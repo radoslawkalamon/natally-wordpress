@@ -138,6 +138,15 @@ body {
   color: var(--color-contra);
 }
 
+.tile-small--current {
+  pointer-events: none;
+  opacity: 0.66;
+}
+
+.tile-small--current .tile-small__link {
+  background-color: rgba(226,0,14,0.5);
+}
+
 .tile-small__link {
   display: flex;
   flex-flow: column nowrap;
