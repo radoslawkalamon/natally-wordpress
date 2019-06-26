@@ -605,6 +605,7 @@ body {
   max-width: var(--max-width-content);
   width: calc(100% - var(--padding-base));
   margin: 0 auto;
+  box-sizing: border-box;
 }
     
 .embed-soundcloud__text {
@@ -873,6 +874,10 @@ body {
 }
 
 /** core/single.php */
+.post-single--post {
+  padding-top: var(--padding-base-half);
+}
+
 .post-single__meta {
   display: flex;
   flex-flow: row wrap;
