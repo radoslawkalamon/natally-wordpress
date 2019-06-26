@@ -738,6 +738,8 @@ body {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   display: none;
+  padding: var(--padding-base-quarter);
+  box-sizing: border-box;
 }
 
 .cookie-bar--active {
@@ -746,6 +748,7 @@ body {
 
 .cookie-bar__text {
   display: inline-block;
+  margin: var(--padding-base-quarter);
 }
 
 .cookie-bar__link {
@@ -768,6 +771,7 @@ body {
   color: var(--color-white);
   font-size: var(--font-size-base);
   transition: background-color 0.5s ease, color 0.5s ease;
+  margin: var(--padding-base-quarter);
 }
 
 .cookie-bar__button:hover {
