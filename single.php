@@ -23,7 +23,6 @@
   ];
   $CarouselPoem = [
     'cat' => 5,
-    'post__not_in' => [get_the_ID()],
     'nopaging' => true
   ];
   $SoundcloudEmbed = get_post_meta(get_the_ID(), 'soundcloud_track_id', true);
@@ -40,7 +39,7 @@
   <div class='post-single__meta'>
     <?php Component_MetaShare($MetaShareTitle, get_permalink(), get_the_title(), $MetaShareClassName); ?>
     <?php Component_MetaComment($MetaCommentTitle, $MetaCommentFacebookPost, $MetaCommentClassName); ?>
-    <?php Component_CarouselPoem($CarouselPoem, 'Sprawdź inne'); ?>
+    <?php Component_CarouselPoem($CarouselPoem, 'Sprawdź inne', '', false, get_the_ID()); ?>
     <?php Component_CarouselPosts($CarouselPosts, 'Coś dłuższego?'); ?>
   </div>
 <?php else: ?>
