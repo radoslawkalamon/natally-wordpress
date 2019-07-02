@@ -10,7 +10,7 @@
       type='button'
       class='cookie-bar__button'
       data-cookie-bar-button
-    >Akceptuj</a>
+    >Akceptuj</button>
   </div>
   <script src='<?php echo get_template_directory_uri(); ?>/js/the-cookie-bar.js' defer></script>
 
