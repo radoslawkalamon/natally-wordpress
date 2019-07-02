@@ -16,9 +16,9 @@
     style='background-image: url(<?php echo $data['thumbnail']; ?>)'
   >
     <div class='title-big__wrapper'>
-      <h3 class='title-big__title'>
+      <h1 class='title-big__title'>
         <?php echo $data['title'] ?>
-      </h3>
+      </h1>
       <p class='title-big__category'>
         <?php echo implode(' • ', $categoriesNames); ?>
       </p>
