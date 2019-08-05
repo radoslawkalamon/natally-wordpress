@@ -1,0 +1,4 @@
+.post-page {
+  padding: 0 var(--padding-base-half);
+  box-sizing: border-box;
+}

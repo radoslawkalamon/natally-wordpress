@@ -1,0 +1,9 @@
+.post-single {
+  padding: 0 var(--padding-base-half);
+  box-sizing: border-box;
+}
+
+.post-single__meta {
+  display: flex;
+  flex-flow: row wrap;
+}

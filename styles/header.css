@@ -1,0 +1,10 @@
+.body-wrapper {
+  max-width: var(--max-width-body);
+  margin: calc(var(--menu-size) + var(--padding-base-half)) auto 0;
+}
+
+@media (min-width: 848px) {
+  .body-wrapper {
+    margin: 0 auto;
+  }
+}

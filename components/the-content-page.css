@@ -1,0 +1,10 @@
+.content-page {
+  max-width: var(--max-width-content);
+  margin: var(--padding-base) auto;
+  line-height: var(--line-height-content);
+  text-indent: var(--text-indent-content);
+}
+
+.content-page a {
+  color: var(--color-red);
+}

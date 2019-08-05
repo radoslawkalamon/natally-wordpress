@@ -1,0 +1,9 @@
+.carousel-posts {
+  width: 100%;
+}
+
+.carousel-posts__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}

@@ -1,0 +1,102 @@
+.tile-big {
+  position: relative;
+  display: block;
+  width: calc(100% - var(--padding-base));
+  max-width: var(--tile-big-max-width);
+  margin: var(--padding-base-half);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--color-contra);
+}
+
+.tile-big::before {
+  content: '';
+  padding-top: 100%;
+  display: block;
+}
+
+.tile-big--front-page-post:first-of-type {
+  margin-top: 0;
+}
+
+@media (min-width: 640px) {
+  .tile-big--front-page-post:first-of-type {
+    max-width: none;
+    width: calc(100% - var(--padding-base));
+  }
+
+  .tile-big--front-page-post:first-of-type::before {
+    padding-top: 50%;
+  }
+
+  .tile-big--front-page-post:nth-of-type(2n):last-of-type {
+    max-width: none;
+    width: calc(100% - var(--padding-base));
+  }
+
+  .tile-big--front-page-post:nth-of-type(2n):last-of-type::before {
+    padding-top: 50%;
+  }
+}
+
+.tile-big__link {
+  position: absolute;
+  z-index: 1;  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  top: 0;
+  left: 0;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+
+.tile-big__link:hover {
+  background-color: var(--tile-color-hover);
+}
+
+.tile-big__wrapper {
+  background-color: var(--tile-color-wrapper);
+  padding: var(--padding-base-half);
+  box-sizing: border-box;
+  width: 100%;
+  font-family: var(--font-family-sans);
+  text-align: right;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease;
+}
+
+.tile-big__title {
+  margin: 0;
+  font-size: var(--font-size-base-double);
+  line-height: 1em;
+}
+
+.tile-big__category {
+  margin: var(--padding-base-quarter) 0;
+  line-height: 0.9em;
+}
+
+.tile-big__line {
+  display: block;
+  height: var(--height-red-line);
+  width: var(--width-red-line-double);
+  margin: var(--padding-base-half) 0 var(--padding-base-half) auto;
+  border: 0;
+  background-color: var(--color-red);
+}
+
+.tile-big__meta {
+  margin: var(--padding-base-quarter) 0 0;
+  line-height: 0.9em;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .tile-big {
+    width: calc(50% - var(--padding-base));
+    max-width: none;
+  }
+}

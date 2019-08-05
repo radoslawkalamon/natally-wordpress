@@ -17,7 +17,7 @@
   >
     <div class='title-big__wrapper'>
       <h1 class='title-big__title'>
-        <?php echo $data['title'] ?>
+        <?php echo $data['title']; ?>
       </h1>
       <p class='title-big__category'>
         <?php echo implode(' • ', $categoriesNames); ?>
@@ -25,7 +25,7 @@
       <hr class='title-big__line' />
       <p class='title-big__meta'>
         <time datetime='<?php echo $data['dateMachine']; ?>'>
-          <?php echo $data['dateHuman'] ?>
+          <?php echo $data['dateHuman']; ?>
         </time>
          • 
         <?php echo $data['readingTime']; ?>
