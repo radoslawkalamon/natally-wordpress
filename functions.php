@@ -61,4 +61,17 @@
   add_image_size('medium', 600, '', true);
   /** Add title tag support */
   add_theme_support('title-tag');
+ 
+  /**
+  * Load an inline SVG.
+  * @param string $filename The filename of the SVG you want to load.
+  * @return string The content of the SVG you want to load.
+  */
+  function load_inline_svg($filename) {
+    $svg_path = '/images/';
+    if (file_exists(get_template_directory().$svg_path.$filename)) {
+      return file_get_contents(get_template_directory_uri().$svg_path.$filename, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
+    }
+    return '';
+  }
 ?>
