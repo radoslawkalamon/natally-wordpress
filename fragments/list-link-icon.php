@@ -20,11 +20,7 @@
         href='<?php echo $element['link']; ?>'
         target='_blank'
       >
-        <img
-          alt='<?php echo $element['alt']; ?>'
-          class='list-link-icon__image'
-          src='<?php echo get_template_directory_uri().'/images/'.$element['icon']; ?>'
-        />
+      <?php echo load_inline_svg($element['icon']); ?>
       </a>
     </li>
     <?php endforeach; ?>
