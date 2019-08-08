@@ -1,21 +1,16 @@
 .tile-small {
-  display: inline-block;
+  display: block;
   position: relative;
-  width: 240px;
-  height: 240px;
-  margin: var(--padding-base-half);
+  width: 100%;
   background-repeat: repeat;
   background-position: center;
   color: var(--color-contra);
 }
 
-.tile-small--current {
-  pointer-events: none;
-  opacity: 0.66;
-}
-
-.tile-small--current .tile-small__link {
-  background-color: var(--tile-color-hover);
+.tile-small::before {
+  content: '';
+  padding-top: 100%;
+  display: block;
 }
 
 .tile-small__link {
@@ -37,7 +32,7 @@
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  transition: background-color 0.5s ease;
+  transition: background-color var(--time-animation) ease;
 }
 
 .tile-small__link:hover {

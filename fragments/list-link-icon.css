@@ -12,17 +12,21 @@
 }
 
 .list-link-icon__link {
-  width: 32px;
-  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.list-link-icon__image {
-  max-width: 100%;
-  max-height: 100%;
+.list-link-icon__link svg {
+  width: 32px;
+  height: 32px;
   display: block;
+  fill: var(--color-base);
+  transition: fill var(--time-animation) ease;
+}
+
+.list-link-icon__link svg:hover {
+  fill: var(--color-red);
 }
 
 .list-link-icon--header-menu {
@@ -34,7 +38,7 @@
     margin-right: 0;
   }
 
-  .list-link-icon--header-menu .list-link-icon__link {
+  .list-link-icon--header-menu .list-link-icon__link svg {
     width: 24px;
     height: 24px;
   }

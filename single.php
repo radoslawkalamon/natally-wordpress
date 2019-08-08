@@ -11,10 +11,8 @@
 <?php
   $TheContent = apply_filters('the_content', get_the_content());
   $MetaShareTitle = 'Udostępnij';
-  $MetaShareClassName = 'width-half';
   $MetaCommentTitle = 'Skomentuj';
   $MetaCommentFacebookPost = get_post_meta(get_the_ID(), 'meta_share_facebook_url', true);
-  $MetaCommentClassName = 'width-half';
   $CarouselPosts = [
     'posts_per_page' => 2,
     'orderby' => 'rand',
@@ -23,7 +21,9 @@
   ];
   $CarouselPoem = [
     'cat' => 5,
-    'nopaging' => true
+    'posts_per_page' => 6,
+    'orderby' => 'rand',
+    'post__not_in' => [get_the_ID()],
   ];
   $SoundcloudEmbed = get_post_meta(get_the_ID(), 'soundcloud_track_id', true);
 ?>
@@ -37,11 +37,25 @@
     <?php Component_TheContentPoem($TheContent); ?>
   </article>
   <div class='post-single__meta'>
-    <?php Component_MetaShare($MetaShareTitle, get_permalink(), get_the_title(), $MetaShareClassName); ?>
-    <?php Component_MetaComment($MetaCommentTitle, $MetaCommentFacebookPost, $MetaCommentClassName); ?>
-    <?php Component_CarouselPoem($CarouselPoem, 'Sprawdź inne', '', false, get_the_ID()); ?>
-    <?php Component_CarouselPosts($CarouselPosts, 'Coś dłuższego?'); ?>
-  </div>
+    <section>
+      <?php Fragment_TitleSection($MetaShareTitle); ?>
+      <?php Component_MetaShare(get_permalink(), get_the_title()); ?>
+    </section>
+    <section>
+      <?php Fragment_TitleSection($MetaCommentTitle); ?>
+      <?php Component_MetaComment($MetaCommentFacebookPost); ?>
+    </section>
+  </div>  
+  <section>
+    <?php Fragment_TitleSection('Sprawdź inne'); ?>
+    <?php Component_CarouselPoem($CarouselPoem, true); ?>
+    <?php Fragment_ButtonGetMore(343, 'Więcej Poezji 3.14'); ?>
+  </section>
+  <section>
+    <?php Fragment_TitleSection('Coś dłuższego?'); ?>
+    <?php Component_CarouselPosts($CarouselPosts, true); ?>
+    <?php Fragment_ButtonGetMore(0, 'Więcej opowiadań'); ?>
+  </section>
 <?php else: ?>
   <?php Component_TheProgressBar(); ?>
   <article class='post-single post-single--post'>
@@ -57,10 +71,24 @@
     <?php Component_TheContentPost($TheContent) ?>
   </article>
   <div class='post-single__meta'>
-    <?php Component_MetaShare($MetaShareTitle, get_permalink(), get_the_title(), $MetaShareClassName); ?>
-    <?php Component_MetaComment($MetaCommentTitle, $MetaCommentFacebookPost, $MetaCommentClassName); ?>
-    <?php Component_CarouselPosts($CarouselPosts, 'Sprawdź inne'); ?>
-    <?php Component_CarouselPoem($CarouselPoem, 'Coś krótszego?'); ?>
-  </div>
+    <section>
+      <?php Fragment_TitleSection($MetaShareTitle); ?>
+      <?php Component_MetaShare(get_permalink(), get_the_title()); ?>
+    </section>
+    <section>
+      <?php Fragment_TitleSection($MetaCommentTitle); ?>
+      <?php Component_MetaComment($MetaCommentFacebookPost); ?>
+    </section>
+  </div> 
+  <section>
+    <?php Fragment_TitleSection('Sprawdź inne'); ?>
+    <?php Component_CarouselPosts($CarouselPosts); ?>
+    <?php Fragment_ButtonGetMore(0, 'Więcej opowiadań'); ?>
+  </section>
+  <section>
+    <?php Fragment_TitleSection('Coś krótszego?'); ?>
+    <?php Component_CarouselPoem($CarouselPoem); ?>
+    <?php Fragment_ButtonGetMore(343, 'Więcej Poezji 3.14'); ?>
+  </section>
 <?php endif; ?>
 <?php get_footer(); ?>

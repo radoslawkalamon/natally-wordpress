@@ -25,6 +25,7 @@
 .menu--header-menu a {
   color: inherit;
   text-decoration: none;
+  transition: color var(--time-animation) ease;
 }
 
 .menu--header-menu a:hover {

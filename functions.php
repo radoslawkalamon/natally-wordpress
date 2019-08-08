@@ -32,7 +32,7 @@
   /** Enqueue CSS */
   function add_style_css() {
     wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,700|Source+Sans+Pro:600,700&subset=latin-ext', array(), '1.0', 'all');
-    wp_register_style('standard-style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
+    wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '1.3', 'all');
     wp_enqueue_style('google-fonts');
     wp_enqueue_style('standard-style');
   }
@@ -41,11 +41,12 @@
   register_nav_menu('header-menu', 'Header Menu');
   register_nav_menu('footer-menu', 'Footer Menu');
   /** Initialize Fragments */
-  get_template_part('fragments/menu');
+  get_template_part('fragments/button-get-more');
   get_template_part('fragments/list-link-icon');
-  get_template_part('fragments/title-section');
+  get_template_part('fragments/menu');
   get_template_part('fragments/tile-big');
   get_template_part('fragments/tile-small');
+  get_template_part('fragments/title-section');
   get_template_part('fragments/title-big');
   get_template_part('fragments/title-small');
   /** Remove Poems post from Home Query */
@@ -70,7 +71,8 @@
   function load_inline_svg($filename) {
     $svg_path = '/images/';
     if (file_exists(get_template_directory().$svg_path.$filename)) {
-      return file_get_contents(get_template_directory_uri().$svg_path.$filename, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
+      return file_get_contents(get_template_directory_uri().$svg_path.$filename);
+      // return file_get_contents(get_template_directory_uri().$svg_path.$filename, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
     }
     return '';
   }

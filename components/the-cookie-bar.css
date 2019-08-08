@@ -31,8 +31,8 @@
 .cookie-bar__button {
   -webkit-appearance: none;
   appearance: none;
-  border: 0;
-  border-radius: 0;
+  border: var(--border-button);
+  border-radius: var(--border-radius-button);
   cursor: pointer;
   display: inline-block;
   background-color: var(--color-red);
@@ -42,11 +42,11 @@
   padding: var(--padding-base-quarter) var(--padding-base-half);
   color: var(--color-white);
   font-size: var(--font-size-base);
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color var(--time-animation) ease, color var(--time-animation) ease;
   margin: var(--padding-base-quarter);
 }
 
 .cookie-bar__button:hover {
   background-color: var(--color-white);
-  color: var(--color-red);
+  color: var(--color-black);
 }

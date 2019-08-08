@@ -1,0 +1,24 @@
+.button-get-more {
+  text-align: center;
+  margin: var(--padding-base-half) 0;
+}
+
+.button-get-more__button {
+  display: inline-block;
+  border: var(--border-button);
+  border-radius: var(--border-radius-button);
+  font-family: var(--font-family-sans);
+  font-weight: bold;
+  color: var(--color-base);
+  padding: var(--padding-base-quarter) var(--padding-base-half);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    background-color var( --time-animation) ease,
+    color var(--time-animation) ease;
+}
+
+.button-get-more__button:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}

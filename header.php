@@ -12,8 +12,6 @@
     <meta charset="<?php bloginfo('charset'); ?>" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js'></script>
     <?php $urlFavicon = get_template_directory_uri()."/images/icons/"; ?>
     <!-- MS Tile Settings -->
     <meta name="msapplication-TileColor" content="#FFFFFF" />

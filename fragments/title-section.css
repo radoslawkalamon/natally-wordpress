@@ -3,10 +3,9 @@
   font-family: var(--font-family-sans);
   font-weight: bold;
   text-transform: uppercase;
-  margin: var(--padding-base-double) auto var(--padding-base-half);
+  margin: var(--padding-base-double) var(--padding-base-half) var(--padding-base-half);
   line-height: 1em;
   text-align: center;
-  width: 100%;
 }
 
 .title-section::after {
@@ -16,8 +15,4 @@
   width: var(--width-red-line);
   background-color: var(--color-red);
   margin: var(--padding-base-half) auto 0;
-}
-
-.title-section--no-margin-bottom {
-  margin-bottom: 0;
 }

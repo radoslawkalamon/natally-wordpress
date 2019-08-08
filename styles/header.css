@@ -1,5 +1,6 @@
 .body-wrapper {
-  max-width: var(--max-width-body);
+  max-width: var(--max-width-body-without-margins);
+  width: calc(100% - var(--padding-base));
   margin: calc(var(--menu-size) + var(--padding-base-half)) auto 0;
 }
 

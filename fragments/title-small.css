@@ -1,11 +1,8 @@
 .title-small {
-  width: 100%;
-  max-width: var(--max-width-body);
   margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
   font-family: var(--font-family-sans);
-  box-sizing: border-box;
 }
 
 .title-small__title {

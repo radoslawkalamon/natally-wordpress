@@ -54,7 +54,7 @@
   left: 0;
   background-color: var(--color-contra);
   width: 100%;
-  transition: opacity 0.5s ease, z-index 0.5s ease;
+  transition: opacity var(--time-animation) ease, z-index var(--time-animation) ease;
   opacity: 0.0;
   pointer-events: none;
   z-index: -1;

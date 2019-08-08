@@ -33,8 +33,10 @@ body {
   --width-red-line: 48px;
   --width-red-line-double: calc(var(--width-red-line) * 2);
 
-  --carousel-arrow-size: 40px;
-  --carousel-dots-size: 8px;
+  --border-button: 3px solid var(--color-red);
+  --border-radius-button: 8px;
+
+  --time-animation: 0.33s;
 
   --menu-size: 48px;
   --menu-size-logo: 32px;
@@ -42,7 +44,10 @@ body {
 
   --tile-color-hover: rgba(226,0,14,0.5);
   --tile-color-wrapper: rgba(0,0,0,0.66);
-  --tile-big-max-width: 450px;
+
+  --grid-column-template-tile-small: minmax(240px, 320px);
+  --grid-column-template-tile-big: minmax(240px, 480px);
+  --grid-gap: 16px;
 
   --embed-soundcloud-padding: var(--height-red-line);
 }
@@ -55,8 +60,8 @@ body.dark-theme {
   --tile-color-wrapper: rgba(255, 255, 255, 0.75);
 }
 
-@media (min-width: 400px) {
+@media (min-width: 960px) {
   body {
-    --carousel-arrow-size: 48px;
+    --grid-gap: 32px;
   }
 }

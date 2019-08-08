@@ -6,7 +6,7 @@
   left: 0;
   z-index: 19;
   background-color: var(--color-red);
-  transition: width 0.25s linear;
+  transition: width var(--time-animation) linear;
 }
 
 @media (min-width: 848px) {

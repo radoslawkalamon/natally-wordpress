@@ -1,9 +1,13 @@
 .carousel-posts {
-  width: 100%;
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(1, var(--grid-column-template-tile-big));
+  justify-content: center;
+  margin: var(--padding-base-half) 0;
 }
 
-.carousel-posts__wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+@media (min-width: 640px) {
+  .carousel-posts {
+    grid-template-columns: repeat(2, var(--grid-column-template-tile-big));
+  }
 }
