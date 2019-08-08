@@ -1,0 +1,19 @@
+.carousel-poem {
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(1, var(--grid-column-template-tile-small));
+  justify-content: center;
+  margin: var(--padding-base-half) 0;
+}
+
+@media (min-width: 576px) {
+  .carousel-poem {
+    grid-template-columns: repeat(2, var(--grid-column-template-tile-small));
+  }
+}
+
+@media (min-width: 848px) {
+  .carousel-poem {
+    grid-template-columns: repeat(3, var(--grid-column-template-tile-small));
+  }
+}

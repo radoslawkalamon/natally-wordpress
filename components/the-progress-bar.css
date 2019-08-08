@@ -1,0 +1,16 @@
+.progress-bar {
+  width: 0%;
+  position: fixed;
+  height: var(--height-red-line);
+  top: var(--menu-size);
+  left: 0;
+  z-index: 19;
+  background-color: var(--color-red);
+  transition: width var(--time-animation) linear;
+}
+
+@media (min-width: 848px) {
+  .progress-bar {
+    top: 0;
+  }
+}

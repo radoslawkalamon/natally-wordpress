@@ -1,0 +1,11 @@
+.post-single__meta {
+  display: grid;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 480px) {
+  .post-single__meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

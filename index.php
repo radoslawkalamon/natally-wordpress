@@ -1,4 +1,12 @@
 <?php get_template_part('components/carousel-poem'); ?>
+
+<?php
+  $CarouselPoem = [
+    'cat' => 5,
+    'posts_per_page' => 6,
+  ];
+?>
+
 <?php get_header(); ?>
 <section class='front-page-posts'>
   <?php while (have_posts()) : the_post(); ?>
@@ -15,13 +23,9 @@
     ); ?>
   <?php endwhile; ?>
 </section>
-<?php Component_CarouselPoem(
-  [
-    'cat' => 5,
-    'nopaging' => true,
-  ],
-  'Poezja 3.14',
-  '',
-  true
-); ?>
+<section>
+  <?php Fragment_TitleSection('Poezja 3.14'); ?>
+  <?php Component_CarouselPoem($CarouselPoem); ?>
+  <?php Fragment_ButtonGetMore(343, 'Więcej Poezji 3.14'); ?>
+</section>
 <?php get_footer(); ?>

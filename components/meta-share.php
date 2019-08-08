@@ -1,13 +1,8 @@
 <?php function Component_MetaShare(
-  string $title = 'Skomentuj',
   string $postURL,
   string $postTitle,
   string $className = ''
 ) {
-  $classNames = implode(' ', [
-    'meta-share',
-    $className !== '' ? 'meta-share--'.$className : '',
-  ]);
   $ListLinkIcon = [
     [
       'alt' => 'Udostępnij na Facebooku',
@@ -25,11 +20,6 @@
     ]
   ]; ?>
 
-  <div class='<?php echo $classNames ?>'>
-    <div class='meta-share__inner'>
-      <?php Fragment_TitleSection($title); ?>
-      <?php Fragment_ListLinkIcon($ListLinkIcon); ?>
-    </div>
-  </div>
+  <?php Fragment_ListLinkIcon($ListLinkIcon, $className); ?>
 
 <?php } ?>
