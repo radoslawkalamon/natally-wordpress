@@ -41,7 +41,7 @@
   /** Enqueue CSS */
   function add_style_css() {
     wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,700|Source+Sans+Pro:600,700&subset=latin-ext', array(), '1.0', 'all');
-    wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '1.3', 'all');
+    wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '1.4', 'all');
     wp_enqueue_style('google-fonts');
     wp_enqueue_style('standard-style');
   }
