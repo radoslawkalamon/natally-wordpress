@@ -13,7 +13,7 @@
 
   <div
     class='<?= $classNames ?>'
-    style='background-image: url(<?= $data['thumbnail']; ?>)'
+    data-background-lazy-loading='<?= $data['thumbnail']; ?>'
   >
     <a 
       class='tile-big__link'

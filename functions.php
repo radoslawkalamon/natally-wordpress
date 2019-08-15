@@ -46,6 +46,11 @@
     wp_enqueue_style('standard-style');
   }
   add_action('wp_enqueue_scripts', 'add_style_css');
+  /** Enqueue JS */
+  function add_scripts_js() {
+    wp_enqueue_script('background-image-lazy-loading', get_template_directory_uri().'/js/background-image-lazy-loading.js', array(), '1.0.0', true);
+  }
+  add_action('wp_enqueue_scripts', 'add_scripts_js');
   /** Register Menus */
   register_nav_menu('header-menu', 'Header Menu');
   register_nav_menu('footer-menu', 'Footer Menu');
