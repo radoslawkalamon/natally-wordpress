@@ -3,6 +3,7 @@
 * Template Name: Poem Archive Template
 */
 ?>
+<?php get_template_part('components/the-content-page'); ?>
 <?php get_template_part('components/carousel-poem'); ?>
 
 <?php
@@ -15,7 +16,7 @@
     'cat' => 5,
     'nopaging' => true,
   ];
-  $ContentArchive = apply_filters('the_content', get_the_content());
+  $ContentArchive = apply_filters('the_content', get_post_field('post_content', $post->id));
 ?>
 <?php get_header(); ?>
 <article class='post-page post-page--poem-archive'>
