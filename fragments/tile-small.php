@@ -8,19 +8,19 @@
   ]); ?>
 
   <div
-    class='<?php echo $classNames ?>'
-    style='background-image: url(<?php echo $data['thumbnail']; ?>)'
+    class='<?= $classNames ?>'
+    data-background-lazy-loading='<?= $data['thumbnail']; ?>'
   >
     <a 
       class='tile-small__link'
-      href='<?php echo $data['url'] ?>'
+      href='<?= $data['url'] ?>'
     >
       <h3 class='tile-small__title'>
-        <?php echo $data['title'] ?>
+        <?= $data['title'] ?>
       </h3>
       <hr class='tile-small__line' />
       <span class='tile-small__date'>
-        <?php echo $data['date'] ?>
+        <?= $data['date'] ?>
       </span>
     </a>
   </div>

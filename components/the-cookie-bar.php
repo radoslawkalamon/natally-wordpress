@@ -4,7 +4,7 @@
 
   <div class='cookie-bar' data-cookie-bar>
     <p class='cookie-bar__text'>
-      Korzystając ze strony 169cm.pl akceptujesz <a class='cookie-bar__link' href='<?php echo $privacyPolicyURL; ?>'>Politykę Prywatności</a>.
+      Korzystając ze strony 169cm.pl akceptujesz <a class='cookie-bar__link' href='<?= $privacyPolicyURL; ?>'>Politykę Prywatności</a>.
     </p>
     <button
       type='button'
@@ -12,6 +12,6 @@
       data-cookie-bar-button
     >Akceptuj</button>
   </div>
-  <script src='<?php echo get_template_directory_uri(); ?>/js/the-cookie-bar.js' defer></script>
+  <script src='<?= get_template_directory_uri(); ?>/js/the-cookie-bar.js' defer></script>
 
 <?php } ?>

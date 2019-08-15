@@ -9,7 +9,7 @@
   <?php $query = new WP_Query($queryArgs); ?>
   <?php if ($query->have_posts()) : ?>
 
-  <div class='<?php echo $classNames ?>'>
+  <div class='<?= $classNames ?>'>
     <?php while ($query->have_posts() ) : $query->the_post(); ?>
       <?php Fragment_TileSmall(
         [

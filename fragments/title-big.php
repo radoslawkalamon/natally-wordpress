@@ -12,23 +12,23 @@
   } ?>
 
   <div
-    class='<?php echo $classNames ?>'
-    style='background-image: url(<?php echo $data['thumbnail']; ?>)'
+    class='<?= $classNames ?>'
+    style='background-image: url(<?= $data['thumbnail']; ?>)'
   >
     <div class='title-big__wrapper'>
       <h1 class='title-big__title'>
-        <?php echo $data['title']; ?>
+        <?= $data['title']; ?>
       </h1>
       <p class='title-big__category'>
-        <?php echo implode(' • ', $categoriesNames); ?>
+        <?= implode(' • ', $categoriesNames); ?>
       </p>
       <hr class='title-big__line' />
       <p class='title-big__meta'>
-        <time datetime='<?php echo $data['dateMachine']; ?>'>
-          <?php echo $data['dateHuman']; ?>
+        <time datetime='<?= $data['dateMachine']; ?>'>
+          <?= $data['dateHuman']; ?>
         </time>
          • 
-        <?php echo $data['readingTime']; ?>
+        <?= $data['readingTime']; ?>
       </p>
     </div>
   </div>

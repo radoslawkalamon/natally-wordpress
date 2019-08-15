@@ -6,6 +6,10 @@
   margin: var(--padding-base-half) 0;
 }
 
+.carousel-poem--archive {
+  margin-bottom: var(--grid-gap);
+}
+
 @media (min-width: 576px) {
   .carousel-poem {
     grid-template-columns: repeat(2, var(--grid-column-template-tile-small));

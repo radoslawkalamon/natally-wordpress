@@ -13,6 +13,7 @@
   # Delete: WP Link REST API
   remove_action('wp_head', 'rest_output_link_wp_head', 10);
   remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
+  remove_action('template_redirect', 'rest_output_link_header', 11, 0);
   add_filter('rest_enabled', '__return_false');
   add_filter('rest_jsonp_enabled', '__return_false');
   # Delete: WP oEmbed Scripts
@@ -29,6 +30,14 @@
   remove_action('wp_head', 'wp_generator');
   # Delete: DNS-Prefetech
   remove_action('wp_head', 'wp_resource_hints', 2);
+  # Delete: Shortlink from <head>
+  remove_action('wp_head', 'wp_shortlink_wp_head', 10);
+  # Delete: Shortlink from HTTP Header
+  remove_action('template_redirect', 'wp_shortlink_header', 11);
+  # Delete: Comment from <head>
+  remove_action('wp_head', 'feed_links', 2);
+  # Delete: Category feed from <head>
+  remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
   /** Enqueue CSS */
   function add_style_css() {
     wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,700|Source+Sans+Pro:600,700&subset=latin-ext', array(), '1.0', 'all');
@@ -37,6 +46,11 @@
     wp_enqueue_style('standard-style');
   }
   add_action('wp_enqueue_scripts', 'add_style_css');
+  /** Enqueue JS */
+  function add_scripts_js() {
+    wp_enqueue_script('background-image-lazy-loading', get_template_directory_uri().'/js/background-image-lazy-loading.js', array(), '1.0.0', true);
+  }
+  add_action('wp_enqueue_scripts', 'add_scripts_js');
   /** Register Menus */
   register_nav_menu('header-menu', 'Header Menu');
   register_nav_menu('footer-menu', 'Footer Menu');
@@ -50,12 +64,12 @@
   get_template_part('fragments/title-big');
   get_template_part('fragments/title-small');
   /** Remove Poems post from Home Query */
-  function remove_posts_from_home_page($query) {
+  function remove_poem_from_home_page($query) {
     if($query->is_main_query() && $query->is_home()) {
         $query->set('category__not_in', array(5));
     }
   }
-  add_action('pre_get_posts', 'remove_posts_from_home_page');
+  add_action('pre_get_posts', 'remove_poem_from_home_page');
   /** Add theme support for post-thumbnails */
   add_theme_support('post-thumbnails');
   add_image_size('large', 1000, '', true);

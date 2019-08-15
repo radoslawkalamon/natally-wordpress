@@ -6,7 +6,7 @@
     class='content-post'
     data-content-post
   >
-    <?php echo $content; ?>
+    <?= $content; ?>
   </div>
 
 <?php } ?>

@@ -15,11 +15,12 @@
     'cat' => 5,
     'nopaging' => true,
   ];
+  $ContentArchive = apply_filters('the_content', get_the_content());
 ?>
 <?php get_header(); ?>
-<section class='poem-archive'>
+<article class='post-page post-page--poem-archive'>
   <?php Fragment_TitleSmall($TitleSmall); ?>
-  <?php echo apply_filters('the_content', get_the_content()); ?>
-</section>
-<?php Component_CarouselPoem($CarouselPoem, false); ?>
+  <?php Component_TheContentPage($ContentArchive); ?>
+  <?php Component_CarouselPoem($CarouselPoem, 'archive'); ?>
+</article>
 <?php get_footer(); ?>

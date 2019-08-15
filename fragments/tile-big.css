@@ -44,6 +44,25 @@
   background-color: var(--tile-color-hover);
 }
 
+.tile-big__audiobook {
+  position: absolute;
+  z-index: 0;
+  top: var(--audiobook-batch-position);
+  right: var(--audiobook-batch-position);
+  width: var(--audiobook-batch-size);
+  height: var(--audiobook-batch-size);
+  background-color: var(--color-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tile-big__audiobook svg {
+  width: var(--audiobook-batch-image-size);
+  height: var(--audiobook-batch-image-size);
+}
+
 .tile-big__wrapper {
   background-color: var(--tile-color-wrapper);
   padding: var(--padding-base-half);

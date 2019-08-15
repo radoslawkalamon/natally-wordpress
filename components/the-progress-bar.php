@@ -5,6 +5,6 @@
     class='progress-bar'
     data-the-progress-bar
   ></div>
-  <script src='<?php echo get_template_directory_uri(); ?>/js/the-progress-bar.js' defer></script>
+  <script src='<?= get_template_directory_uri(); ?>/js/the-progress-bar.js' defer></script>
 
 <?php } ?>
