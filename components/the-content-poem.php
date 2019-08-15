@@ -4,7 +4,7 @@
 
   <div class='content-poem'>
     <div class='content-poem__inner'>
-      <?php echo $content; ?>
+      <?= $content; ?>
     </div>
   </div>
 

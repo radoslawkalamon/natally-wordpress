@@ -7,20 +7,22 @@
     $className !== '' ? 'list-link-icon--'.$className : '',
   ]); ?>
 
-  <ul class='<?php echo $classNames; ?>'>
+  <ul class='<?= $classNames; ?>'>
     <?php foreach ($data as $element) : ?>
     <?php $elementClassNames = implode(' ', [
       'list-link-icon__item',
       $element['classname'] !== '' ? 'list-link-icon__item--'.$element['classname'] : '',
     ]); ?>
-    <li class='<?php echo $elementClassNames; ?>'>
+    <li class='<?= $elementClassNames; ?>'>
       <a
+        aria-label="<?= $element['alt']; ?>"
         class='list-link-icon__link'
-        <?php echo isset($element['hook']) ? $element['hook'] : ''; ?>
-        href='<?php echo $element['link']; ?>'
+        <?= isset($element['hook']) ? $element['hook'] : ''; ?>
+        href='<?= $element['link']; ?>'
+        rel='noopener noreferrer'
         target='_blank'
       >
-      <?php echo load_inline_svg($element['icon']); ?>
+      <?= load_inline_svg($element['icon']); ?>
       </a>
     </li>
     <?php endforeach; ?>

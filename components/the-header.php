@@ -37,15 +37,15 @@
       <img
         alt='Logo 169cm.pl'
         class='header__icon'
-        src='<?php echo get_template_directory_uri(); ?>/images/theme_change.svg'
+        src='<?= get_template_directory_uri(); ?>/images/theme_change.svg'
       />
     </button>
     <div class='header__logo-wrapper'>
-      <a href='<?php echo esc_url(home_url()); ?>'>
+      <a href='<?= esc_url(home_url()); ?>'>
         <img
           alt='Logo 169cm.pl'
           class='header__logo'
-          src='<?php echo get_template_directory_uri(); ?>/images/169cm_pl_logo.svg'
+          src='<?= get_template_directory_uri(); ?>/images/169cm_pl_logo.svg'
         />
       </a>
     </div>
@@ -57,7 +57,7 @@
       <img
         alt='Logo 169cm.pl'
         class='header__icon'
-        src='<?php echo get_template_directory_uri(); ?>/images/hamburger.svg'
+        src='<?= get_template_directory_uri(); ?>/images/hamburger.svg'
       />
     </button>
     <nav class='header__navigation' data-navigation>
@@ -65,6 +65,6 @@
       <?php Fragment_ListLinkIcon($ListLinkIcon_Argument, 'header-menu'); ?>
     </nav>
   </header>
-  <script src='<?php echo get_template_directory_uri(); ?>/js/the-header.js' defer></script>
+  <script src='<?= get_template_directory_uri(); ?>/js/the-header.js' defer></script>
 
 <?php } ?>

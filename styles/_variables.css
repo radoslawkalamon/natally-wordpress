@@ -49,6 +49,10 @@ body {
   --grid-column-template-tile-big: minmax(240px, 480px);
   --grid-gap: 16px;
 
+  --audiobook-batch-size: 32px;
+  --audiobook-batch-position: 8px;
+  --audiobook-batch-image-size: 20px;
+
   --embed-soundcloud-padding: var(--height-red-line);
 }
 

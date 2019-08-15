@@ -15,7 +15,7 @@ postcss([atImport(), clean()])
   })
   .then(function (result) {
     fs.writeFile("style.min.css", result.css, (err) => {
-      if(err) return console.log(err);
+      if (err) return console.log(err);
       console.log("The file was saved!");
     });
   });

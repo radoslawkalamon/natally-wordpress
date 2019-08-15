@@ -7,17 +7,17 @@
     $className !== '' ? 'title-small--'.$className : '',
   ]); ?>
 
-  <header class='<?php echo $classNames ?>'>
+  <header class='<?= $classNames ?>'>
     <h1 class='title-small__title'>
-      <?php echo $data['title'] ?>
+      <?= $data['title'] ?>
     </h1>
     <hr class='title-small__line' />
     <?php if($data['dateMachine'] && $data['dateHuman']) : ?>
     <time
       class='title-small__date'
-      datetime='<?php echo $data['dateMachine']; ?>'
+      datetime='<?= $data['dateMachine']; ?>'
     >
-      <?php echo $data['dateHuman'] ?>
+      <?= $data['dateHuman'] ?>
     </time>
     <?php endif; ?>
   </header>

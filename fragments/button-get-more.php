@@ -12,12 +12,12 @@
     : get_permalink($IDPost);
   ?>
 
-  <div class='<?php echo $classNames; ?>'>
+  <div class='<?= $classNames; ?>'>
     <a
       class='button-get-more__button'
-      href='<?php echo $URLPost; ?>'
+      href='<?= $URLPost; ?>'
     >
-      <?php echo $title; ?>
+      <?= $title; ?>
     </a>
   </div>
 

@@ -12,23 +12,28 @@
   } ?>
 
   <div
-    class='<?php echo $classNames ?>'
-    style='background-image: url(<?php echo $data['thumbnail']; ?>)'
+    class='<?= $classNames ?>'
+    style='background-image: url(<?= $data['thumbnail']; ?>)'
   >
     <a 
       class='tile-big__link'
-      href='<?php echo $data['url'] ?>'
+      href='<?= $data['url'] ?>'
     >
+      <?php if ($data['audiobook'] !== '') : ?>
+      <span class='tile-big__audiobook'>
+        <?= load_inline_svg('audiobook.svg'); ?>
+      </span>
+      <?php endif; ?>
       <div class='tile-big__wrapper'>
         <h3 class='tile-big__title'>
-          <?php echo $data['title'] ?>
+          <?= $data['title'] ?>
         </h3>
         <p class='tile-big__category'>
-          <?php echo implode(' • ', $categoriesNames); ?>
+          <?= implode(' • ', $categoriesNames); ?>
         </p>
         <hr class='tile-big__line' />
         <span class='tile-big__meta'>
-          <?php echo implode(' • ', [$data['date'], $data['readingTime']]); ?>
+          <?= implode(' • ', [$data['date'], $data['readingTime']]); ?>
         </span>
       </div>
     </a>

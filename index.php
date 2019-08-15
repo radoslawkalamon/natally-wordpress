@@ -12,6 +12,7 @@
   <?php while (have_posts()) : the_post(); ?>
     <?php Fragment_TileBig(
       [
+        'audiobook' => get_post_meta(get_the_ID(), 'soundcloud_track_id', true),
         'date' => get_the_time('d F Y'),
         'title' => get_the_title(),
         'thumbnail' => get_the_post_thumbnail_url(null, 'medium'),

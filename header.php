@@ -15,26 +15,26 @@
     <?php $urlFavicon = get_template_directory_uri()."/images/icons/"; ?>
     <!-- MS Tile Settings -->
     <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-square70x70logo" content="<?php echo $urlFavicon; ?>icon-192x192.png">
-    <meta name="msapplication-square150x150logo" content="<?php echo $urlFavicon; ?>icon-192x192.png">
-    <meta name="msapplication-wide310x150logo" content="<?php echo $urlFavicon; ?>icon-310x150.png">
+    <meta name="msapplication-square70x70logo" content="<?= $urlFavicon; ?>icon-192x192.png">
+    <meta name="msapplication-square150x150logo" content="<?= $urlFavicon; ?>icon-192x192.png">
+    <meta name="msapplication-wide310x150logo" content="<?= $urlFavicon; ?>icon-310x150.png">
     <!-- Favicon Settings -->
-    <link rel="icon" type="image/png" href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="48x48" />
-    <link rel="icon" type="image/png" href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="144x144" />
-    <link rel="icon" type="image/png" href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="<?= $urlFavicon; ?>icon-192x192.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="<?= $urlFavicon; ?>icon-192x192.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="<?= $urlFavicon; ?>icon-192x192.png" sizes="48x48" />
+    <link rel="icon" type="image/png" href="<?= $urlFavicon; ?>icon-192x192.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="<?= $urlFavicon; ?>icon-192x192.png" sizes="144x144" />
+    <link rel="icon" type="image/png" href="<?= $urlFavicon; ?>icon-192x192.png" sizes="192x192" />
     <!-- iOS Settings -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
-    <link href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="152x152" rel="apple-touch-icon-precomposed">
-    <link href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="144x144" rel="apple-touch-icon-precomposed">
-    <link href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="120x120" rel="apple-touch-icon-precomposed">
-    <link href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="114x114" rel="apple-touch-icon-precomposed">
-    <link href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="76x76" rel="apple-touch-icon-precomposed">
-    <link href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="72x72" rel="apple-touch-icon-precomposed">
-    <link href="<?php echo $urlFavicon; ?>icon-192x192.png" sizes="57x57" rel="apple-touch-icon-precomposed">
+    <link href="<?= $urlFavicon; ?>icon-192x192.png" sizes="152x152" rel="apple-touch-icon-precomposed">
+    <link href="<?= $urlFavicon; ?>icon-192x192.png" sizes="144x144" rel="apple-touch-icon-precomposed">
+    <link href="<?= $urlFavicon; ?>icon-192x192.png" sizes="120x120" rel="apple-touch-icon-precomposed">
+    <link href="<?= $urlFavicon; ?>icon-192x192.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+    <link href="<?= $urlFavicon; ?>icon-192x192.png" sizes="76x76" rel="apple-touch-icon-precomposed">
+    <link href="<?= $urlFavicon; ?>icon-192x192.png" sizes="72x72" rel="apple-touch-icon-precomposed">
+    <link href="<?= $urlFavicon; ?>icon-192x192.png" sizes="57x57" rel="apple-touch-icon-precomposed">
     <!-- Blink Settings -->
     <meta name="theme-color" content="#E2000E">
     <!-- Google Podcasts Settings -->

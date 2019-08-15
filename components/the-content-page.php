@@ -3,7 +3,7 @@
 ) { ?>
 
   <div class='content-page'>
-    <?php echo $content; ?>
+    <?= $content; ?>
   </div>
 
 <?php } ?>

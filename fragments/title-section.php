@@ -7,8 +7,8 @@
     $className !== '' ? 'title-section--'.$className : '',
   ]); ?>
 
-  <h2 class='<?php echo $classNames ?>'>
-    <?php echo $title ?>
+  <h2 class='<?= $classNames ?>'>
+    <?= $title ?>
   </h2>
 
 <?php } ?>
