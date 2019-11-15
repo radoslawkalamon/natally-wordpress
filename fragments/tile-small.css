@@ -27,7 +27,7 @@
   height: 100%;
   padding: var(--padding-base-quarter);
   box-sizing: border-box;
-  background-color: var(--tile-color-wrapper);
+  background-color: var(--tile-color-wrapper-lighter);
   color: var(--color-white);
   font-family: var(--font-family-sans);
   text-decoration: none;

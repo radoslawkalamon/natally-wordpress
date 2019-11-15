@@ -1,15 +1,14 @@
 <?php
-  if (!isset($content_width)) $content_width = 900;
+  if (!isset($content_width)) { $content_width = 900; }
   # Delete: WP Emoji Scripts / CSS
   remove_action('wp_head', 'print_emoji_detection_script', 7); 
   remove_action('admin_print_scripts', 'print_emoji_detection_script'); 
   remove_action('wp_print_styles', 'print_emoji_styles'); 
   remove_action('admin_print_styles', 'print_emoji_styles');
   # Delete: Gutenberg CSS
-  function delete_gutenberg_css() {
+  add_action('wp_print_styles', function() {
     wp_dequeue_style('wp-block-library');
-  }
-  add_action('wp_print_styles', 'delete_gutenberg_css', 100);
+  }, 100);
   # Delete: WP Link REST API
   remove_action('wp_head', 'rest_output_link_wp_head', 10);
   remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
@@ -39,18 +38,16 @@
   # Delete: Category feed from <head>
   remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
   /** Enqueue CSS */
-  function add_style_css() {
+  add_action('wp_enqueue_scripts', function() {
     wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,700|Source+Sans+Pro:600,700&subset=latin-ext', array(), '1.0', 'all');
     wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '1.4', 'all');
     wp_enqueue_style('google-fonts');
     wp_enqueue_style('standard-style');
-  }
-  add_action('wp_enqueue_scripts', 'add_style_css');
+  });
   /** Enqueue JS */
-  function add_scripts_js() {
+  add_action('wp_enqueue_scripts', function() {
     wp_enqueue_script('background-image-lazy-loading', get_template_directory_uri().'/js/background-image-lazy-loading.js', array(), '1.0.0', true);
-  }
-  add_action('wp_enqueue_scripts', 'add_scripts_js');
+  });
   /** Register Menus */
   register_nav_menu('header-menu', 'Header Menu');
   register_nav_menu('footer-menu', 'Footer Menu');
@@ -64,12 +61,11 @@
   get_template_part('fragments/title-big');
   get_template_part('fragments/title-small');
   /** Remove Poems post from Home Query */
-  function remove_poem_from_home_page($query) {
+  add_action('pre_get_posts', function($query) {
     if($query->is_main_query() && $query->is_home()) {
         $query->set('category__not_in', array(5));
     }
-  }
-  add_action('pre_get_posts', 'remove_poem_from_home_page');
+  });
   /** Add theme support for post-thumbnails */
   add_theme_support('post-thumbnails');
   add_image_size('large', 1000, '', true);
