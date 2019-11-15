@@ -38,7 +38,9 @@
     <!-- Blink Settings -->
     <meta name="theme-color" content="#E2000E">
     <!-- Google Podcasts Settings -->
-    <link type="application/rss+xml" rel="alternate" title="169cm.pl" href="http://feeds.soundcloud.com/users/soundcloud:users:618891150/sounds.rss"/>
+    <link type="application/rss+xml" rel="alternate" title="169cm.pl :: Kanał Podcastu" href="http://feeds.soundcloud.com/users/soundcloud:users:618891150/sounds.rss"/>
+    <!-- Posts RSS Feed -->
+    <link type="application/rss+xml" rel="alternate" title="169cm.pl :: Kanał postów" href="<?= bloginfo('rss2_url'); ?>" />
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
