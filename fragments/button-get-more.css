@@ -10,7 +10,7 @@
   font-family: var(--font-family-sans);
   font-weight: bold;
   color: var(--color-base);
-  padding: var(--padding-base-quarter) var(--padding-base-half);
+  padding: var(--padding-button);
   text-transform: uppercase;
   text-decoration: none;
   transition:
