@@ -22,6 +22,8 @@ body {
   --padding-base-double: calc(var(--padding-base) * 2);
   --padding-base-half: calc(var(--padding-base) / 2);
   --padding-base-quarter: calc(var(--padding-base) / 4);
+  --padding-button: 8px 16px;
+  --padding-button-small: 4px 8px;
 
   --font-size-base: 16px;
   --font-size-base-triple: calc(var(--font-size-base) * 3);

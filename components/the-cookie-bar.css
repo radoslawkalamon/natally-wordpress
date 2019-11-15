@@ -9,18 +9,21 @@
   color: var(--color-contra);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  display: none;
   padding: var(--padding-base-quarter);
   box-sizing: border-box;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .cookie-bar--active {
-  display: block;
+  display: flex;
 }
 
 .cookie-bar__text {
   display: inline-block;
   margin: var(--padding-base-quarter);
+  font-size: 0.875em;
 }
 
 .cookie-bar__link {
@@ -39,7 +42,7 @@
   text-transform: uppercase;
   font-family: var(--font-family-sans);
   font-weight: bold;
-  padding: var(--padding-base-quarter) var(--padding-base-half);
+  padding: var(--padding-button-small);
   color: var(--color-white);
   font-size: var(--font-size-base);
   transition: background-color var(--time-animation) ease, color var(--time-animation) ease;
