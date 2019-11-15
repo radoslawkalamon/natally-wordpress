@@ -44,6 +44,7 @@ body {
 
   --tile-color-hover: rgba(226,0,14,0.5);
   --tile-color-wrapper: rgba(0,0,0,0.66);
+  --tile-color-wrapper-lighter: rgba(0,0,0,0.22);
 
   --grid-column-template-tile-small: minmax(240px, 320px);
   --grid-column-template-tile-big: minmax(240px, 480px);
