@@ -35,10 +35,6 @@ remove_action('wp_head', 'wp_resource_hints', 2);
 remove_action('wp_head', 'wp_shortlink_wp_head', 10);
 # Delete: Shortlink from HTTP Header
 remove_action('template_redirect', 'wp_shortlink_header', 11);
-# Delete: Comment from <head>
-remove_action('wp_head', 'feed_links', 2);
-# Delete: Category feed from <head>
-remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
 /** Enqueue CSS */
 add_action('wp_enqueue_scripts', function () {
   wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,700|Source+Sans+Pro:600,700&subset=latin-ext', array(), '1.0', 'all');
@@ -82,17 +78,33 @@ add_action('parse_query', function ($query) {
   }
 });
 add_filter('get_search_form', '__return_false');
+/** Deactive Comments Feeds */
+function disable_comments_feeds() {
+  if (is_single() || is_page()) {
+    wp_redirect(get_permalink(), 301);
+    die();
+  }
+}
+add_action('do_feed',      'disable_comments_feeds', -1);
+add_action('do_feed_rdf',  'disable_comments_feeds', -1);
+add_action('do_feed_rss',  'disable_comments_feeds', -1);
+add_action('do_feed_rss2', 'disable_comments_feeds', -1);
+add_action('do_feed_atom', 'disable_comments_feeds', -1);
+add_action('do_feed_rss2_comments', 'disable_comments_feeds', -1);
+add_action('do_feed_atom_comments', 'disable_comments_feeds', -1);
+add_action('feed_links_show_comments_feed', '__return_false', -1);
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
 /**
  * Load an inline SVG.
  * @param string $filename The filename of the SVG you want to load.
  * @return string The content of the SVG you want to load.
  */
-function load_inline_svg($filename)
-{
+function load_inline_svg($filename) {
   $svg_path = '/images/';
   if (file_exists(get_template_directory() . $svg_path . $filename)) {
-    return file_get_contents(get_template_directory_uri().$svg_path.$filename);
-    // return file_get_contents(get_template_directory_uri() . $svg_path . $filename, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
+    // return file_get_contents(get_template_directory_uri().$svg_path.$filename);
+    return file_get_contents(get_template_directory_uri() . $svg_path . $filename, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
   }
   return '';
 }
