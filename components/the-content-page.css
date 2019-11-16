@@ -4,7 +4,3 @@
   line-height: var(--line-height-content);
   text-indent: var(--text-indent-content);
 }
-
-.content-page a {
-  color: var(--color-red);
-}
