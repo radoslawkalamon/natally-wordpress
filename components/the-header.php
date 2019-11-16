@@ -13,12 +13,12 @@
         'icon' => 'instagram.svg',
         'link' => 'https://instagram.com/169cmpl',
       ],
-      [
-        'alt' => 'Odwiedź mnie na YouTubie',
-        'classname' => 'youtube',
-        'icon' => 'youtube.svg',
-        'link' => 'https://www.youtube.com/channel/UCFraGGi24jvfx9AuvB9Y2Og',
-      ],
+      // [
+      //   'alt' => 'Odwiedź mnie na YouTubie',
+      //   'classname' => 'youtube',
+      //   'icon' => 'youtube.svg',
+      //   'link' => 'https://www.youtube.com/channel/UCFraGGi24jvfx9AuvB9Y2Og',
+      // ],
       [
         'alt' => 'Odwiedź mnie na SoundCloud',
         'classname' => 'soundcloud',
