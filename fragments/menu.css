@@ -48,10 +48,6 @@
   margin-bottom: 0;
 }
 
-.menu--footer-menu a {
-  color: inherit;
-}
-
 @media (min-width: 480px) {
   .menu--footer-menu .menu-item {
     margin-bottom: 0;
