@@ -48,12 +48,12 @@
   </div>  
   <section>
     <?php Fragment_TitleSection('Sprawdź inne'); ?>
-    <?php Component_CarouselPoem($CarouselPoem, true); ?>
+    <?php Component_CarouselPoem($CarouselPoem); ?>
     <?php Fragment_ButtonGetMore(343, 'Więcej Poezji 3.14'); ?>
   </section>
   <section>
     <?php Fragment_TitleSection('Coś dłuższego?'); ?>
-    <?php Component_CarouselPosts($CarouselPosts, true); ?>
+    <?php Component_CarouselPosts($CarouselPosts); ?>
     <?php Fragment_ButtonGetMore(0, 'Więcej opowiadań'); ?>
   </section>
 <?php else: ?>

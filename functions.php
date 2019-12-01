@@ -15,7 +15,6 @@ add_action('wp_print_styles', function () {
 remove_action('wp_head', 'rest_output_link_wp_head', 10);
 remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
 remove_action('template_redirect', 'rest_output_link_header', 11, 0);
-add_filter('rest_enabled', '__return_false');
 add_filter('rest_jsonp_enabled', '__return_false');
 # Delete: WP oEmbed Scripts
 remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
@@ -95,6 +94,18 @@ add_action('do_feed_atom_comments', 'disable_comments_feeds', -1);
 add_action('feed_links_show_comments_feed', '__return_false', -1);
 remove_action('wp_head', 'feed_links', 2);
 remove_action('wp_head', 'feed_links_extra', 3);
+/** Restrict REST API only for authenticated users */
+add_filter('rest_authentication_errors', function($result) {
+  if (!empty($result)) {
+      return $result;
+  }
+  if (!is_user_logged_in()) {
+      return new WP_Error('rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ));
+  }
+  return $result;
+});
+/** Deactive XMLRPC */
+add_filter('xmlrpc_enabled', '__return_false');
 /**
  * Load an inline SVG.
  * @param string $filename The filename of the SVG you want to load.
@@ -103,8 +114,8 @@ remove_action('wp_head', 'feed_links_extra', 3);
 function load_inline_svg($filename) {
   $svg_path = '/images/';
   if (file_exists(get_template_directory() . $svg_path . $filename)) {
-    // return file_get_contents(get_template_directory_uri().$svg_path.$filename);
-    return file_get_contents(get_template_directory_uri() . $svg_path . $filename, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
+    return file_get_contents(get_template_directory().$svg_path.$filename);
+    // return file_get_contents(get_template_directory().$svg_path.$filename, false, stream_context_create(array('ssl' => array('verify_peer' => false, 'verify_peer_name' => false))));
   }
   return '';
 }
