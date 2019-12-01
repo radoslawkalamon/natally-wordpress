@@ -20,8 +20,7 @@
   animation-iteration-count: infinite;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 45px;
   animation-delay: -0.5s;
   z-index: 3;
 }
@@ -71,14 +70,14 @@
 @keyframes post-error-404-fish-animation {
   0% {
     bottom: 25px;
-    transform: translateX(-50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   50% {
     bottom: 35px;
-    transform: translateX(-50%) rotate(10deg);
+    transform: rotate(10deg);
   }
   100% {
     bottom: 25px;
-    transform: translateX(-50%) rotate(0deg);
+    transform: rotate(0deg);
   }
 }
