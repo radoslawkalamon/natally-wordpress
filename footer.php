@@ -9,9 +9,9 @@
         rel='noopener noreferrer'
       >
         <img
-          alt='<?= get_the_author_meta('display_name', 1); ?>'
+          alt='Pieczywo Twarde'
           class='footer__logo'
-          src='<?= get_template_directory_uri(); ?>/images/radoslawkalamon_pl_logo.svg'
+          src='<?= get_template_directory_uri(); ?>/images/pieczywo_twarde_logo.svg'
         />
       </a>
       <?php Fragment_Menu('footer-menu', 'footer-menu'); ?>
