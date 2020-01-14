@@ -3,6 +3,7 @@ const glob = require('glob');
 
 const execludeFiles = [
     'components/*.css',
+    'dev/**',
     'dist/**',
     'fragments/*.css',
     'node_modules/**',
@@ -10,12 +11,10 @@ const execludeFiles = [
     '.git/**',
     '.gitattributes',
     '.gitignore',
-    'create-dist.js',
     'package.json',
     'package-lock.json',
-    'style.js',
 ];
-const distFolderName = 'dist';
+const distFolderName = '../natally';
 
 glob('**/*', {'ignore': execludeFiles}, function (err, dirContentList) {
     if (err) return console.log(err);

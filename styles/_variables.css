@@ -59,13 +59,25 @@ body {
   --embed-soundcloud-padding: var(--height-red-line);
 }
 
+/*
+@media (prefers-color-scheme: dark) {
+  body {
+    --color-contra: #333;
+    --color-base: white;
+    --color-base-lighter: #aaa;
+    --color-base-transparent: rgba(255, 255, 255, 0.8);
+  }
+}
+*/
+
+/*
 body.dark-theme {
   --color-contra: #333;
   --color-base: white;
   --color-base-lighter: #aaa;
   --color-base-transparent: rgba(255, 255, 255, 0.8);
-  --tile-color-wrapper: rgba(255, 255, 255, 0.75);
 }
+*/
 
 @media (min-width: 960px) {
   body {

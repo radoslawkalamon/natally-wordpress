@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-style": "node style.js",
-    "build-dist": "node create-dist.js",
+    "build-style": "node ./dev/style.js",
+    "build-dist": "node ./dev/create-dist.js",
     "build": "npm run build-style && npm run build-dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/radoslawkuswik/natally-wordpress#readme",
   "devDependencies": {
+    "chokidar": "^3.3.1",
     "fs-extra": "^8.1.0",
     "glob": "^7.1.6",
     "postcss": "^7.0.17",
