@@ -1,34 +1,30 @@
-const fs   = require('fs-extra');
+// Modules
+const fs = require('fs-extra');
 const glob = require('glob');
+// Globals
+const globals = require('./globals.js');
+// Variables
+const scriptFilename = __filename.split('\\').pop();
 
-const execludeFiles = [
-    'components/*.css',
-    'dev/**',
-    'dist/**',
-    'fragments/*.css',
-    'node_modules/**',
-    'styles/**',
-    '.git/**',
-    '.gitattributes',
-    '.gitignore',
-    'package.json',
-    'package-lock.json',
-];
-const distFolderName = '../natally';
+glob(globals.globs.allFiles, { 'ignore': globals.devFilesArray }, function (error, dirContentList) {
+  if (error) {
+    console.error(globals.consoleString(scriptFilename, `Glob setting failed!`));
+    console.error(error);
+    return;
+  };
 
-glob('**/*', {'ignore': execludeFiles}, function (err, dirContentList) {
-    if (err) return console.log(err);
+  const dirContentFilesOnlyList = dirContentList.filter((dirContentItem) => {
+    return fs.lstatSync(dirContentItem).isDirectory() === false;
+  });
 
-    const dirContentFilesOnlyList = dirContentList.filter((dirContentItem) => {
-        return fs.lstatSync(dirContentItem).isDirectory() === false;
-    });
-
-    dirContentFilesOnlyList.forEach(file => {
-        try {
-            fs.copySync(file, `${distFolderName}/${file}`);
-            console.log(`File ${file} copied successfully!`);
-        } catch (error) {
-            throw error;
-        }
-    });
+  dirContentFilesOnlyList.forEach(file => {
+    try {
+      fs.copySync(file, `${globals.distFolder}/${file}`);
+      console.log(globals.consoleString(scriptFilename, `File ${file} copying completed!`));
+    } catch (errorForEach) {
+      console.error(globals.consoleString(scriptFilename, `File ${file} copying failed!`));
+      console.error(errorForEach);
+      return;
+    }
+  });
 });
