@@ -121,3 +121,5 @@ function load_inline_svg($filename) {
   }
   return '';
 }
+/** Remove SearchAction from Yoast SEO JSON */
+add_filter('disable_wpseo_json_ld_search', '__return_true');
