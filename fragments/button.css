@@ -1,6 +1,6 @@
 .button {
   text-align: center;
-  margin: var(--padding-base-half) 0;
+  margin: var(--padding-base) 0;
 }
 
 .button__link {
