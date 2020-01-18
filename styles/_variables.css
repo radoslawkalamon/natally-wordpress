@@ -36,7 +36,7 @@ body {
   --width-red-line-double: calc(var(--width-red-line) * 2);
 
   --border-button: 3px solid var(--color-red);
-  --border-radius-button: 8px;
+  --border-radius-button: 0;
 
   --time-animation: 0.33s;
 
@@ -53,7 +53,7 @@ body {
   --grid-gap: 16px;
 
   --audiobook-batch-size: 32px;
-  --audiobook-batch-position: 8px;
+  --audiobook-batch-position: 16px;
   --audiobook-batch-image-size: 20px;
 
   --embed-soundcloud-padding: var(--height-red-line);

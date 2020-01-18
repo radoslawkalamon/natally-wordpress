@@ -3,7 +3,7 @@
   font-family: var(--font-family-sans);
   font-weight: bold;
   text-transform: uppercase;
-  margin: var(--padding-base-double) var(--padding-base-half) var(--padding-base-half);
+  margin: var(--padding-base-double) var(--padding-base-half) var(--padding-base);
   line-height: 1em;
   text-align: center;
 }
