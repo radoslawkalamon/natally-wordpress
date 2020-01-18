@@ -36,6 +36,11 @@
     ]); ?>
     <?php Component_TheContentPoem($TheContent); ?>
   </article>
+  <section class='post-single__poem-more-info' data-poem-more-info=''>
+    <?php Fragment_TitleSection('Pierwszy raz?'); ?>
+    <?php Fragment_Text('Chcesz dowiedzieć się więcej o Poezji&nbsp;3.14?'); ?>
+    <?php Fragment_Button(343, 'Tak, z przyjemnością!'); ?>
+  </section>
   <div class='post-single__meta'>
     <section>
       <?php Fragment_TitleSection($MetaShareTitle); ?>
@@ -72,7 +77,8 @@
   </article>
   <section>
     <?php Fragment_TitleSection('Podobało się?'); ?>
-    <?php Fragment_Button('https://www.facebook.com/169cmpl', 'Polub fanpage na Facebooku!'); ?>
+    <?php Fragment_Text('Chcesz otrzymywać informacje o nowych tekstach na blogu?'); ?>
+    <?php Fragment_Button('https://www.facebook.com/169cmpl', 'Polub fanpage na Facebooku'); ?>
   </section>
   <div class='post-single__meta'>
     <section>

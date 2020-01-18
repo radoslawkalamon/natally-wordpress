@@ -9,3 +9,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.post-single__poem-more-info {
+  display: none;
+}
+
+.post-single__poem-more-info--active {
+  display: block;
+}

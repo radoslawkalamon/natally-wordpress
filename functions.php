@@ -44,6 +44,7 @@ add_action('wp_enqueue_scripts', function () {
 /** Enqueue JS */
 add_action('wp_enqueue_scripts', function () {
   wp_enqueue_script('background-image-lazy-loading', get_template_directory_uri() . '/js/background-image-lazy-loading.js', array(), '1.0.0', true);
+  wp_enqueue_script('poem-more-info', get_template_directory_uri() . '/js/poem-more-info.js', array(), '1.0.0', true);
 });
 /** Register Menus */
 register_nav_menu('header-menu', 'Header Menu');
@@ -52,6 +53,7 @@ register_nav_menu('footer-menu', 'Footer Menu');
 get_template_part('fragments/button');
 get_template_part('fragments/list-link-icon');
 get_template_part('fragments/menu');
+get_template_part('fragments/text');
 get_template_part('fragments/tile-big');
 get_template_part('fragments/tile-small');
 get_template_part('fragments/title-section');
