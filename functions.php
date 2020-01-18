@@ -123,3 +123,8 @@ function load_inline_svg($filename) {
 }
 /** Remove SearchAction from Yoast SEO JSON */
 add_filter('disable_wpseo_json_ld_search', '__return_true');
+/** Minify HTML */
+get_template_part('WP_HTML_Compression');
+add_action('get_header', function() {
+  ob_start(function($html) { return new WP_HTML_Compression($html); });
+});
