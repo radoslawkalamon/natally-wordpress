@@ -13,7 +13,7 @@ const watcherMoveOnChange = chokidar.watch(globals.globs.allFiles, {
 watcherMoveOnChange
     .on('ready', () => console.log(globals.consoleString(scriptFilename, 'Initial scanning completed! (MoveOnChange)')))
     .on('change', path => {
-        fs.copySync(path, `${globals.distFolder}/${path}`);
+        fs.copySync(path, `${globals.watcherFolder}/${path}`);
         console.log(globals.consoleString(scriptFilename, `File ${path} copying completed!`));
     });
 
