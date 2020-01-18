@@ -49,7 +49,7 @@ add_action('wp_enqueue_scripts', function () {
 register_nav_menu('header-menu', 'Header Menu');
 register_nav_menu('footer-menu', 'Footer Menu');
 /** Initialize Fragments */
-get_template_part('fragments/button-get-more');
+get_template_part('fragments/button');
 get_template_part('fragments/list-link-icon');
 get_template_part('fragments/menu');
 get_template_part('fragments/tile-big');

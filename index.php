@@ -27,6 +27,6 @@
 <section>
   <?php Fragment_TitleSection('Poezja 3.14'); ?>
   <?php Component_CarouselPoem($CarouselPoem); ?>
-  <?php Fragment_ButtonGetMore(343, 'Więcej Poezji 3.14'); ?>
+  <?php Fragment_Button(343, 'Więcej Poezji 3.14'); ?>
 </section>
 <?php get_footer(); ?>

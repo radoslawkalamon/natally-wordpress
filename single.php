@@ -49,12 +49,12 @@
   <section>
     <?php Fragment_TitleSection('Sprawdź inne'); ?>
     <?php Component_CarouselPoem($CarouselPoem); ?>
-    <?php Fragment_ButtonGetMore(343, 'Więcej Poezji 3.14'); ?>
+    <?php Fragment_Button(343, 'Więcej Poezji 3.14'); ?>
   </section>
   <section>
     <?php Fragment_TitleSection('Coś dłuższego?'); ?>
     <?php Component_CarouselPosts($CarouselPosts); ?>
-    <?php Fragment_ButtonGetMore(0, 'Więcej opowiadań'); ?>
+    <?php Fragment_Button(0, 'Więcej opowiadań'); ?>
   </section>
 <?php else: ?>
   <?php Component_TheProgressBar(); ?>
@@ -70,6 +70,10 @@
     <?php Component_SoundcloudEmbed($SoundcloudEmbed); ?>
     <?php Component_TheContentPost($TheContent) ?>
   </article>
+  <section>
+    <?php Fragment_TitleSection('Podobało się?'); ?>
+    <?php Fragment_Button('https://www.facebook.com/169cmpl', 'Polub fanpage na Facebooku!'); ?>
+  </section>
   <div class='post-single__meta'>
     <section>
       <?php Fragment_TitleSection($MetaShareTitle); ?>
@@ -79,16 +83,16 @@
       <?php Fragment_TitleSection($MetaCommentTitle); ?>
       <?php Component_MetaComment($MetaCommentFacebookPost); ?>
     </section>
-  </div> 
+  </div>
   <section>
     <?php Fragment_TitleSection('Sprawdź inne'); ?>
     <?php Component_CarouselPosts($CarouselPosts); ?>
-    <?php Fragment_ButtonGetMore(0, 'Więcej opowiadań'); ?>
+    <?php Fragment_Button(0, 'Więcej opowiadań'); ?>
   </section>
   <section>
     <?php Fragment_TitleSection('Coś krótszego?'); ?>
     <?php Component_CarouselPoem($CarouselPoem); ?>
-    <?php Fragment_ButtonGetMore(343, 'Więcej Poezji 3.14'); ?>
+    <?php Fragment_Button(343, 'Więcej Poezji 3.14'); ?>
   </section>
 <?php endif; ?>
 <?php get_footer(); ?>
