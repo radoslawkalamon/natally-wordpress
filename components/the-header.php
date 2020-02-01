@@ -11,14 +11,14 @@
         'alt' => 'Odwiedź mnie na Instagramie',
         'classname' => 'instagram',
         'icon' => 'instagram.svg',
-        'link' => 'https://instagram.com/169cmpl',
+        'link' => 'https://instagram.com/radoslawkalamon',
       ],
-      // [
-      //   'alt' => 'Odwiedź mnie na YouTubie',
-      //   'classname' => 'youtube',
-      //   'icon' => 'youtube.svg',
-      //   'link' => 'https://www.youtube.com/channel/UCFraGGi24jvfx9AuvB9Y2Og',
-      // ],
+      [
+        'alt' => 'Odwiedź mnie na Twitterze',
+        'classname' => 'twitter',
+        'icon' => 'twitter.svg',
+        'link' => 'https://twitter.com/radoslawkalamon',
+      ],
       [
         'alt' => 'Odwiedź mnie na SoundCloud',
         'classname' => 'soundcloud',

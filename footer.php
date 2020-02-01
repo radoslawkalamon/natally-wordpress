@@ -10,6 +10,7 @@
       >
         <img
           alt='Pieczywo Twarde'
+          title='Pieczywo Twarde'
           class='footer__logo'
           src='<?= get_template_directory_uri(); ?>/images/pieczywo_twarde_logo.svg'
         />

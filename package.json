@@ -1,13 +1,13 @@
 {
   "name": "natally",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "build-style": "node ./dev/style.js",
     "build-dist": "node ./dev/create-dist.js",
     "build": "npm run build-style && npm run build-dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "node ./dev/watch.js",
   },
   "repository": {
     "type": "git",
