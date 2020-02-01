@@ -15,7 +15,8 @@
     ]); ?>
     <li class='<?= $elementClassNames; ?>'>
       <a
-        aria-label="<?= $element['alt']; ?>"
+        aria-label='<?= $element['alt']; ?>'
+        title='<?= $element['alt']; ?>'
         class='list-link-icon__link'
         <?= isset($element['hook']) ? $element['hook'] : ''; ?>
         href='<?= $element['link']; ?>'
