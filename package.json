@@ -7,7 +7,7 @@
     "build-style": "node ./dev/style.js",
     "build-dist": "node ./dev/create-dist.js",
     "build": "npm run build-style && npm run build-dist",
-    "watch": "node ./dev/watch.js",
+    "watch": "node ./dev/watch.js"
   },
   "repository": {
     "type": "git",
