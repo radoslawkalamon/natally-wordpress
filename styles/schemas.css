@@ -1,0 +1,45 @@
+@media (prefers-color-scheme: light) {
+  body {
+    --color-contra: var(--color-white);
+    --color-contra-transparent: var(--color-white-transparent);
+    --color-base: var(--color-black);
+    --color-base-transparent: var(--color-gray-transparent-1);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --color-contra: var(--color-gray);
+    --color-contra-transparent: var(--color-gray-transparent-1);
+    --color-base: var(--color-white);
+    --color-base-transparent: var(--color-white-transparent);
+  }
+}
+
+body[data-color-schema='light'] {
+  --color-contra: var(--color-white);
+  --color-contra-transparent: var(--color-white-transparent);
+  --color-base: var(--color-black);
+  --color-base-transparent: var(--color-gray-transparent-1);
+}
+
+body[data-color-schema='dark'] {
+  --color-contra: var(--color-gray);
+  --color-contra-transparent: var(--color-gray-transparent-1);
+  --color-base: var(--color-white);
+  --color-base-transparent: var(--color-white-transparent);
+}
+
+body[data-color-schema='sepia'] {
+  --color-contra: var(--color-sepia);
+  --color-contra-transparent: var(--color-sepia-transparent);
+  --color-base: var(--color-gray);
+  --color-base-transparent: var(--color-gray-transparent-1);
+}
+
+body[data-color-schema='gray'] {
+  --color-contra: var(--color-light-gray);
+  --color-contra-transparent: var(--color-light-gray-transparent);
+  --color-base: var(--color-gray);
+  --color-base-transparent: var(--color-gray-transparent-1);
+}

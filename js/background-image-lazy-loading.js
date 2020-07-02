@@ -1,28 +1,33 @@
 (() => {
+  'use strict';
   const attrLazyLoading = 'data-background-lazy-loading';
-  const arrayElements = document.querySelectorAll(`[${attrLazyLoading}]`);
+  const elements = document.querySelectorAll(`[${attrLazyLoading}]`);
   const loadBackgroundImage = (element) => {
     let URLThumbnail = element.getAttribute(attrLazyLoading);
     element.style.backgroundImage = `url(${URLThumbnail})`;
+    element.removeAttribute(attrLazyLoading);
   };
 
   if (('IntersectionObserver' in window) === true) {
-    const callbackObserver = (entries) => { 
+    const callbackObserver = (entries, observer) => { 
       entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
+        if (entry.isIntersecting) {
           loadBackgroundImage(entry.target);
+          observer.unobserve(entry.target);
         }
       });
     };
     const configObserver = {
-      threshold: 0.01,
+      root: null,
+      margin: '0px 0px 0px 0px',
+      threshold: 0,
     };
     const observer = new IntersectionObserver(callbackObserver, configObserver);
-    arrayElements.forEach((element) => {
+    elements.forEach((element) => {
       observer.observe(element);
     });
   } else {
-    arrayElements.forEach(element => {
+    elements.forEach(element => {
       loadBackgroundImage(element);
     });
   }

@@ -2,39 +2,41 @@
 Theme Name: Natally
 Author: Radosław Kalamon
 Author URI: https://radoslawkalamon.pl
-Version: 1.5
+Version: 2.0
 License: All Right Reserved
 License URI: https://radoslawkalamon.pl
 Description: 169cm.pl Natally Theme
 */
 
 @import url('styles/_variables.css');
+@import url('styles/schemas.css');
+@import url('styles/layout.css');
 @import url('styles/body.css');
-@import url('styles/header.css');
-@import url('styles/index.css');
-@import url('styles/single.css');
-@import url('styles/page.css');
-@import url('styles/footer.css');
-@import url('styles/404.css');
 
-@import url('fragments/button.css');
-@import url('fragments/list-link-icon.css');
-@import url('fragments/menu.css');
-@import url('fragments/text.css');
-@import url('fragments/tile-big.css');
-@import url('fragments/tile-small.css');
-@import url('fragments/title-big.css');
-@import url('fragments/title-section.css');
-@import url('fragments/title-small.css');
+@import url('fragments/button/button.css');
+@import url('fragments/menu/menu.css');
+@import url('fragments/plain-text/plain-text.css');
+@import url('fragments/tile-poem/tile-poem.css');
+@import url('fragments/tile-post/tile-post.css');
+@import url('fragments/link-icons/link-icons.css');
+@import url('fragments/title/title.css');
 
-@import url('components/carousel-poem.css');
-@import url('components/carousel-posts.css');
-@import url('components/meta-comment.css');
-@import url('components/meta-share.css');
-@import url('components/soundcloud-embed.css');
-@import url('components/the-content-page.css');
-@import url('components/the-content-poem.css');
-@import url('components/the-content-post.css');
-@import url('components/the-cookie-bar.css');
-@import url('components/the-header.css');
-@import url('components/the-progress-bar.css');
+@import url('components/list-poem/list-poem.css');
+@import url('components/list-post/list-post.css');
+@import url('components/section/section.css');
+@import url('components/social-media-comment/social-media-comment.css');
+@import url('components/social-media-share/social-media-share.css');
+@import url('components/drawer/drawer.css');
+@import url('components/drawer-button/drawer-button.css');
+
+@import url('blocks/content/content.css');
+@import url('blocks/cookie-bar/cookie-bar.css');
+@import url('blocks/header/header.css');
+@import url('blocks/progress-bar/progress-bar.css');
+@import url('blocks/footer/footer.css');
+@import url('blocks/meta/meta.css');
+@import url('blocks/cover-image/cover-image.css');
+@import url('blocks/audiobook/audiobook.css');
+@import url('blocks/404/404.css');
+@import url('blocks/drawer-menu/drawer-menu.css');
+@import url('blocks/drawer-settings/drawer-settings.css');

@@ -1,16 +1,15 @@
-<?php get_template_part('components/the-header'); ?>
 <?php $urlFavicon = get_template_directory_uri()."/images/icons/"; ?>
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57058519-3"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57058519-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-57058519-3');
-    </script>
+    </script> -->
     <meta charset="<?php bloginfo('charset'); ?>" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,5 +29,8 @@
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
-    <?php Component_TheHeader(); ?>
-    <main class='body-wrapper'>
+    <script src="<?= get_template_directory_uri(); ?>/blocks/drawer-settings/drawer-settings-body-attachment.js"></script>
+    <div class='body-wrapper'>
+      <?php Block_Header(); ?>
+      <?php Block_DrawerMenu(); ?>
+      <?php Block_DrawerSettings(); 

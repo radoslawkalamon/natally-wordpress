@@ -1,0 +1,47 @@
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  width: 100%;
+  padding: var(--gap-size-2);
+  background-color: var(--color-contra);
+  display: none;
+  grid-template-columns: auto max-content;
+  grid-gap: var(--gap-size-2);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+@supports (backdrop-filter: var(--backdrop-filter-blur)) {
+  .cookie-bar {
+    background-color: var(--color-contra-transparent);
+    backdrop-filter: var(--backdrop-filter-blur);
+  }
+}
+
+.cookie-bar--active {
+  display: grid;
+}
+
+.cookie-bar a {
+  color: var(--color-base);
+  transition: color var(--time-animation) ease;
+}
+
+.cookie-bar a:hover {
+  color: var(--color-red);
+}
+
+.cookie-bar__text,
+.cookie-bar__button {
+  font-size: var(--font-size-footnotes);
+}
+
+@media (min-width: 768px) {
+  .cookie-bar__text,
+  .cookie-bar__button {
+    font-size: var(--font-size-base);
+  }
+}

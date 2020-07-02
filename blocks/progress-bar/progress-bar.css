@@ -1,0 +1,10 @@
+.progress-bar {
+  width: 0%;
+  position: fixed;
+  height: var(--height-line);
+  top: var(--height-header);
+  left: 0;
+  z-index: 5;
+  background-color: var(--color-red);
+  transition: width var(--time-animation) linear;
+}

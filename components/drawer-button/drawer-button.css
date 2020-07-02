@@ -1,0 +1,65 @@
+.drawer-button {
+  appearance: none;
+  padding: 0;
+  height: var(--height-header);
+  width: var(--height-header);
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background-color var(--time-animation) ease;
+}
+
+.drawer-button svg {
+  transition: fill var(--time-animation) ease;
+  height: 24px;
+  width: 24px;
+  display: block;
+  fill: var(--color-base);
+}
+
+.drawer-button:hover,       
+.drawer-button--active {
+  background-color: var(--color-red);
+}
+
+.drawer-button:hover svg,
+.drawer-button--active svg {
+  fill: var(--color-white);
+}
+
+/** var(--max-width-body) + 3 * var(--height-header) */
+@media (min-width: 1024px) {
+  .drawer-button {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+  }
+
+  .drawer-button[data-drawer-button='left'] {
+    left: 0;
+    transition:
+      background-color var(--time-animation) ease,
+      left var(--time-animation) ease;
+  }
+
+  .drawer-button--active[data-drawer-button='left'] {
+    left: var(--width-drawer);
+  }
+
+  .drawer-button[data-drawer-button='right'] {
+    right: 0;
+    transition:
+      background-color var(--time-animation) ease,
+      right var(--time-animation) ease;
+  }
+
+  .drawer-button--active[data-drawer-button='right'] {
+    right: var(--width-drawer);
+  }
+}
