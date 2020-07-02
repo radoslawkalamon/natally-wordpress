@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  border: var(--border-button);
+  font-family: var(--font-family-sans);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  background-color: var(--color-contra);
+  color: var(--color-base);
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: var(--padding-size-1) var(--padding-size-2);
+  border-radius: 0;
+  transition:
+    background-color var(--time-animation) ease,
+    color var(--time-animation) ease;
+}
+
+.button--invert {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.button:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.button--invert:hover {
+  background-color: transparent;
+  color: var(--color-base);
+}

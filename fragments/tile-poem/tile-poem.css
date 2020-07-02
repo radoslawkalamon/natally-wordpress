@@ -1,0 +1,78 @@
+.tile-poem {
+  color: var(--color-white);
+  font-family: var(--font-family-sans);
+  text-transform: uppercase;
+  position: relative;
+  width: 100%;
+  background-size: 50%;
+  background-position: center;
+}
+
+.tile-poem::before {
+  content: '';
+  padding-top: 100%;
+  display: block;
+}
+
+.tile-poem__content {
+  text-decoration: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-align: center;
+  box-sizing: border-box;
+  padding: var(--padding-size-2);
+  background-color: var(--color-gray-transparent-2);
+  transition: background-color var(--time-animation) ease;
+}
+
+.tile-poem__content::before {
+  content: '';
+  display: block;
+  width: var(--width-red-line);
+  margin: 0;
+  background-color: var(--color-red);
+  height: var(--height-line);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 2;
+}
+
+.tile-poem__content:hover {
+  background-color: var(--color-red-transparent);
+  color: var(--color-white);
+}
+
+.tile-poem__header {
+  display: flex;
+  align-items: flex-end;
+  height: 50%;
+  box-sizing: border-box;
+  padding-bottom: var(--padding-size-2);
+}
+
+.tile-poem__title {
+  font-size: var(--font-size-h2);
+  margin: 0;
+  line-height: 1;
+  width: 100%;
+}
+
+.tile-poem__meta {
+  font-weight: bold;
+  height: 50%;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-top: var(--padding-size-2);
+}
+
+.tile-poem__date {
+  width: 100%;
+}

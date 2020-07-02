@@ -1,0 +1,18 @@
+.list-poem {
+  display: grid;
+  grid-gap: var(--gap-size-2);
+  grid-template-columns: repeat(1, minmax(240px, 320px));
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .list-poem {
+    grid-template-columns: repeat(2, minmax(240px, 320px));
+  }
+}
+
+@media (min-width: 1024px) {
+  .list-poem {
+    grid-template-columns: repeat(3, minmax(240px, 320px));
+  }
+}

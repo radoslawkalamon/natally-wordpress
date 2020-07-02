@@ -6,7 +6,17 @@ body {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-base);
   color: var(--color-base);
-  margin: 0;
-  padding: 0;
   background-color: var(--color-contra);
+  margin: calc(var(--height-header) + var(--height-line) + var(--gap-size-1)) var(--gap-size-2) var(--gap-size-2);
+  padding: 0;
+}
+
+.body-wrapper {
+  max-width: var(--max-width-body);
+  margin: 0 auto;
+  display: grid;
+  grid-gap: var(--gap-size-2);
+  grid-template-areas:
+    'main'
+    'footer';
 }

@@ -1,9 +1,10 @@
 module.exports = {
     devFilesArray: [
-        'components/*.css',
+        'fragments/**/*.css',
+        'components/**/*.css',
+        'blocks/**/*.css',
         'dev/**',
         'dist/**',
-        'fragments/*.css',
         'node_modules/**',
         'styles/**',
         '.git/**',

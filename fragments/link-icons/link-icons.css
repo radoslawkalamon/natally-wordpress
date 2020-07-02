@@ -1,0 +1,45 @@
+.link-icons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-icons__item {
+  margin: 0 var(--padding-size-1);
+}
+
+.link-icons__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-icons__link svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+  fill: var(--color-base);
+  transition: fill var(--time-animation) ease;
+}
+
+.link-icons__link svg:hover {
+  fill: var(--color-red);
+}
+
+.link-icons--social-media .link-icons__link svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  .link-icons--social-media {
+    justify-content: flex-end;
+  }
+
+  .link-icons--social-media .link-icons__item:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,4 +1,1 @@
-<?php 
-
-wp_redirect(home_url(), 301);
-die();
+<?php wp_redirect(home_url(), 301); die();

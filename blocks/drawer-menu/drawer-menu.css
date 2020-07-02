@@ -1,0 +1,28 @@
+.drawer-menu {
+  width: 100%;
+}
+
+.drawer-menu a {
+  color: var(--color-base);
+  transition: color var(--time-animation) ease;
+  font-family: var(--font-family-sans);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.drawer-menu a:hover {
+  color: var(--color-red);
+}
+
+.menu--header {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: var(--padding-size-2);
+}
+
+@media (min-width: 1024px) {
+  .drawer-menu {
+    text-align: right;
+  }
+}
