@@ -8,13 +8,6 @@
   width: 100%;
 }
 
-@supports (backdrop-filter: var(--backdrop-filter-blur)) {
-  .header {
-    background-color: var(--color-contra-transparent);
-    backdrop-filter: var(--backdrop-filter-blur);
-  }
-}
-
 .header__inner {
   display: grid;
   grid-template-columns: var(--height-header) auto var(--height-header);

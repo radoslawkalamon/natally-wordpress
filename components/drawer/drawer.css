@@ -10,13 +10,6 @@
   align-items: flex-start;
 }
 
-@supports (backdrop-filter: var(--backdrop-filter-blur)) {
-  .drawer {
-    background-color: var(--color-contra-transparent);
-    backdrop-filter: var(--backdrop-filter-blur);
-  }
-}
-
 .drawer[data-drawer='left'] {
   transition: left var(--time-animation) ease;
   left: var(--position-drawer);

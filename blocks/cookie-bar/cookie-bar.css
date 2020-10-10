@@ -14,13 +14,6 @@
   justify-content: center;
 }
 
-@supports (backdrop-filter: var(--backdrop-filter-blur)) {
-  .cookie-bar {
-    background-color: var(--color-contra-transparent);
-    backdrop-filter: var(--backdrop-filter-blur);
-  }
-}
-
 .cookie-bar--active {
   display: grid;
 }

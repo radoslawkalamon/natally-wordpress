@@ -48,8 +48,6 @@ body {
   --border-button: 2px solid var(--color-red);
 
   --time-animation: 0.33s;
-
-  --backdrop-filter-blur: blur(5px);
 }
 
 @media (min-width: 768px) {
