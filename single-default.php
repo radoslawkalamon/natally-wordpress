@@ -58,7 +58,7 @@
       [],
       [
         'tag' => 'aside',
-        'title' => 'Coś krótszego?',
+        'title' => 'Poezja 3.14',
         'buttonLabel' => 'Więcej Poezji 3.14',
         'buttonHref' => 343
       ],

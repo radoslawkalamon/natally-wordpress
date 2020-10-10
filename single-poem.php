@@ -43,7 +43,7 @@
       [],
       [
         'tag' => 'aside',
-        'title' => 'Coś dłuższego?',
+        'title' => 'Opowiadania',
         'buttonLabel' => 'Więcej opowiadań',
         'buttonHref' => 0
       ],
