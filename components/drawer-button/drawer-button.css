@@ -20,7 +20,7 @@
   height: 24px;
   width: 24px;
   display: block;
-  fill: var(--color-base);
+  fill: var(--color-base-1);
 }
 
 .drawer-button:hover,       
@@ -33,33 +33,25 @@
   fill: var(--color-white);
 }
 
-/** var(--max-width-body) + 3 * var(--height-header) */
-@media (min-width: 1024px) {
-  .drawer-button {
-    height: 100vh;
-    position: fixed;
-    top: 0;
+.drawer-button--sidebar {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .drawer-button--sidebar {
+    display: flex;
+    grid-area: button-settings;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
   }
 
-  .drawer-button[data-drawer-button='left'] {
-    left: 0;
-    transition:
-      background-color var(--time-animation) ease,
-      left var(--time-animation) ease;
+  .drawer-button--sidebar:hover {
+    background-color: transparent;
   }
 
-  .drawer-button--active[data-drawer-button='left'] {
-    left: var(--width-drawer);
-  }
-
-  .drawer-button[data-drawer-button='right'] {
-    right: 0;
-    transition:
-      background-color var(--time-animation) ease,
-      right var(--time-animation) ease;
-  }
-
-  .drawer-button--active[data-drawer-button='right'] {
-    right: var(--width-drawer);
+  .drawer-button--sidebar.drawer-button--active svg,
+  .drawer-button--sidebar:hover svg {
+    fill: var(--color-red);
   }
 }

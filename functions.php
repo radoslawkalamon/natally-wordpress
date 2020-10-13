@@ -36,8 +36,8 @@ remove_action('wp_head', 'wp_shortlink_wp_head', 10);
 remove_action('template_redirect', 'wp_shortlink_header', 11);
 /** Enqueue CSS */
 add_action('wp_enqueue_scripts', function () {
-  wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '2.0', 'all');
-  wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,700|Source+Sans+Pro:600,700&subset=latin-ext&display=swap', array(), '2.0', 'all');
+  wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '2.1', 'all');
+  wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,700|Source+Sans+Pro:600,700&subset=latin-ext&display=swap', array(), '2.1', 'all');
   wp_enqueue_style('standard-style');
   wp_enqueue_style('google-fonts');
 });
@@ -58,12 +58,12 @@ get_template_part('fragments/tile-poem/tile-poem');
 get_template_part('fragments/tile-post/tile-post');
 get_template_part('fragments/link-icons/link-icons');
 get_template_part('fragments/title/title');
+get_template_part('fragments/logo/logo');
 /** Initialize Components */
 get_template_part('components/list-poem/list-poem');
 get_template_part('components/list-post/list-post');
 get_template_part('components/section/section');
-get_template_part('components/social-media-comment/social-media-comment');
-get_template_part('components/social-media-share/social-media-share');
+get_template_part('components/social-media/social-media');
 get_template_part('components/drawer/drawer');
 get_template_part('components/drawer-button/drawer-button');
 /** Initialize Blocks */
@@ -76,7 +76,7 @@ get_template_part('blocks/meta/meta');
 get_template_part('blocks/cover-image/cover-image');
 get_template_part('blocks/audiobook/audiobook');
 get_template_part('blocks/404/404');
-get_template_part('blocks/drawer-menu/drawer-menu');
+get_template_part('blocks/drawer-sidebar/drawer-sidebar');
 get_template_part('blocks/drawer-settings/drawer-settings');
 /** Remove Poems post from Home Query */
 add_action('pre_get_posts', function ($query) {

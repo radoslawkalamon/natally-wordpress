@@ -7,8 +7,7 @@
 
 .color-schema-list {
   display: grid;
-  grid-gap: var(--gap-size-2) 0;
-  justify-content: space-between;
+  grid-gap: var(--gap-size-2);
   grid-template-columns: repeat(3, 48px);
 }
 
@@ -29,9 +28,13 @@
   margin: 0;
 }
 
+.color-schema-list__radio:hover {
+  border: 2px solid var(--color-red-transparent);
+}
+
 .color-schema-list__radio:focus,
 .color-schema-list__radio:active {
-  border: 2px dotted var(--color-red);
+  border: 2px solid var(--color-red-transparent);
   outline: 0;
 }
 

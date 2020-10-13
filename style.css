@@ -2,7 +2,7 @@
 Theme Name: Natally
 Author: Radosław Kalamon
 Author URI: https://radoslawkalamon.pl
-Version: 2.0
+Version: 2.1
 License: All Right Reserved
 License URI: https://radoslawkalamon.pl
 Description: 169cm.pl Natally Theme
@@ -20,12 +20,11 @@ Description: 169cm.pl Natally Theme
 @import url('fragments/tile-post/tile-post.css');
 @import url('fragments/link-icons/link-icons.css');
 @import url('fragments/title/title.css');
+@import url('fragments/logo/logo.css');
 
 @import url('components/list-poem/list-poem.css');
 @import url('components/list-post/list-post.css');
 @import url('components/section/section.css');
-@import url('components/social-media-comment/social-media-comment.css');
-@import url('components/social-media-share/social-media-share.css');
 @import url('components/drawer/drawer.css');
 @import url('components/drawer-button/drawer-button.css');
 
@@ -38,5 +37,5 @@ Description: 169cm.pl Natally Theme
 @import url('blocks/cover-image/cover-image.css');
 @import url('blocks/audiobook/audiobook.css');
 @import url('blocks/404/404.css');
-@import url('blocks/drawer-menu/drawer-menu.css');
+@import url('blocks/drawer-sidebar/drawer-sidebar.css');
 @import url('blocks/drawer-settings/drawer-settings.css');

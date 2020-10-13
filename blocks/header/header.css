@@ -4,15 +4,8 @@
   left: 0;
   z-index: 15;
   height: var(--height-header);
-  background-color: var(--color-contra);
+  background-color: var(--color-contra-2);
   width: 100%;
-}
-
-@supports (backdrop-filter: var(--backdrop-filter-blur)) {
-  .header {
-    background-color: var(--color-contra-transparent);
-    backdrop-filter: var(--backdrop-filter-blur);
-  }
 }
 
 .header__inner {
@@ -23,19 +16,10 @@
 .header__logo {
   margin: 0 auto;
   max-width: var(--max-width-body);
-  box-sizing: border-box;
-  text-align: center;
-  font-size: 0;
 }
 
-.header__logo svg {
-  height: 32px;
-  width: auto;
-  display: block;
-  margin: var(--padding-size-1) 0;
-  fill: var(--color-base);
-}
-
-.header__link {
-  display: inline-block;
+@media (min-width: 1200px) {
+  .header {
+    display: none;
+  }
 }

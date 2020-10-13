@@ -48,7 +48,6 @@
 
 .tile-post__content {
   background-color: var(--color-gray-transparent-1);
-  backdrop-filter: var(--backdrop-filter-blur);
   padding: var(--padding-size-2);
   display: grid;
   grid-template-columns: 1fr;

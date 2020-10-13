@@ -4,7 +4,13 @@
   height: var(--height-line);
   top: var(--height-header);
   left: 0;
-  z-index: 5;
+  z-index: 10;
   background-color: var(--color-red);
   transition: width var(--time-animation) linear;
+}
+
+@media (min-width: 1200px) {
+  .progress-bar {
+    top: 0;
+  }
 }

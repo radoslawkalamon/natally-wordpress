@@ -5,11 +5,8 @@ body {
   --color-sepia: #f9f5e9;
   --color-light-gray: #e6e6e6;
   --color-red: #e2000e;
-  --color-white-transparent: rgba(255, 255, 255, 0.8);
   --color-gray-transparent-1: rgba(34, 34, 34, 0.8);
   --color-gray-transparent-2: rgba(34, 34, 34, 0.2);
-  --color-sepia-transparent: rgba(249, 245, 233, 0.8);
-  --color-light-gray-transparent: rgba(230, 230, 230, 0.8);
   --color-red-transparent: rgba(226, 0, 14, 0.4);
 
   --font-family-sans: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -40,21 +37,19 @@ body {
   --height-line: 4px;
 
   --width-red-line: 48px;
-  --width-red-line-double: calc(var(--width-red-line) * 2);
-  --width-drawer: calc(320px - var(--height-header));
+  --width-drawer: 240px;
 
   --position-drawer: calc(-1 * var(--width-drawer));
 
   --border-button: 2px solid var(--color-red);
 
   --time-animation: 0.33s;
-
-  --backdrop-filter-blur: blur(5px);
 }
 
 @media (min-width: 768px) {
   body {
     --gap-size-1: 16px;
     --gap-size-2: 32px;
+    --width-drawer: 300px;
   }
 }

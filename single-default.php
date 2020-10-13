@@ -41,26 +41,6 @@
         [['align-center'], 'Chcesz otrzymywać informacje o nowych tekstach na blogu?'],
         'post-did-you-like'
       ); ?>
-      <?php Component_Section(
-        [],
-        [
-          'tag' => 'aside',
-          'title' => 'Udostępnij'
-        ],
-        'Component_SocialMediaShare',
-        [[], get_the_title(), get_the_permalink()],
-        'social-media-share'
-      ); ?>
-      <?php Component_Section(
-        [],
-        [
-          'tag' => 'aside',
-          'title' => 'Skomentuj'
-        ],
-        'Component_SocialMediaComment',
-        [[], get_post_meta(get_the_ID(), 'meta_share_facebook_url', true)],
-        'social-media-comment'
-      ); ?>
     </article>
     <?php Component_Section(
       [],
@@ -78,7 +58,7 @@
       [],
       [
         'tag' => 'aside',
-        'title' => 'Coś krótszego?',
+        'title' => 'Poezja 3.14',
         'buttonLabel' => 'Więcej Poezji 3.14',
         'buttonHref' => 343
       ],

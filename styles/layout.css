@@ -80,26 +80,20 @@
     'cover-image'
     'audiobook'
     'content'
-    'post-did-you-like'
-    'social-media-share'
-    'social-media-comment';
+    'post-did-you-like';
 }
 
 .article--post-poem {
   grid-template-areas:
     'meta'
     'content'
-    'poem-first-time'
-    'social-media-share'
-    'social-media-comment';
+    'poem-first-time';
 }
 
 .article--post-journal {
   grid-template-areas:
     'meta'
-    'content'
-    'social-media-share'
-    'social-media-comment';
+    'content';
 }
 
 .article--404 {
@@ -108,24 +102,4 @@
     'content'
     'list-post'
     'list-poem';
-}
-
-@media (min-width: 768px) {
-  .article--post {
-    grid-template-areas:
-      'meta meta'
-      'cover-image cover-image'
-      'audiobook audiobook'
-      'content content'
-      'post-did-you-like post-did-you-like'
-      'social-media-share social-media-comment';
-  }
-
-  .article--post-poem {
-    grid-template-areas:
-      'meta meta'
-      'content content'
-      'poem-first-time poem-first-time'
-      'social-media-share social-media-comment';
-  }
 }
