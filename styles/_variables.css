@@ -37,7 +37,7 @@ body {
   --height-line: 4px;
 
   --width-red-line: 48px;
-  --width-drawer: 300px;
+  --width-drawer: 240px;
 
   --position-drawer: calc(-1 * var(--width-drawer));
 
@@ -50,5 +50,6 @@ body {
   body {
     --gap-size-1: 16px;
     --gap-size-2: 32px;
+    --width-drawer: 300px;
   }
 }
