@@ -28,9 +28,13 @@
   margin: 0;
 }
 
+.color-schema-list__radio:hover {
+  border: 2px solid var(--color-red-transparent);
+}
+
 .color-schema-list__radio:focus,
 .color-schema-list__radio:active {
-  border: 2px dashed var(--color-red);
+  border: 2px solid var(--color-red-transparent);
   outline: 0;
 }
 
