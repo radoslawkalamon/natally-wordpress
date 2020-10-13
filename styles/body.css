@@ -5,8 +5,8 @@ a {
 body {
   font-family: var(--font-family-serif);
   font-size: var(--font-size-base);
-  color: var(--color-base);
-  background-color: var(--color-contra);
+  color: var(--color-base-1);
+  background-color: var(--color-contra-1);
   margin: calc(var(--height-header) + var(--height-line) + var(--gap-size-1)) var(--gap-size-2) var(--gap-size-2);
   padding: 0;
 }
@@ -19,4 +19,10 @@ body {
   grid-template-areas:
     'main'
     'footer';
+}
+
+@media (min-width: 1200px) {
+  body {
+    margin: var(--gap-size-2) var(--gap-size-2) var(--gap-size-2) calc(var(--gap-size-2) + var(--width-drawer));
+  }
 }

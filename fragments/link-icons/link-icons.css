@@ -3,7 +3,7 @@
   margin: 0;
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -21,12 +21,16 @@
   width: 32px;
   height: 32px;
   display: block;
-  fill: var(--color-base);
+  fill: var(--color-base-1);
   transition: fill var(--time-animation) ease;
 }
 
 .link-icons__link svg:hover {
   fill: var(--color-red);
+}
+
+.link-icons--social-media {
+  grid-area: social-media;
 }
 
 .link-icons--social-media .link-icons__link svg {
@@ -35,11 +39,7 @@
 }
 
 @media (min-width: 768px) {
-  .link-icons--social-media {
-    justify-content: flex-end;
-  }
-
-  .link-icons--social-media .link-icons__item:last-child {
-    margin-right: 0;
+  .link-icons--social-media .link-icons__item:first-child {
+    margin-left: 0;
   }
 }

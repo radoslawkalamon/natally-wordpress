@@ -5,7 +5,7 @@
   z-index: 15;
   width: 100%;
   padding: var(--gap-size-2);
-  background-color: var(--color-contra);
+  background-color: var(--color-contra-1);
   display: none;
   grid-template-columns: auto max-content;
   grid-gap: var(--gap-size-2);
@@ -19,7 +19,7 @@
 }
 
 .cookie-bar a {
-  color: var(--color-base);
+  color: var(--color-base-1);
   transition: color var(--time-animation) ease;
 }
 

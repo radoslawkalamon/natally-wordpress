@@ -1,7 +1,7 @@
 .footer {
   grid-area: footer;
 
-  border-top: 2px solid var(--color-base);
+  border-top: 2px solid var(--color-base-1);
   padding-top: var(--gap-size-2);
   display: grid;
   grid-gap: var(--gap-size-2);
@@ -12,7 +12,7 @@
 }
 
 .footer a {
-  color: var(--color-base);
+  color: var(--color-base-1);
   transition: color var(--time-animation) ease;
 }
 

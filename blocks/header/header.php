@@ -2,15 +2,13 @@
   <header class='header'>
     <div class='header__inner'>
       <div class='header__button-left'>
-        <?php Component_DrawerButton([], 'left', 'hamburger.svg'); ?>
+        <?php Component_DrawerButton([], 'sidebar', 'hamburger.svg'); ?>
       </div>
       <div class='header__logo'>
-        <a class='header__link' href='<?= home_url(); ?>'>
-          <?= load_inline_svg('169cm_logo.svg'); ?>
-        </a>
+        <?php Fragment_Logo(['header']); ?>
       </div>
       <div class='header__button-right'>
-        <?php Component_DrawerButton([], 'right', 'cog.svg'); ?>
+        <?php Component_DrawerButton([], 'settings', 'cog.svg'); ?>
       </div>
     </div>
   </header>

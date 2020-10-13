@@ -1,45 +1,45 @@
 @media (prefers-color-scheme: light) {
   body {
-    --color-contra: var(--color-white);
-    --color-contra-transparent: var(--color-white-transparent);
-    --color-base: var(--color-black);
-    --color-base-transparent: var(--color-gray-transparent-1);
+    --color-contra-1: var(--color-white);
+    --color-contra-2: #f2f2f2;
+    --color-contra-3: #e5e5e5;
+    --color-base-1: var(--color-black);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    --color-contra: var(--color-gray);
-    --color-contra-transparent: var(--color-gray-transparent-1);
-    --color-base: var(--color-white);
-    --color-base-transparent: var(--color-white-transparent);
+    --color-contra-1: var(--color-gray);
+    --color-contra-2: #2d2d2d;
+    --color-contra-3: #383838;
+    --color-base-1: var(--color-white);
   }
 }
 
 body[data-color-schema='light'] {
-  --color-contra: var(--color-white);
-  --color-contra-transparent: var(--color-white-transparent);
-  --color-base: var(--color-black);
-  --color-base-transparent: var(--color-gray-transparent-1);
+  --color-contra-1: var(--color-white);
+  --color-contra-2: #f2f2f2;
+  --color-contra-3: #e5e5e5;
+  --color-base-1: var(--color-black);
 }
 
 body[data-color-schema='dark'] {
-  --color-contra: var(--color-gray);
-  --color-contra-transparent: var(--color-gray-transparent-1);
-  --color-base: var(--color-white);
-  --color-base-transparent: var(--color-white-transparent);
+  --color-contra-1: var(--color-gray);
+  --color-contra-2: #2d2d2d;
+  --color-contra-3: #383838;
+  --color-base-1: var(--color-white);
 }
 
 body[data-color-schema='sepia'] {
-  --color-contra: var(--color-sepia);
-  --color-contra-transparent: var(--color-sepia-transparent);
-  --color-base: var(--color-gray);
-  --color-base-transparent: var(--color-gray-transparent-1);
+  --color-contra-1: var(--color-sepia);
+  --color-contra-2: #f3ecd6;
+  --color-contra-3: #eee3c3;
+  --color-base-1: var(--color-gray);
 }
 
 body[data-color-schema='gray'] {
-  --color-contra: var(--color-light-gray);
-  --color-contra-transparent: var(--color-light-gray-transparent);
-  --color-base: var(--color-gray);
-  --color-base-transparent: var(--color-gray-transparent-1);
+  --color-contra-1: var(--color-light-gray);
+  --color-contra-2: #dadada;
+  --color-contra-3: #cfcfcf;
+  --color-base-1: var(--color-gray);
 }

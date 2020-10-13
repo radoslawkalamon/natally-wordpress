@@ -30,7 +30,7 @@
 function Block_DrawerSettings() {
   Component_Drawer(
     [],
-    'right',
+    'settings',
     'Content_DrawerSettings'
   );
 }

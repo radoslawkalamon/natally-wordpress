@@ -32,5 +32,5 @@
     <script src="<?= get_template_directory_uri(); ?>/blocks/drawer-settings/drawer-settings-body-attachment.js"></script>
     <div class='body-wrapper'>
       <?php Block_Header(); ?>
-      <?php Block_DrawerMenu(); ?>
+      <?php Block_DrawerSidebar(); ?>
       <?php Block_DrawerSettings(); 
