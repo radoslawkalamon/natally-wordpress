@@ -4,6 +4,7 @@ body {
   --color-contra-2: #f2f2f2;
   --color-contra-3: #e5e5e5;
   --color-base-1: var(--color-black);
+  --color-accent-1: var(--color-red);
 }
 
 @media (prefers-color-scheme: light) {
@@ -12,6 +13,7 @@ body {
     --color-contra-2: #f2f2f2;
     --color-contra-3: #e5e5e5;
     --color-base-1: var(--color-black);
+    --color-accent-1: var(--color-red);
   }
 }
 
@@ -21,6 +23,7 @@ body {
     --color-contra-2: #2d2d2d;
     --color-contra-3: #383838;
     --color-base-1: var(--color-white);
+    --color-accent-1: var(--color-red);
   }
 }
 
@@ -29,6 +32,7 @@ body[data-color-schema='light'] {
   --color-contra-2: #f2f2f2;
   --color-contra-3: #e5e5e5;
   --color-base-1: var(--color-black);
+  --color-accent-1: var(--color-red);
 }
 
 body[data-color-schema='dark'] {
@@ -36,6 +40,7 @@ body[data-color-schema='dark'] {
   --color-contra-2: #2d2d2d;
   --color-contra-3: #383838;
   --color-base-1: var(--color-white);
+  --color-accent-1: var(--color-red);
 }
 
 body[data-color-schema='sepia'] {
@@ -43,6 +48,7 @@ body[data-color-schema='sepia'] {
   --color-contra-2: #f3ecd6;
   --color-contra-3: #eee3c3;
   --color-base-1: var(--color-gray);
+  --color-accent-1: var(--color-red);
 }
 
 body[data-color-schema='gray'] {
@@ -50,4 +56,5 @@ body[data-color-schema='gray'] {
   --color-contra-2: #dadada;
   --color-contra-3: #cfcfcf;
   --color-base-1: var(--color-gray);
+  --color-accent-1: var(--color-red);
 }

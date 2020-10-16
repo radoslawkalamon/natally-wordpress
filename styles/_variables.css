@@ -41,7 +41,7 @@ body {
 
   --position-drawer: calc(-1 * var(--width-drawer));
 
-  --border-button: 2px solid var(--color-red);
+  --border-button: 2px solid var(--color-accent-1);
 
   --time-animation: 0.33s;
 }

@@ -5,7 +5,7 @@
   top: var(--height-header);
   left: 0;
   z-index: 10;
-  background-color: var(--color-red);
+  background-color: var(--color-accent-1);
   transition: width var(--time-animation) linear;
 }
 

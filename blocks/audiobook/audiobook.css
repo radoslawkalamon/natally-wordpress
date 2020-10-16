@@ -1,5 +1,5 @@
 .audiobook {
-  background-color: var(--color-red);
+  background-color: var(--color-accent-1);
   padding: var(--padding-size-1);
   max-width: var(--max-width-content);
   width: 100%;
@@ -37,7 +37,7 @@
   transform-origin: top left;
   transform: rotate(-45deg) translate(-50%, -50%);
   z-index: 2;
-  outline: 4px solid var(--color-red);
+  outline: 4px solid var(--color-accent-1);
   top: 50%;
   left: 50%;
 }

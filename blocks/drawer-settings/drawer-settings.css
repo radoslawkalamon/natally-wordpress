@@ -39,7 +39,7 @@
 }
 
 .color-schema-list__radio[checked='true'] {
-  border: 2px solid var(--color-red);
+  border: 2px solid var(--color-accent-1);
 }
 
 .color-schema-list__radio::before {

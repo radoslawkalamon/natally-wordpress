@@ -24,7 +24,7 @@
 }
 
 .cookie-bar a:hover {
-  color: var(--color-red);
+  color: var(--color-accent-1);
 }
 
 .cookie-bar__text,
