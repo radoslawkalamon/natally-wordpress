@@ -4,8 +4,8 @@
   left: 0;
   z-index: 15;
   width: 100%;
-  padding: var(--gap-size-2);
-  background-color: var(--color-contra-1);
+  padding: var(--padding-size-2);
+  background-color: var(--color-contra-3);
   display: none;
   grid-template-columns: auto max-content;
   grid-gap: var(--gap-size-2);

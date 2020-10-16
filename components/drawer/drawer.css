@@ -3,7 +3,7 @@
   position: fixed;
   z-index: 10;
   width: var(--width-drawer);
-  background-color: var(--color-contra-2);
+  background-color: var(--color-contra-3);
   box-sizing: border-box;
   padding: var(--gap-size-2);
   display: flex;
