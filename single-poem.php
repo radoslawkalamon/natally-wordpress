@@ -1,6 +1,12 @@
 <?php get_header(); ?>
   <main class='main main--post-poem'>
     <article class='article article--post-poem'>
+     <?php Block_CoverImage(
+        ['poem'],
+        [
+          'thumbnail' => get_the_post_thumbnail_url(),
+        ]
+      ); ?>
       <?php Block_Meta(
         ['post-poem'],
         [

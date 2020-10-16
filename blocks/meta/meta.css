@@ -9,6 +9,10 @@
   grid-gap: var(--padding-size-2);
 }
 
+.meta--post-poem {
+  margin-top: var(--height-poem-cover);
+}
+
 .meta__title {
   font-size: var(--font-size-h1);
   line-height: 1;
