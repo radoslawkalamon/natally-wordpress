@@ -1,3 +1,11 @@
+/** Default scheme */
+body {
+  --color-contra-1: var(--color-white);
+  --color-contra-2: #f2f2f2;
+  --color-contra-3: #e5e5e5;
+  --color-base-1: var(--color-black);
+}
+
 @media (prefers-color-scheme: light) {
   body {
     --color-contra-1: var(--color-white);
