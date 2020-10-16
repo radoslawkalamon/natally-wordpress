@@ -59,6 +59,7 @@ get_template_part('fragments/tile-post/tile-post');
 get_template_part('fragments/link-icons/link-icons');
 get_template_part('fragments/title/title');
 get_template_part('fragments/logo/logo');
+get_template_part('fragments/poem-link/poem-link');
 /** Initialize Components */
 get_template_part('components/list-poem/list-poem');
 get_template_part('components/list-post/list-post');

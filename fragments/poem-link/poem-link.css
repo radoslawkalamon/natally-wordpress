@@ -1,0 +1,47 @@
+.poem-link {
+  color: var(--color-base-1);
+  font-family: var(--font-family-sans);
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  border-bottom: 1px solid var(--color-contra-3);
+}
+
+.poem-link:last-child {
+  border-bottom: 0;
+}
+
+.poem-link__content {
+  padding: var(--padding-size-2) 0;
+  color: inherit;
+  text-decoration: none;
+  display: grid;
+  align-items: center;
+  grid-template-areas: 'header meta';
+  grid-template-columns: 1fr 80px;
+  transition: color var(--time-animation) ease;
+}
+
+.poem-link__content:hover {
+  color: var(--color-red);
+}
+
+.poem-link__header {
+  grid-area: header;
+}
+
+.poem-link__title {
+  font-size: var(--font-size-h4);
+  margin: 0;
+  line-height: 1;
+  width: 100%;
+}
+
+.poem-link__meta {
+  grid-area: meta;
+  text-align: right;
+}
+
+.poem-link__date {
+  font-size: var(--font-size-footnotes);
+}

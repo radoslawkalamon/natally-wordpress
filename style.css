@@ -21,6 +21,7 @@ Description: 169cm.pl Natally Theme
 @import url('fragments/link-icons/link-icons.css');
 @import url('fragments/title/title.css');
 @import url('fragments/logo/logo.css');
+@import url('fragments/poem-link/poem-link.css');
 
 @import url('components/list-poem/list-poem.css');
 @import url('components/list-post/list-post.css');

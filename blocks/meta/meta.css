@@ -13,6 +13,7 @@
   font-size: var(--font-size-h1);
   line-height: 1;
   margin: 0;
+  word-break: break-word;
 }
 
 .meta__title::after {
