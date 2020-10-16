@@ -22,8 +22,8 @@
       <?php Fragment_TilePoem(
         $styleClasses,
         [
-          'dateHuman' => get_the_time('d F Y'),
-          'dateMachine' => get_the_time('Y-m-d'),
+          'dateHuman' => get_the_date(),
+          'dateMachine' => get_the_date('Y-m-d'),
           'title' => get_the_title(),
           'thumbnail' => get_the_post_thumbnail_url(),
           'permalink' => get_the_permalink(),
