@@ -54,7 +54,6 @@ register_nav_menu('footer-menu', 'Footer Menu');
 get_template_part('fragments/button/button');
 get_template_part('fragments/menu/menu');
 get_template_part('fragments/plain-text/plain-text');
-get_template_part('fragments/tile-poem/tile-poem');
 get_template_part('fragments/tile-post/tile-post');
 get_template_part('fragments/link-icons/link-icons');
 get_template_part('fragments/title/title');
