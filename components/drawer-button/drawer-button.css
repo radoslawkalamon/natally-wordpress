@@ -25,7 +25,7 @@
 
 .drawer-button:hover,       
 .drawer-button--active {
-  background-color: var(--color-red);
+  background-color: var(--color-accent-1);
 }
 
 .drawer-button:hover svg,
@@ -52,6 +52,6 @@
 
   .drawer-button--sidebar.drawer-button--active svg,
   .drawer-button--sidebar:hover svg {
-    fill: var(--color-red);
+    fill: var(--color-accent-1);
   }
 }

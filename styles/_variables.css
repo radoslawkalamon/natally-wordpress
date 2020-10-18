@@ -35,13 +35,14 @@ body {
 
   --height-header: 48px;
   --height-line: 4px;
+  --height-poem-cover: 48px;
 
   --width-red-line: 48px;
   --width-drawer: 240px;
 
   --position-drawer: calc(-1 * var(--width-drawer));
 
-  --border-button: 2px solid var(--color-red);
+  --border-button: 2px solid var(--color-accent-1);
 
   --time-animation: 0.33s;
 }

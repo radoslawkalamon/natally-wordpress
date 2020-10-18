@@ -36,8 +36,8 @@ remove_action('wp_head', 'wp_shortlink_wp_head', 10);
 remove_action('template_redirect', 'wp_shortlink_header', 11);
 /** Enqueue CSS */
 add_action('wp_enqueue_scripts', function () {
-  wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '2.1', 'all');
-  wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,700|Source+Sans+Pro:600,700&subset=latin-ext&display=swap', array(), '2.1', 'all');
+  wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '2.2', 'all');
+  wp_register_style('google-fonts', 'https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@700&display=swap', array(), '2.2', 'all');
   wp_enqueue_style('standard-style');
   wp_enqueue_style('google-fonts');
 });
@@ -54,11 +54,11 @@ register_nav_menu('footer-menu', 'Footer Menu');
 get_template_part('fragments/button/button');
 get_template_part('fragments/menu/menu');
 get_template_part('fragments/plain-text/plain-text');
-get_template_part('fragments/tile-poem/tile-poem');
 get_template_part('fragments/tile-post/tile-post');
 get_template_part('fragments/link-icons/link-icons');
 get_template_part('fragments/title/title');
 get_template_part('fragments/logo/logo');
+get_template_part('fragments/poem-link/poem-link');
 /** Initialize Components */
 get_template_part('components/list-poem/list-poem');
 get_template_part('components/list-post/list-post');

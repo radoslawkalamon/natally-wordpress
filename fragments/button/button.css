@@ -17,12 +17,12 @@
 }
 
 .button--invert {
-  background-color: var(--color-red);
+  background-color: var(--color-accent-1);
   color: var(--color-white);
 }
 
 .button:hover {
-  background-color: var(--color-red);
+  background-color: var(--color-accent-1);
   color: var(--color-white);
 }
 

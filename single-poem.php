@@ -1,12 +1,18 @@
 <?php get_header(); ?>
   <main class='main main--post-poem'>
     <article class='article article--post-poem'>
+     <?php Block_CoverImage(
+        ['poem'],
+        [
+          'thumbnail' => get_the_post_thumbnail_url(),
+        ]
+      ); ?>
       <?php Block_Meta(
         ['post-poem'],
         [
           'title' => get_the_title(),
-          'dateMachine' => get_the_time('Y-m-d'),
-          'dateHuman' => get_the_time('d F Y')
+          'dateMachine' => get_the_date('Y-m-d'),
+          'dateHuman' => get_the_date()
         ]
       ); ?>
       <?php Block_Content(

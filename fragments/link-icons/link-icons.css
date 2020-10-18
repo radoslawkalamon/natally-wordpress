@@ -26,7 +26,7 @@
 }
 
 .link-icons__link svg:hover {
-  fill: var(--color-red);
+  fill: var(--color-accent-1);
 }
 
 .link-icons--social-media {

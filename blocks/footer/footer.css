@@ -17,7 +17,7 @@
 }
 
 .footer a:hover {
-  color: var(--color-red);
+  color: var(--color-accent-1);
 }
 
 .footer__copyright {

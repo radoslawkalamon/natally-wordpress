@@ -12,7 +12,7 @@
         [],
         [
           'tag' => 'section',
-          'title' => 'Coś dłuższego?',
+          'title' => 'Opowiadania',
           'buttonLabel' => 'Więcej opowiadań',
           'buttonHref' => 0
         ],
@@ -24,7 +24,7 @@
         [],
         [
           'tag' => 'section',
-          'title' => 'Coś krótszego?',
+          'title' => 'Poezja 3.14',
           'buttonLabel' => 'Więcej Poezji 3.14',
           'buttonHref' => 343
         ],

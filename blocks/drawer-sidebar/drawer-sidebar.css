@@ -17,7 +17,7 @@
 }
 
 .drawer[data-drawer='sidebar'] a:hover {
-  color: var(--color-red);
+  color: var(--color-accent-1);
 }
 
 .menu--header {

@@ -5,6 +5,10 @@
   list-style: none;
 }
 
+.menu.menu--header .current-menu-item a {
+  text-decoration: underline;
+}
+
 .menu--footer {
   width: 100%;
 }

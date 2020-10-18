@@ -23,8 +23,8 @@
         $styleClasses,
         [
           'audiobook' => get_post_meta(get_the_ID(), 'soundcloud_track_id', true),
-          'dateHuman' => get_the_time('d F Y'),
-          'dateMachine' => get_the_time('Y-m-d'),
+          'dateHuman' => get_the_date(),
+          'dateMachine' => get_the_date('Y-m-d'),
           'title' => get_the_title(),
           'thumbnail' => get_the_post_thumbnail_url(null, 'post-thumbnail-desktop-1x'),
           'permalink' => get_the_permalink(),
