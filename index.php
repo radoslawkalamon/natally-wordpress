@@ -6,7 +6,6 @@
         [],
         [
           'tag' => 'section',
-          'title' => 'Opowiadania'
         ],
         'Component_ListPost',
         [['front-page']],
