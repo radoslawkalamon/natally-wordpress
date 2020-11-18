@@ -16,9 +16,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-gap: var(--gap-size-2);
-  grid-template-areas:
-    'main'
-    'footer';
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 1200px) {

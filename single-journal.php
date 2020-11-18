@@ -1,11 +1,13 @@
 <?php get_header(); ?>
-  <main class='main main--post-journal'>
-    <article class='article article--post-journal'>
-      <?php Block_Meta(); ?>
-      <?php Block_Content(['post-journal'], apply_filters('the_content', get_the_content())); ?>
-      <!-- Article <main> -->
+  <main class='main main--single-journal'>
+    <article class='article article--single-journal'>
+      <?php Block_JournalMeta(); ?>
+      <?php Block_Audiobook(); ?>
+      <?php Block_JournalContent(); ?>
     </article>
-    Single aside journal
-    <!-- Article <aside> -->
+    <?php Block_DidYouLike(); ?>
+    <?php Block_JournalListSuggestions(); ?>
+    <?php Block_StoryListSuggestions(); ?>
+    <?php Block_PoemListSuggestions(); ?>
   </main>
 <?php get_footer();

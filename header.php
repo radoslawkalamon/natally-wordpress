@@ -1,5 +1,3 @@
-<?php $urlFavicon = get_template_directory_uri()."/images/icons/"; ?>
-
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
@@ -15,11 +13,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no">
     <!-- Favicon Settings -->
-    <link rel="shortcut icon" type="image/png" href="<?= $urlFavicon; ?>icon-192x192.png">
-    <link rel="shortcut icon" sizes="192x192" href="<?= $urlFavicon; ?>icon-192x192.png">
+    <link rel="shortcut icon" type="image/png" href="<?= get_template_directory_uri(); ?>/images/icons/icon-192x192.png">
+    <link rel="shortcut icon" sizes="192x192" href="<?= get_template_directory_uri(); ?>/images/icons/icon-192x192.png">
     <!-- iOS Settings -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href="<?= $urlFavicon; ?>icon-192x192-white.png">
+    <link rel="apple-touch-icon" href="<?= get_template_directory_uri(); ?>/images/icons/icon-192x192-white.png">
     <!-- Blink Settings -->
     <meta name="theme-color" content="#E2000E">
     <!-- Google Podcasts Settings -->

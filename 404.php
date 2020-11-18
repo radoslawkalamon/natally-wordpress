@@ -1,37 +1,12 @@
 <?php get_header(); ?>
-  <main class='main main--404'>
-    <article class='article article--404'>
-      <?php Block_Meta(
-        ['page'],
-        [
-          'title' => 'Porobiło się!'
-        ]
-      ); ?>
-      <?php Block_404(); ?>
-      <?php Component_Section(
-        [],
-        [
-          'tag' => 'section',
-          'title' => 'Opowiadania',
-          'buttonLabel' => 'Więcej opowiadań',
-          'buttonHref' => 0
-        ],
-        'Component_ListPost',
-        [[], true],
-        'list-post'
-      ); ?>
-      <?php Component_Section(
-        [],
-        [
-          'tag' => 'section',
-          'title' => 'Poezja 3.14',
-          'buttonLabel' => 'Więcej Poezji 3.14',
-          'buttonHref' => 343
-        ],
-        'Component_ListPoem',
-        [[], true],
-        'list-poem'
-      ); ?>
+  <main class='main main--error-404'>
+    <article class='article article--error-404'>
+      <?php Block_Error404Meta(); ?>
+      <?php Block_PufferFishAnimation(); ?>
+      <?php Block_Error404Content(); ?>
+      <?php Block_StoryListSuggestions(); ?>
+      <?php Block_JournalListSuggestions(); ?>
+      <?php Block_PoemListSuggestions(); ?>
     </article>
   </main>
 <?php get_footer();

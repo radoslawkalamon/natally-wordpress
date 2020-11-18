@@ -1,105 +1,11 @@
 .main {
-  grid-area: main;
   display: grid;
   grid-gap: var(--gap-size-2);
-}
-
-.main--index {
-  display: block;
-}
-
-.main--page {
-  display: block;
-}
-
-.main--page-poem {
-  display: block;
-}
-
-.main--page-journal {
-  display: block;
-}
-
-.main--post {
-  grid-template-areas: 
-    'article'
-    'list-post'
-    'list-poem';
-}
-
-.main--post-poem {
-  grid-template-areas: 
-    'article'
-    'list-poem'
-    'list-post';
-}
-
-.main--post-journal {
-  display: block;
-}
-
-.main--404 {
-  display: block;
+  grid-template-columns: 1fr;
 }
 
 .article {
-  grid-area: article;
   display: grid;
   grid-gap: var(--gap-size-2);
-}
-
-.article--index {
-  grid-template-areas:
-    'list-post'
-    'list-poem';
-}
-
-.article--page {
-  grid-template-areas:
-    'meta'
-    'content';
-}
-
-.article--page-poem {
-  grid-template-areas:
-    'meta'
-    'content'
-    'list-poem';
-}
-
-.article--page-journal {
-  grid-template-areas:
-    'meta'
-    'content'
-    'list-journal';
-}
-
-.article--post {
-  grid-template-areas:
-    'meta'
-    'cover-image'
-    'audiobook'
-    'content'
-    'post-did-you-like';
-}
-
-.article--post-poem {
-  grid-template-areas:
-    'meta'
-    'content'
-    'poem-first-time';
-}
-
-.article--post-journal {
-  grid-template-areas:
-    'meta'
-    'content';
-}
-
-.article--404 {
-  grid-template-areas:
-    'meta'
-    'content'
-    'list-post'
-    'list-poem';
+  grid-template-columns: 1fr;
 }
