@@ -50,6 +50,21 @@ add_action('wp_enqueue_scripts', function () {
 /** Register Menus */
 register_nav_menu('header-menu', 'Header Menu');
 register_nav_menu('footer-menu', 'Footer Menu');
+/** Initialize Components */
+get_template_part('components/button/button');
+get_template_part('components/content/content');
+get_template_part('components/drawer/drawer');
+get_template_part('components/drawer-button/drawer-button');
+get_template_part('components/icon/icon');
+get_template_part('components/link-journal/link-journal');  
+get_template_part('components/link-poem/link-poem');        
+get_template_part('components/link-story/link-story');      
+get_template_part('components/logo/logo');
+get_template_part('components/menu/menu');
+get_template_part('components/meta/meta');
+get_template_part('components/section/section');
+get_template_part('components/text/text');
+get_template_part('components/title/title');
 /** Initialize Blocks */
 get_template_part('blocks/audiobook/audiobook');
 get_template_part('blocks/cookie-bar/cookie-bar');
