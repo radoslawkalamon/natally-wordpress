@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+  <?php Block_ProgressBar(); ?>
   <main class='main main--single-journal'>
     <article class='article article--single-journal'>
       <?php Block_JournalMeta(); ?>

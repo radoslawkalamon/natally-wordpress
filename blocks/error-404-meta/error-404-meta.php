@@ -1,3 +1,3 @@
-<?php function Block_Error404Meta() { ?>
-Block_Error404Meta
-<?php }
+<?php function Block_Error404Meta() {
+  Component_Meta(['page'], 'Porobiło się!');
+}

@@ -1,3 +1,42 @@
 .drawer {
+  top: var(--height-header);
+  position: fixed;
+  z-index: 10;
+  width: var(--width-drawer);
+  background-color: var(--color-contra-3);
+  box-sizing: border-box;
+  padding: var(--gap-size-2);
+  display: flex;
+  align-items: flex-start;
+  height: calc(100% - var(--height-header));
+  overflow-y: auto;
+}
 
+.drawer[data-drawer='settings'] {
+  transition: right var(--time-animation) ease;
+  right: var(--position-drawer);
+}
+
+.drawer--active[data-drawer='settings'] {
+  right: 0;
+}
+
+@media (min-width: 1200px) {
+  .drawer {
+    height: 100%;
+  }
+
+  .drawer[data-drawer='settings'] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: initial;
+    z-index: 8;
+    background-color: var(--color-contra-3);
+    transition: left var(--time-animation) ease;
+  }
+
+  .drawer--active[data-drawer='settings'] {
+    left: var(--width-drawer);
+  }
 }

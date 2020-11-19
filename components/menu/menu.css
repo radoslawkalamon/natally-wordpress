@@ -1,3 +1,26 @@
 .menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
+.menu.menu--sidebar .current-menu-item a {
+  text-decoration: underline;
+}
+
+.menu--footer {
+  width: 100%;
+}
+
+.menu--footer .menu-item {
+  display: inline-block;
+}
+
+.menu--footer .menu-item::after {
+  content: ' • ';
+}
+
+.menu--footer .menu-item:last-of-type:after {
+  display: none;
 }

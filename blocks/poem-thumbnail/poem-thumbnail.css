@@ -1,3 +1,18 @@
 .poem-thumbnail {
+  width: 100%;
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+  grid-area: none;
+  height: var(--height-poem-cover);
+  position: absolute;
+  top: var(--height-header);
+  left: 0;
+  z-index: 1;
+}
 
+@media (min-width: 1200px) {
+  .poem-thumbnail {
+    top: 0;
+  }
 }

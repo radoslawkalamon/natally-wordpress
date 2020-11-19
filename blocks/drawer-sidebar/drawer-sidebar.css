@@ -1,3 +1,52 @@
-.drawer-sidebar {
+.drawer[data-drawer='sidebar'] {
+  transition: left var(--time-animation) ease;
+  left: var(--position-drawer);
+  display: grid;
+  grid-gap: var(--gap-size-2);
+  grid-template-rows: 1fr max-content;
+  grid-template-areas:
+    'menu'
+    'social-media';
+}
 
+.drawer[data-drawer='sidebar'] a {
+  color: var(--color-base-1);
+  transition: color var(--time-animation) ease;
+  font-family: var(--font-family-sans);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.drawer[data-drawer='sidebar'] a:hover {
+  color: var(--color-accent-1);
+}
+
+.drawer--active[data-drawer='sidebar'] {
+  left: 0;
+}
+
+.menu--sidebar {
+  display: grid;
+  grid-area: menu;
+  grid-template-rows: 1fr;
+  grid-gap: var(--padding-size-2);
+  margin: auto 0;
+}
+
+@media (min-width: 1200px) {
+  .drawer[data-drawer='sidebar'] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: var(--color-contra-2);
+    transition: none;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-columns: 1fr max-content;
+    grid-template-areas:
+      'logo logo'
+      'menu menu'
+      'social-media button-settings';
+  }
 }

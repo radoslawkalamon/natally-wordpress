@@ -1,16 +1,16 @@
 (() => {
   'use strict';
   // isPage conditional
-  const isPoemArchive = document.querySelector('.main--page-poem') !== null;
-  const isPoemSingle = document.querySelector('.main--post-poem') !== null;
+  const isPoemArchive = document.querySelector('.main--index-poem') !== null;
+  const isPoemSingle = document.querySelector('.main--single-poem') !== null;
   // Poem More Info Counter
   const poemMoreInfoCounterName = 'poem-more-info';
   const poemMoreInfoCounterMax = 3;
   const poemMoreInfoCounter = window.localStorage.getItem('poem-more-info') || '0';
   const poemMoreInfoCounterInt = parseInt(poemMoreInfoCounter);
   // Poem More Info Element
-  const poemMoreInfoSelector = '.section--poem-first-time';
-  const poemMoreInfoClassActive = 'section--poem-first-time-active';
+  const poemMoreInfoSelector = '.poem-first-time';
+  const poemMoreInfoClassActive = 'poem-first-time--active';
 
   if ((isPoemArchive === true || isPoemSingle === true) && poemMoreInfoCounter < poemMoreInfoCounterMax) {
     // Calculate new PoemMoreInfoCounter value

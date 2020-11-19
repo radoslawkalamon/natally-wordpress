@@ -1,3 +1,36 @@
 .footer {
+  border-top: 2px solid var(--color-base-1);
+  padding-top: var(--gap-size-2);
+  display: grid;
+  grid-gap: var(--gap-size-2);
+  grid-template-areas:
+    'copyright'
+    'footermenu';
+  align-items: center;
+}
 
+.footer__copyright {
+  grid-area: copyright;
+  text-align: center;
+}
+
+.footer__menu {
+  grid-area: footermenu;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    grid-template-columns: max-content auto;
+    grid-template-areas:
+      'copyright footermenu';
+  }
+
+  .footer__copyright {
+    text-align: left;
+  }
+
+  .footer__menu {
+    text-align: right;
+  }
 }

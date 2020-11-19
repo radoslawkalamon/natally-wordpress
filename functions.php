@@ -63,6 +63,7 @@ get_template_part('components/logo/logo');
 get_template_part('components/menu/menu');
 get_template_part('components/meta/meta');
 get_template_part('components/section/section');
+get_template_part('components/social-media/social-media');
 get_template_part('components/text/text');
 get_template_part('components/title/title');
 /** Initialize Blocks */
@@ -144,18 +145,6 @@ add_filter('rest_authentication_errors', function($result) {
 });
 /** Deactive XMLRPC */
 add_filter('xmlrpc_enabled', '__return_false');
-/**
- * Load an inline SVG.
- * @param string $filename The filename of the SVG you want to load.
- * @return string The content of the SVG you want to load.
- */
-function load_inline_svg($filename) {
-  $svg_path = '/images/';
-
-  return file_exists(get_template_directory().$svg_path.$filename)
-    ? file_get_contents(get_template_directory().$svg_path.$filename)
-    : '';
-}
 /** Remove SearchAction from Yoast SEO JSON */
 add_filter('disable_wpseo_json_ld_search', '__return_true');
 /** Minify HTML */

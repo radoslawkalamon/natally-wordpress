@@ -1,3 +1,19 @@
 .story-thumbnail {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
+.story-thumbnail::before {
+  content: '';
+  padding-top: 75%;
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .story-thumbnail::before {
+    content: '';
+    padding-top: 50%;
+  }
 }

@@ -1,3 +1,32 @@
 .meta {
+  text-align: center;
+  font-family: var(--font-family-sans);
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--padding-size-2);
+}
 
+.meta--post-poem {
+  margin-top: var(--height-poem-cover);
+}
+
+.meta__title {
+  font-size: var(--font-size-h1);
+  line-height: 1;
+  margin: 0;
+  word-break: break-word;
+}
+
+.meta__title::after {
+  content: '';
+  display: block;
+  width: var(--width-red-line);
+  margin: var(--padding-size-2) auto 0;
+  background-color: var(--color-accent-1);
+  height: var(--height-line);
+}
+
+.meta__footer {
+  font-weight: bold;
 }
