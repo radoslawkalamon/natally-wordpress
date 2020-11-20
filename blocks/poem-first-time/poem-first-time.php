@@ -9,7 +9,7 @@
         'buttonHref' => 343
       ],
       'Component_Text',
-      [['align-center'], 'Chcesz dowiedzieć się więcej o Poezji 3.14?']
+      [['align-center'], 'Chcesz dowiedzieć&nbsp;się więcej o&nbsp;Poezji&nbsp;3.14?']
     ); ?>
   </div>
 <?php }
