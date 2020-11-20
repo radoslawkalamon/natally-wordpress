@@ -24,7 +24,9 @@
     [],
     [
       'tag' => 'section',
-      'title' => 'Opowiadania'
+      'title' => 'Opowiadania',
+      'buttonLabel' => 'Więcej opowiadań',
+      'buttonHref' => 0
     ],
     'Content_StoryListSuggestions',
     [],
