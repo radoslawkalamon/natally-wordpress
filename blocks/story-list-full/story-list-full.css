@@ -1,0 +1,12 @@
+.story-list-full {
+  display: grid;
+  grid-gap: var(--gap-size-2);
+  grid-template-columns: repeat(1, minmax(240px, 480px));
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .story-list-full {
+    grid-template-columns: repeat(2, minmax(240px, 480px));
+  }
+}

@@ -13,7 +13,7 @@
     class='<?= implode(' ', $classNames); ?>'
     data-drawer-button='<?= $location; ?>'
   >
-    <?= load_inline_svg($icon); ?>
+    <?= Component_Icon($icon); ?>
   </button>
 
 <?php }

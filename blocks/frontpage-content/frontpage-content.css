@@ -1,0 +1,18 @@
+.frontpage-content {
+  margin-top: var(--padding-size-4);
+}
+
+.frontpage-content img {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  display: inline;
+  float: right;
+  margin-left: var(--gap-size-2);
+  margin-bottom: var(--gap-size-1);
+}
+
+.fontpage-content p {
+  margin-bottom: 0;
+  display: inline;
+}

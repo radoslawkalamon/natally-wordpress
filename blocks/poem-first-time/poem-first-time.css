@@ -1,0 +1,7 @@
+.poem-first-time {
+  display: none;
+}
+
+.poem-first-time--active {
+  display: block;
+}

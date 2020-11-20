@@ -2,8 +2,7 @@
   array $styleClasses = [],
   array $data,
   callable $content,
-  array $contentArgs = [],
-  string $gridArea = ''
+  array $contentArgs = []
 ) {
   $classNames = [
     'section',
@@ -12,10 +11,7 @@
   $data['tag'] = $data['tag'] ?? 'section';
   ?>
 
-  <<?= $data['tag']; ?>
-    class='<?= implode(' ', $classNames); ?>'
-    style='grid-area: <?= $gridArea; ?>;'
-  >
+  <<?= $data['tag']; ?> class='<?= implode(' ', $classNames); ?>'>
     <?php if ($data['title'] !== null) : ?>
     <h2 class='section__title'>
       <?= $data['title']; ?>
@@ -26,7 +22,7 @@
     </div>
     <?php if ($data['buttonLabel'] !== null && $data['buttonHref'] !== null) : ?>
     <div class='section__button'>
-      <?php Fragment_Button([], $data['buttonLabel'], $data['buttonHref']); ?>
+      <?php Component_Button([], $data['buttonLabel'], $data['buttonHref']); ?>
     </div>
     <?php endif; ?>
   </<?= $data['tag']; ?>>

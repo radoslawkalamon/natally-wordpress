@@ -1,5 +1,11 @@
-<?php function Component_SocialMedia(array $styleClasses = []) { ?>
-  <?php
+<?php function Component_SocialMedia(
+  array $styleClasses = []
+) {
+  $classNames = [
+    'social-media',
+    ...array_map(fn($element) => 'social-media--'.$element, $styleClasses),
+  ];
+
   $socialMedia = [
     [
       'alt' => 'Odwiedź mnie na Facebooku',
@@ -27,5 +33,21 @@
     ],
   ];
   ?>
-  <?php Fragment_LinkIcons($styleClasses, $socialMedia); ?>
+
+  <ul class='<?= implode(' ', $classNames); ?>'>
+    <?php foreach ($socialMedia as $element) : ?>
+    <li class='social-media__item'>
+      <a
+        title='<?= $element['alt']; ?>'
+        aria-label='<?= $element['alt']; ?>'
+        class='social-media__link'
+        href='<?= $element['link']; ?>'
+        rel='noopener noreferrer'
+        target='_blank'
+      >
+        <?= Component_Icon($element['icon']); ?>
+      </a>
+    </li>
+    <?php endforeach; ?>
+  </ul>
 <?php }

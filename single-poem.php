@@ -1,61 +1,13 @@
 <?php get_header(); ?>
-  <main class='main main--post-poem'>
-    <article class='article article--post-poem'>
-     <?php Block_CoverImage(
-        ['poem'],
-        [
-          'thumbnail' => get_the_post_thumbnail_url(),
-        ]
-      ); ?>
-      <?php Block_Meta(
-        ['post-poem'],
-        [
-          'title' => get_the_title(),
-          'dateMachine' => get_the_date('Y-m-d'),
-          'dateHuman' => get_the_date()
-        ]
-      ); ?>
-      <?php Block_Content(
-        ['post-poem'],
-        apply_filters('the_content', get_the_content())
-      ); ?>
-      <!-- Article <main> -->
-      <?php Component_Section(
-        ['poem-first-time'],
-        [
-          'tag' => 'aside',
-          'title' => 'Pierwszy raz?',
-          'buttonLabel' => 'Tak, z przyjemnością!',
-          'buttonHref' => 343
-        ],
-        'Fragment_PlainText',
-        [['align-center'], 'Chcesz dowiedzieć się więcej o Poezji 3.14?'],
-        'poem-first-time'
-      ); ?>
+  <main class='main main--single-poem'>
+    <article class='article article--single-poem'>
+      <?php Block_PoemThumbnail(); ?>
+      <?php Block_PoemMeta(); ?>
+      <?php Block_PoemContent(); ?>
     </article>
-    <?php Component_Section(
-      [],
-      [
-        'tag' => 'aside',
-        'title' => 'Sprawdź inne',
-        'buttonLabel' => 'Więcej Poezji 3.14',
-        'buttonHref' => 343
-      ],
-      'Component_ListPoem',
-      [[], true],
-      'list-poem'
-    ); ?>
-    <?php Component_Section(
-      [],
-      [
-        'tag' => 'aside',
-        'title' => 'Opowiadania',
-        'buttonLabel' => 'Więcej opowiadań',
-        'buttonHref' => 0
-      ],
-      'Component_ListPost',
-      [[], true],
-      'list-post'
-    ); ?>
+    <?php Block_PoemFirstTime(); ?>
+    <?php Block_PoemListSuggestions(); ?>
+    <?php Block_StoryListSuggestions(); ?>
+    <?php Block_JournalListSuggestions(); ?>
   </main>
 <?php get_footer();

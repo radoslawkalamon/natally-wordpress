@@ -4,19 +4,6 @@
   grid-gap: var(--gap-size-2);
 }
 
-.section--plain-text p {
-  margin: 0;
-  text-align: center;
-}
-
-.section--poem-first-time {
-  display: none;
-}
-
-.section--poem-first-time-active {
-  display: grid;
-}
-
 .section__title {
   margin: var(--padding-size-4) 0 0 0;
   font-family: var(--font-family-sans);

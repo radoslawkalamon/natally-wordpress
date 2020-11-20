@@ -7,6 +7,13 @@ body {
   --color-accent-1: var(--color-red);
 }
 
+/** Standard Scrollbar Settings */
+body { scrollbar-color: gray var(--color-contra-3); }
+/** Webkit Scrollbar Settings */
+body::-webkit-scrollbar { width: 12px; }
+body::-webkit-scrollbar-track { background-color: var(--color-contra-3); }
+body::-webkit-scrollbar-thumb { background-color: gray; }
+
 @media (prefers-color-scheme: light) {
   body {
     --color-contra-1: var(--color-white);

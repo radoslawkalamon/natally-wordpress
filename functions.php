@@ -36,8 +36,8 @@ remove_action('wp_head', 'wp_shortlink_wp_head', 10);
 remove_action('template_redirect', 'wp_shortlink_header', 11);
 /** Enqueue CSS */
 add_action('wp_enqueue_scripts', function () {
-  wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '2.2', 'all');
-  wp_register_style('google-fonts', 'https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@700&display=swap', array(), '2.2', 'all');
+  wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '2.3', 'all');
+  wp_register_style('google-fonts', 'https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@700&display=swap', array(), '2.3', 'all');
   wp_enqueue_style('standard-style');
   wp_enqueue_style('google-fonts');
 });
@@ -50,40 +50,52 @@ add_action('wp_enqueue_scripts', function () {
 /** Register Menus */
 register_nav_menu('header-menu', 'Header Menu');
 register_nav_menu('footer-menu', 'Footer Menu');
-/** Initialize Fragments */
-get_template_part('fragments/button/button');
-get_template_part('fragments/menu/menu');
-get_template_part('fragments/plain-text/plain-text');
-get_template_part('fragments/tile-post/tile-post');
-get_template_part('fragments/link-icons/link-icons');
-get_template_part('fragments/title/title');
-get_template_part('fragments/logo/logo');
-get_template_part('fragments/poem-link/poem-link');
 /** Initialize Components */
-get_template_part('components/list-poem/list-poem');
-get_template_part('components/list-post/list-post');
-get_template_part('components/section/section');
-get_template_part('components/social-media/social-media');
+get_template_part('components/button/button');
+get_template_part('components/content/content');
 get_template_part('components/drawer/drawer');
 get_template_part('components/drawer-button/drawer-button');
+get_template_part('components/icon/icon');
+get_template_part('components/link-journal/link-journal');  
+get_template_part('components/link-poem/link-poem');        
+get_template_part('components/link-story/link-story');      
+get_template_part('components/logo/logo');
+get_template_part('components/menu/menu');
+get_template_part('components/meta/meta');
+get_template_part('components/section/section');
+get_template_part('components/social-media/social-media');
+get_template_part('components/text/text');
+get_template_part('components/title/title');
 /** Initialize Blocks */
-get_template_part('blocks/cookie-bar/cookie-bar');
-get_template_part('blocks/header/header');
-get_template_part('blocks/progress-bar/progress-bar');
-get_template_part('blocks/footer/footer');
-get_template_part('blocks/content/content');
-get_template_part('blocks/meta/meta');
-get_template_part('blocks/cover-image/cover-image');
 get_template_part('blocks/audiobook/audiobook');
-get_template_part('blocks/404/404');
-get_template_part('blocks/drawer-sidebar/drawer-sidebar');
+get_template_part('blocks/cookie-bar/cookie-bar');
+get_template_part('blocks/did-you-like/did-you-like');
 get_template_part('blocks/drawer-settings/drawer-settings');
-/** Remove Poems post from Home Query */
-add_action('pre_get_posts', function ($query) {
-  if ($query->is_main_query() && $query->is_home()) {
-    $query->set('category__not_in', array(5));
-  }
-});
+get_template_part('blocks/drawer-sidebar/drawer-sidebar');
+get_template_part('blocks/error-404-content/error-404-content');
+get_template_part('blocks/error-404-meta/error-404-meta');
+get_template_part('blocks/footer/footer');
+get_template_part('blocks/frontpage-content/frontpage-content');
+get_template_part('blocks/header/header');
+get_template_part('blocks/journal-content/journal-content');
+get_template_part('blocks/journal-list-full/journal-list-full');
+get_template_part('blocks/journal-list-suggestions/journal-list-suggestions');
+get_template_part('blocks/journal-meta/journal-meta');
+get_template_part('blocks/page-content/page-content');
+get_template_part('blocks/page-meta/page-meta');
+get_template_part('blocks/poem-content/poem-content');
+get_template_part('blocks/poem-first-time/poem-first-time');
+get_template_part('blocks/poem-list-full/poem-list-full');
+get_template_part('blocks/poem-list-suggestions/poem-list-suggestions');
+get_template_part('blocks/poem-meta/poem-meta');
+get_template_part('blocks/poem-thumbnail/poem-thumbnail');
+get_template_part('blocks/progress-bar/progress-bar');
+get_template_part('blocks/puffer-fish-animation/puffer-fish-animation');
+get_template_part('blocks/story-content/story-content');
+get_template_part('blocks/story-list-full/story-list-full');
+get_template_part('blocks/story-list-suggestions/story-list-suggestions');
+get_template_part('blocks/story-meta/story-meta');
+get_template_part('blocks/story-thumbnail/story-thumbnail');
 /** Add theme support for post-thumbnails */
 add_theme_support('post-thumbnails');
 /** Image size settings */
@@ -133,18 +145,6 @@ add_filter('rest_authentication_errors', function($result) {
 });
 /** Deactive XMLRPC */
 add_filter('xmlrpc_enabled', '__return_false');
-/**
- * Load an inline SVG.
- * @param string $filename The filename of the SVG you want to load.
- * @return string The content of the SVG you want to load.
- */
-function load_inline_svg($filename) {
-  $svg_path = '/images/';
-
-  return file_exists(get_template_directory().$svg_path.$filename)
-    ? file_get_contents(get_template_directory().$svg_path.$filename)
-    : '';
-}
 /** Remove SearchAction from Yoast SEO JSON */
 add_filter('disable_wpseo_json_ld_search', '__return_true');
 /** Minify HTML */

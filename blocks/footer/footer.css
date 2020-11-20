@@ -1,6 +1,4 @@
 .footer {
-  grid-area: footer;
-
   border-top: 2px solid var(--color-base-1);
   padding-top: var(--gap-size-2);
   display: grid;
@@ -9,15 +7,6 @@
     'copyright'
     'footermenu';
   align-items: center;
-}
-
-.footer a {
-  color: var(--color-base-1);
-  transition: color var(--time-animation) ease;
-}
-
-.footer a:hover {
-  color: var(--color-accent-1);
 }
 
 .footer__copyright {

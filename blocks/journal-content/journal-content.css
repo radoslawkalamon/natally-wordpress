@@ -1,0 +1,3 @@
+.journal-content p {
+  text-indent: var(--text-indent-content);
+}

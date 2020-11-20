@@ -7,7 +7,7 @@
     ['title' => 'Szary', 'value' => 'gray'],
   ]; ?>
   <form name='website-settings' class='drawer-settings'>
-    <?php Fragment_Title(
+    <?php Component_Title(
       [],
       'Motyw',
       '4'

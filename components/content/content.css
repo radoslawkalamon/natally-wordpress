@@ -1,0 +1,41 @@
+.content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--max-width-content);
+  line-height: var(--line-height-content);
+  font-size: var(--font-size-base);
+  hyphens: auto;
+}
+
+.content p {
+  margin: 0 0 var(--margin-paragraph-content);
+}
+
+.content p:last-child {
+  margin: 0;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+  font-family: var(--font-family-sans);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.content h1 {
+  font-size: var(--font-size-h1);
+}
+
+.content h2 {
+  font-size: var(--font-size-h2);
+}
+
+.content h3 {
+  font-size: var(--font-size-h3);
+}
+
+.content h4 {
+  font-size: var(--font-size-h4);
+}

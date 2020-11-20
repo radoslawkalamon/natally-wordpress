@@ -1,7 +1,7 @@
 <?php function Content_DrawerSidebar() { ?>
-  <?php Fragment_Logo(['sidebar']); ?>
-  <?php Fragment_Menu(['header'], 'header-menu'); ?>
-  <?php Component_SocialMedia(['social-media']); ?>
+  <?php Component_Logo(['sidebar']); ?>
+  <?php Component_Menu(['sidebar'], 'header-menu'); ?>
+  <?php Component_SocialMedia(['sidebar']); ?>
   <?php Component_DrawerButton(['sidebar'], 'settings', 'cog.svg'); ?>
 <?php } 
 

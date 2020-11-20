@@ -1,5 +1,5 @@
       <?php Block_Footer(); ?>
-      <?php Block_CookieBar('/polityka-prywatnosci/'); ?>
+      <?php Block_CookieBar(); ?>
     </div>
     <?php wp_footer(); ?>
   </body>

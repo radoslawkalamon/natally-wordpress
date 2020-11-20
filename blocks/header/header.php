@@ -5,7 +5,7 @@
         <?php Component_DrawerButton([], 'sidebar', 'hamburger.svg'); ?>
       </div>
       <div class='header__logo'>
-        <?php Fragment_Logo(['header']); ?>
+        <?php Component_Logo(['header']); ?>
       </div>
       <div class='header__button-right'>
         <?php Component_DrawerButton([], 'settings', 'cog.svg'); ?>
