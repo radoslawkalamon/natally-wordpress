@@ -10,7 +10,7 @@ body {
   --color-red-transparent: rgba(226, 0, 14, 0.4);
 
   --font-family-sans: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-family-serif: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
+  --font-family-serif: Georgia, Times, 'Times New Roman', serif; 
   --font-size-footnotes: 13px;
   --font-size-base: 16px;
   --font-size-h4: 20px;
