@@ -1,7 +1,8 @@
 <?php
-if (!isset($content_width)) {
-  $content_width = 900;
-}
+# Global const
+const NATALLY_VERSION = '2.4';
+# Content Width set
+$content_width ??= 900;
 # Delete: WP Emoji Scripts / CSS
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
@@ -36,7 +37,7 @@ remove_action('wp_head', 'wp_shortlink_wp_head', 10);
 remove_action('template_redirect', 'wp_shortlink_header', 11);
 /** Enqueue CSS */
 add_action('wp_enqueue_scripts', function () {
-  wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '2.4', 'all');
+  wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), NATALLY_VERSION, 'all');
   wp_enqueue_style('standard-style');
 });
 /** Enqueue JS */
