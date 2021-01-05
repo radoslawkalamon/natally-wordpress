@@ -71,6 +71,7 @@ get_template_part('components/link-poem/link-poem');
 get_template_part('components/link-story/link-story');
 get_template_part('components/list-journal/list-journal');
 get_template_part('components/list-poem/list-poem');
+get_template_part('components/list-story/list-story');
 get_template_part('components/logo/logo');
 get_template_part('components/menu/menu');
 get_template_part('components/meta/meta');

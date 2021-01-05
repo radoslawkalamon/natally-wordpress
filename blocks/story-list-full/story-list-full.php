@@ -4,18 +4,7 @@
     'orderby' => 'date',
     'posts_per_page' => -1,
   ]; ?>
-
-  <?php $query = new WP_Query($queryArgs); ?>
-  <?php if ($query->have_posts()) : ?>
-  
-  <div class='story-list-full'>
-    <?php while ($query->have_posts() ) : $query->the_post(); ?>
-      <?php Component_LinkStory(); ?>
-    <?php endwhile; ?>
-  </div>
-
-  <?php wp_reset_postdata(); ?>
-  <?php endif; ?>
+  <?php Component_ListStory(['full'], $queryArgs); ?>
 <?php } ?>
 
 <?php function Block_StoryListFull() { ?>
@@ -29,5 +18,3 @@
     [],
   ); ?>
 <?php }
-
-natally_push_style('blocks-story-list-full', 'blocks/story-list-full/story-list-full.css');
