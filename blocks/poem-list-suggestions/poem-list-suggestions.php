@@ -2,20 +2,12 @@
 <?php function Content_PoemListSuggestions() { ?>
   <?php $queryArgs = [
     'cat' => 5,
-    'orderby' => 'rand',
+    'orderby' => is_front_page() ? 'date' : 'rand',
     'posts_per_page' => 6,
     'post__not_in' => is_single() ? [get_the_ID()] : [],
-  ]; ?>
-
-  <?php $query = new WP_Query($queryArgs); ?>
-  <?php if ($query->have_posts()) : ?>
-
-  <?php while ($query->have_posts() ) : $query->the_post(); ?>
-    <?php Component_LinkPoem(); ?>
-  <?php endwhile; ?>
-
-  <?php wp_reset_postdata(); ?>
-  <?php endif; ?>
+  ];
+  ?>
+  <?php Component_ListPoem(['suggestions'], $queryArgs); ?>
 <?php } ?>
 
 <?php function Block_PoemListSuggestions() { ?>
@@ -33,5 +25,3 @@
     ); ?>
   </div>
 <?php }
-
-natally_push_style('blocks-poem-list-suggestions', 'blocks/poem-list-suggestions/poem-list-suggestions.css');
