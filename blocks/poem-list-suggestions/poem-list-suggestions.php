@@ -34,7 +34,4 @@
   </div>
 <?php }
 
-
-
-
-
+natally_push_style('blocks-poem-list-suggestions', 'blocks/poem-list-suggestions/poem-list-suggestions.css');

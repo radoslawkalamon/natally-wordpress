@@ -7,5 +7,7 @@
       Akceptuj
     </button>
   </div>
-  <script src='<?= get_template_directory_uri(); ?>/blocks/cookie-bar/cookie-bar.js' defer></script>
 <?php }
+
+natally_push_style('blocks-cookie-bar', 'blocks/cookie-bar/cookie-bar.css');
+natally_push_script('blocks-cookie-bar', 'blocks/cookie-bar/cookie-bar.js', true);

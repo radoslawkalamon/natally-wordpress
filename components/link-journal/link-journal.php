@@ -32,3 +32,5 @@
   </article>
 
 <?php }
+
+natally_push_style('components-link-journal', 'components/link-journal/link-journal.css');

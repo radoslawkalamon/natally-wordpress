@@ -16,4 +16,6 @@
 
   <?php wp_reset_postdata(); ?>
   <?php endif; ?>
-<?php } ?>
+<?php }
+
+natally_push_style('blocks-journal-list-full', 'blocks/journal-list-full/journal-list-full.css');

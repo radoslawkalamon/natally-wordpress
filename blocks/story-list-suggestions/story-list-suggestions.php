@@ -32,3 +32,5 @@
     [],
   ); ?>
 <?php }
+
+natally_push_style('blocks-story-list-suggestions', 'blocks/story-list-suggestions/story-list-suggestions.css');

@@ -10,3 +10,5 @@
 
   <p class='<?= implode(' ', $classNames); ?>'><?= $text; ?></p>
 <?php }
+
+natally_push_style('components-text', 'components/text/text.css');

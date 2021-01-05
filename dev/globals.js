@@ -1,30 +1,24 @@
 module.exports = {
     devFilesArray: [
-        'fragments/**/*.css',
-        'components/**/*.css',
-        'blocks/**/*.css',
         'dev/**',
         'dist/**',
         'node_modules/**',
-        'styles/**',
         '.git/**',
         '.gitattributes',
         '.gitignore',
         'package.json',
         'package-lock.json',
+        'file-hashes.json',
     ],
     globs: {
         allFiles: '**/*',
-        cssFiles: '**/*.css',
-    },
-    cssFiles: {
-        default: 'style.css',
-        minified: 'style.min.css',
+        filesToHash: 'dist/**/*.*(js|css)',
     },
     distFolder: './dist',
+    hashesFile: './dist/file-hashes.json',
     watcherFolder: '../natally',
-    consoleString(actionName, logString) {
+    consoleLog(actionName, logString) {
         const ConsoleDate = new Date();
-        return `${ConsoleDate.toLocaleTimeString('pl-PL')} | ${actionName.padEnd(20)} | ${logString}`;
+        console.log(`${ConsoleDate.toLocaleTimeString('pl-PL')} | ${actionName.padEnd(20)} | ${logString}`);
     }
 };

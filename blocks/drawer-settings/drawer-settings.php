@@ -23,7 +23,6 @@
         />
       <?php endforeach; ?>
     </div>
-    <script src='<?= get_template_directory_uri(); ?>/blocks/drawer-settings/drawer-settings.js' defer></script>
   </form>
 <?php } 
 
@@ -34,3 +33,7 @@ function Block_DrawerSettings() {
     'Content_DrawerSettings'
   );
 }
+
+natally_push_style('blocks-drawer-settings', 'blocks/drawer-settings/drawer-settings.css');
+natally_push_script('blocks-drawer-settings-body-attachment', 'blocks/drawer-settings/drawer-settings-body-attachment.js');
+natally_push_script('blocks-drawer-settings', 'blocks/drawer-settings/drawer-settings.js');

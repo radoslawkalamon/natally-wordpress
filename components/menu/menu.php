@@ -24,3 +24,5 @@
     'walker'          => ''
   ]);
 }
+
+natally_push_style('components-menu', 'components/menu/menu.css');

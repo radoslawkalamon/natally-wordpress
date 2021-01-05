@@ -12,3 +12,5 @@ function Block_DrawerSidebar() {
     'Content_DrawerSidebar'
   );
 }
+
+natally_push_style('blocks-drawer-sidebar', 'blocks/drawer-sidebar/drawer-sidebar.css');

@@ -18,3 +18,5 @@
   </div>
 
 <?php }
+
+natally_push_style('components-drawer', 'components/drawer/drawer.css');

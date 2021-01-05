@@ -8,4 +8,4 @@
   ></div>
 <?php }
 
-
+natally_push_style('blocks-story-thumbnail', 'blocks/story-thumbnail/story-thumbnail.css');

@@ -4,5 +4,7 @@
     class='progress-bar'
     data-progress-bar
   ></div>
-  <script src='<?= get_template_directory_uri(); ?>/blocks/progress-bar/progress-bar.js' defer></script>
 <?php }
+
+natally_push_style('blocks-progress-bar', 'blocks/progress-bar/progress-bar.css');
+natally_push_script('blocks-progress-bar', 'blocks/progress-bar/progress-bar.js');

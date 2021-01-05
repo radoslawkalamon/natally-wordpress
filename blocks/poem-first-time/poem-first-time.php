@@ -13,3 +13,5 @@
     ); ?>
   </div>
 <?php }
+
+natally_push_style('blocks-poem-first-time', 'blocks/poem-first-time/poem-first-time.css');

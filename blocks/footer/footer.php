@@ -8,3 +8,5 @@
     </div>
   </footer>
 <?php }
+
+natally_push_style('blocks-footer', 'blocks/footer/footer.css');

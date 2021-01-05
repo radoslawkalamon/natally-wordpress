@@ -4,9 +4,7 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build-style": "node ./dev/style.js",
-    "build-dist": "node ./dev/create-dist.js",
-    "build": "npm run build-style && npm run build-dist",
+    "build": "node ./dev/create-dist.js && node ./dev/minify-files.js && node ./dev/calculate-hashes.js",
     "watch": "node ./dev/watch.js"
   },
   "repository": {
@@ -24,8 +22,7 @@
     "chokidar": "^3.4.3",
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
-    "postcss": "^8.2.2",
-    "postcss-clean": "^1.1.0",
-    "postcss-import": "^14.0.0"
+    "md5-file": "^5.0.0",
+    "minify": "^6.0.1"
   }
 }

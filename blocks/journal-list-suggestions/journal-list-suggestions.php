@@ -33,7 +33,4 @@
   </div>
 <?php }
 
-
-
-
-
+natally_push_style('blocks-journal-list-suggestions', 'blocks/journal-list-suggestions/journal-list-suggestions.css');

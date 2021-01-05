@@ -5,3 +5,5 @@
     <?php Component_Content(['poem'], $content); ?>
   </div>
 <?php }
+
+natally_push_style('blocks-poem-content', 'blocks/poem-content/poem-content.css');

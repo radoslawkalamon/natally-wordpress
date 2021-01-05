@@ -51,3 +51,5 @@
     <?php endforeach; ?>
   </ul>
 <?php }
+
+natally_push_style('components-social-media', 'components/social-media/social-media.css');

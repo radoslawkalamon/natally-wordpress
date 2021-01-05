@@ -23,3 +23,5 @@
     <?= $label; ?>
   </a>
 <?php }
+
+natally_push_style('components-button', 'components/button/button.css');

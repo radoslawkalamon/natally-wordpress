@@ -17,3 +17,5 @@
   <?php wp_reset_postdata(); ?>
   <?php endif; ?>
 <?php }
+
+natally_push_style('blocks-poem-list-full', 'blocks/poem-list-full/poem-list-full.css');

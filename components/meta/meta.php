@@ -20,3 +20,5 @@
     <?php endif; ?>
   </div>
 <?php }
+
+natally_push_style('components-meta', 'components/meta/meta.css');

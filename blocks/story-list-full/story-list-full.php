@@ -29,3 +29,5 @@
     [],
   ); ?>
 <?php }
+
+natally_push_style('blocks-story-list-full', 'blocks/story-list-full/story-list-full.css');

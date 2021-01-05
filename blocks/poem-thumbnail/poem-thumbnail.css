@@ -3,6 +3,7 @@
   background-size: auto;
   background-position: center;
   background-repeat: repeat;
+  background-color: var(--color-contra-3);
   grid-area: none;
   height: var(--height-poem-cover);
   position: absolute;
