@@ -29,3 +29,5 @@
     />
   </div>
 <?php }
+
+natally_push_style('blocks-puffer-fish-animation', 'blocks/puffer-fish-animation/puffer-fish-animation.css');
