@@ -16,7 +16,7 @@
         'tag' => 'section',
         'title' => 'Zapiski',
         'buttonLabel' => 'Więcej Zapisków',
-        'buttonHref' => NATALLY_PAGE_JOURNALSS
+        'buttonHref' => NATALLY_PAGE_JOURNALS
       ],
       'Content_JournalListSuggestions',
       [],
