@@ -17,3 +17,5 @@
   </button>
 
 <?php }
+
+natally_push_style('components-drawer-button', 'components/drawer-button/drawer-button.css');

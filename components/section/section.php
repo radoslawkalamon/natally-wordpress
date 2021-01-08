@@ -27,3 +27,5 @@
     <?php endif; ?>
   </<?= $data['tag']; ?>>
 <?php }
+
+natally_push_style('components-section', 'components/section/section.css');

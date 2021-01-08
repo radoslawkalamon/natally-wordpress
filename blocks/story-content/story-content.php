@@ -5,3 +5,5 @@
     <?php Component_Content(['story'], $content, true); ?>
   </div>
 <?php }
+
+natally_push_style('blocks-story-content', 'blocks/story-content/story-content.css');

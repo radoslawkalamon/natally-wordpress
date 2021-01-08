@@ -15,3 +15,5 @@
   </<?= $tagName; ?>>
 
 <?php }
+
+natally_push_style('components-title', 'components/title/title.css');

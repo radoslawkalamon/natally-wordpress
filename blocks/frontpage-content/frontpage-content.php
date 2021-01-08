@@ -6,3 +6,5 @@
     <?php Component_Content(['frontpage'], $content); ?>
   </div>
 <?php }
+
+natally_push_style('blocks-frontpage-content', 'blocks/frontpage-content/frontpage-content.css');

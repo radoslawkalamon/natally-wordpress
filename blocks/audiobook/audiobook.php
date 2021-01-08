@@ -15,3 +15,5 @@
   </section>
   <?php endif; ?>
 <?php }
+
+natally_push_style('blocks-audiobook', 'blocks/audiobook/audiobook.css');

@@ -16,3 +16,5 @@
     <?= $content; ?>
   </div>
 <?php }
+
+natally_push_style('components-content', 'components/content/content.css');

@@ -13,3 +13,5 @@
     </a>
   </div>
 <?php }
+
+natally_push_style('components-logo', 'components/logo/logo.css');

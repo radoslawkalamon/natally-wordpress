@@ -20,14 +20,17 @@
     <link rel="apple-touch-icon" href="<?= get_template_directory_uri(); ?>/images/icons/icon-192x192-white.png">
     <!-- Blink Settings -->
     <meta name="theme-color" content="#E2000E">
-    <!-- Google Podcasts Settings -->
+    <!-- Podcasts RSS Feed -->
     <link type="application/rss+xml" rel="alternate" title="169cm.pl :: Kanał podcastu" href="http://feeds.soundcloud.com/users/soundcloud:users:618891150/sounds.rss"/>
     <!-- Posts RSS Feed -->
     <link type="application/rss+xml" rel="alternate" title="169cm.pl :: Kanał postów" href="<?= bloginfo('rss2_url'); ?>" />
+    <!-- Head -->
     <?php wp_head(); ?>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap">
   </head>
   <body <?php body_class(); ?>>
-    <script src="<?= get_template_directory_uri(); ?>/blocks/drawer-settings/drawer-settings-body-attachment.js"></script>
     <div class='body-wrapper'>
       <?php Block_Header(); ?>
       <?php Block_DrawerSidebar(); ?>

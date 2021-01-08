@@ -13,3 +13,5 @@
     </div>
   </header>
 <?php }
+
+natally_push_style('blocks-header', 'blocks/header/header.css');

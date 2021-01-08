@@ -5,3 +5,5 @@
     <?php Component_Content(['journal'], $content, true); ?>
   </div>
 <?php }
+
+natally_push_style('blocks-journal-content', 'blocks/journal-content/journal-content.css');

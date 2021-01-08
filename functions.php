@@ -1,16 +1,44 @@
 <?php
-if (!isset($content_width)) {
-  $content_width = 900;
+# Global const
+const NATALLY_VERSION = '2.4';
+const NATALLY_PAGE_STORIES = 0;
+const NATALLY_PAGE_POEMS = 343;
+const NATALLY_PAGE_JOURNALS = 588;
+const NATALLY_PAGE_PRIVACY_POLICY = 149;
+const NATALLY_PAGE_404 = 657;
+# Global variables
+$NATALLY_STYLES = [
+  ['styles-variables', 'styles/variables.css'],
+  ['styles-schemas', 'styles/schemas.css'],
+  ['styles-layout', 'styles/layout.css'],
+  ['styles-body', 'styles/body.css'],
+];
+$NATALLY_SCRIPTS = [
+  ['background-image-lazy-loading', 'js/background-image-lazy-loading.js', true],
+  ['drawer', 'js/drawer.js', true],
+  ['poem-more-info', 'js/poem-more-info.js', true],
+];
+$NATALLY_FILES_HASHES_PATH = get_template_directory().'/file-hashes.json';
+$NATALLY_FILES_HASHES = json_decode(file_get_contents($NATALLY_FILES_HASHES_PATH), true);
+# Styles Push Function
+function natally_push_style(string $name, string $path) {
+  global $NATALLY_STYLES;
+  array_push($NATALLY_STYLES, [$name, $path]);
 }
+# Scripts Push Function
+function natally_push_script(string $name, string $path, bool $defer = true) {
+  global $NATALLY_SCRIPTS;
+  array_push($NATALLY_SCRIPTS, [$name, $path, $defer]);
+}
+# Content Width set
+$content_width ??= 650;
 # Delete: WP Emoji Scripts / CSS
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
 # Delete: Gutenberg CSS
-add_action('wp_print_styles', function () {
-  wp_dequeue_style('wp-block-library');
-}, 100);
+add_action('wp_print_styles', fn () => wp_dequeue_style('wp-block-library'), 100);
 # Delete: WP Link REST API
 remove_action('wp_head', 'rest_output_link_wp_head', 10);
 remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
@@ -34,31 +62,21 @@ remove_action('wp_head', 'wp_resource_hints', 2);
 remove_action('wp_head', 'wp_shortlink_wp_head', 10);
 # Delete: Shortlink from HTTP Header
 remove_action('template_redirect', 'wp_shortlink_header', 11);
-/** Enqueue CSS */
-add_action('wp_enqueue_scripts', function () {
-  wp_register_style('standard-style', get_template_directory_uri() . '/style.min.css', array(), '2.3', 'all');
-  wp_register_style('google-fonts', 'https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@700&display=swap', array(), '2.3', 'all');
-  wp_enqueue_style('standard-style');
-  wp_enqueue_style('google-fonts');
-});
-/** Enqueue JS */
-add_action('wp_enqueue_scripts', function () {
-  wp_enqueue_script('background-image-lazy-loading', get_template_directory_uri() . '/js/background-image-lazy-loading.js', array(), '1.0.0', true);
-  wp_enqueue_script('drawer', get_template_directory_uri() . '/js/drawer.js', array(), '1.0.0', true);
-  wp_enqueue_script('poem-more-info', get_template_directory_uri() . '/js/poem-more-info.js', array(), '1.0.0', true);
-});
-/** Register Menus */
+# Register Menus
 register_nav_menu('header-menu', 'Header Menu');
 register_nav_menu('footer-menu', 'Footer Menu');
-/** Initialize Components */
+# Initialize Components
 get_template_part('components/button/button');
 get_template_part('components/content/content');
 get_template_part('components/drawer/drawer');
 get_template_part('components/drawer-button/drawer-button');
 get_template_part('components/icon/icon');
-get_template_part('components/link-journal/link-journal');  
-get_template_part('components/link-poem/link-poem');        
-get_template_part('components/link-story/link-story');      
+get_template_part('components/link-journal/link-journal');
+get_template_part('components/link-poem/link-poem');
+get_template_part('components/link-story/link-story');
+get_template_part('components/list-journal/list-journal');
+get_template_part('components/list-poem/list-poem');
+get_template_part('components/list-story/list-story');
 get_template_part('components/logo/logo');
 get_template_part('components/menu/menu');
 get_template_part('components/meta/meta');
@@ -66,7 +84,7 @@ get_template_part('components/section/section');
 get_template_part('components/social-media/social-media');
 get_template_part('components/text/text');
 get_template_part('components/title/title');
-/** Initialize Blocks */
+#Initialize Blocks
 get_template_part('blocks/audiobook/audiobook');
 get_template_part('blocks/cookie-bar/cookie-bar');
 get_template_part('blocks/did-you-like/did-you-like');
@@ -96,19 +114,39 @@ get_template_part('blocks/story-list-full/story-list-full');
 get_template_part('blocks/story-list-suggestions/story-list-suggestions');
 get_template_part('blocks/story-meta/story-meta');
 get_template_part('blocks/story-thumbnail/story-thumbnail');
-/** Add theme support for post-thumbnails */
+# Enqueue CSS
+add_action('wp_enqueue_scripts', function () {
+  global $NATALLY_FILES_HASHES;
+  global $NATALLY_STYLES;
+  foreach ($NATALLY_STYLES as $style) {
+    [$name, $path] = $style;
+    $pathTheme = get_template_directory_uri().'/'.$path;
+    $hash = $NATALLY_FILES_HASHES[$path] ?? time();
+    wp_enqueue_style($name, $pathTheme, [], $hash, 'all');
+  }
+});
+# Enqueue JS
+add_action('wp_enqueue_scripts', function () {
+  global $NATALLY_FILES_HASHES;
+  global $NATALLY_SCRIPTS;
+  foreach ($NATALLY_SCRIPTS as $script) {
+    [$name, $path, $defer] = $script;
+    $pathTheme = get_template_directory_uri().'/'.$path;
+    $hash = $NATALLY_FILES_HASHES[$path] ?? time();
+    wp_enqueue_script($name, $pathTheme, [], $hash, $defer);
+  }
+});
+# Add theme support for post-thumbnails
 add_theme_support('post-thumbnails');
-/** Image size settings */
+# Image size settings
 add_image_size('post-thumbnail-desktop-2x', 1800, null, true);
 add_image_size('post-thumbnail-desktop-1x', 900, null, true);
 remove_image_size('1536x1536');
 remove_image_size('2048x2048');
-add_filter('intermediate_image_sizes', function($sizes) {
-  return array_diff($sizes, ['medium_large']);
-});
-/** Add title tag support */
+add_filter('intermediate_image_sizes', fn($sizes) => array_diff($sizes, ['medium_large']));
+# Add title tag support
 add_theme_support('title-tag');
-/** Deactive Search */
+# Deactive Search
 add_action('parse_query', function ($query) {
   if (is_search()) {
     $query->is_search = false;
@@ -116,7 +154,7 @@ add_action('parse_query', function ($query) {
   }
 });
 add_filter('get_search_form', '__return_false');
-/** Deactive Comments Feeds */
+# Deactive Comments Feeds
 function disable_comments_feeds() {
   if (is_single() || is_page()) {
     wp_redirect(get_permalink(), 301);
@@ -133,22 +171,20 @@ add_action('do_feed_atom_comments', 'disable_comments_feeds', -1);
 add_action('feed_links_show_comments_feed', '__return_false', -1);
 remove_action('wp_head', 'feed_links', 2);
 remove_action('wp_head', 'feed_links_extra', 3);
-/** Restrict REST API only for authenticated users */
+#Restrict REST API only for authenticated users
 add_filter('rest_authentication_errors', function($result) {
   if (!empty($result)) {
       return $result;
   }
   if (!is_user_logged_in()) {
-      return new WP_Error('rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ));
+      return new WP_Error('rest_not_logged_in', 'You are not currently logged in.', ['status' => 401]);
   }
   return $result;
 });
-/** Deactive XMLRPC */
+# Deactive XMLRPC
 add_filter('xmlrpc_enabled', '__return_false');
-/** Remove SearchAction from Yoast SEO JSON */
+# Remove SearchAction from Yoast SEO JSON
 add_filter('disable_wpseo_json_ld_search', '__return_true');
-/** Minify HTML */
+# Minify HTML
 get_template_part('WP_HTML_Compression');
-add_action('get_header', function() {
-  ob_start(function($html) { return new WP_HTML_Compression($html); });
-});
+add_action('get_header', fn() => ob_start(fn($html) => new WP_HTML_Compression($html)));

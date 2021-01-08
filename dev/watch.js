@@ -7,20 +7,13 @@ const globals = require('./globals.js');
 const scriptFilename = __filename.split('\\').pop();
 
 const watcherMoveOnChange = chokidar.watch(globals.globs.allFiles, {
-    ignored: globals.devFilesArray,
-    persistent: true,
+  ignored: globals.devFilesArray,
+  persistent: true,
 });
-watcherMoveOnChange
-    .on('ready', () => console.log(globals.consoleString(scriptFilename, 'Initial scanning completed! (MoveOnChange)')))
-    .on('change', path => {
-        fs.copySync(path, `${globals.watcherFolder}/${path}`);
-        console.log(globals.consoleString(scriptFilename, `File ${path} copying completed!`));
-    });
 
-const watcherStyles = chokidar.watch(globals.globs.cssFiles, {
-    ignored: [ globals.cssFiles.minified ],
-    persistent: true,
-});
-watcherStyles
-    .on('ready', () => console.log(globals.consoleString(scriptFilename, 'Initial scanning completed! (Styles)')))
-    .on('change', () => require('child_process').fork('./dev/style.js'));
+watcherMoveOnChange
+  .on('ready', () => globals.consoleLog(scriptFilename, 'Initial scanning completed!'))
+  .on('change', (path) => {
+    fs.copySync(path, `${globals.watcherFolder}/${path}`);
+    globals.consoleLog(scriptFilename, `File ${path} copied successfully!`);
+  });

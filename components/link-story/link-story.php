@@ -37,3 +37,5 @@
     </a>
   </article>
 <?php }
+
+natally_push_style('components-link-story', 'components/link-story/link-story.css');

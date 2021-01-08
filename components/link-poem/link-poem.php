@@ -22,3 +22,5 @@
     </a>
   </article>
 <?php }
+
+natally_push_style('components-link-poem', 'components/link-poem/link-poem.css');

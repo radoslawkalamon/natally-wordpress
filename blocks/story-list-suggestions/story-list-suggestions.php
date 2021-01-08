@@ -5,18 +5,7 @@
     'posts_per_page' => 2,
     'post__not_in' => is_single() ? [get_the_ID()] : [],
   ]; ?>
-
-  <?php $query = new WP_Query($queryArgs); ?>
-  <?php if ($query->have_posts()) : ?>
-  
-  <div class='story-list-full'>
-    <?php while ($query->have_posts() ) : $query->the_post(); ?>
-      <?php Component_LinkStory(); ?>
-    <?php endwhile; ?>
-  </div>
-
-  <?php wp_reset_postdata(); ?>
-  <?php endif; ?>
+  <?php Component_ListStory(['suggestions'], $queryArgs); ?>
 <?php } ?>
 
 <?php function Block_StoryListSuggestions() { ?>
@@ -26,7 +15,7 @@
       'tag' => 'section',
       'title' => 'Opowiadania',
       'buttonLabel' => 'Więcej opowiadań',
-      'buttonHref' => 0
+      'buttonHref' => NATALLY_PAGE_STORIES
     ],
     'Content_StoryListSuggestions',
     [],
