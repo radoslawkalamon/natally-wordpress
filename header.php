@@ -24,11 +24,11 @@
     <link type="application/rss+xml" rel="alternate" title="169cm.pl :: Kanał podcastu" href="http://feeds.soundcloud.com/users/soundcloud:users:618891150/sounds.rss"/>
     <!-- Posts RSS Feed -->
     <link type="application/rss+xml" rel="alternate" title="169cm.pl :: Kanał postów" href="<?= bloginfo('rss2_url'); ?>" />
-    <!-- Google Fonts Preconnect -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap">
     <!-- Head -->
     <?php wp_head(); ?>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap">
   </head>
   <body <?php body_class(); ?>>
     <div class='body-wrapper'>
