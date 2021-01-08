@@ -15,7 +15,7 @@
       'tag' => 'section',
       'title' => 'Opowiadania',
       'buttonLabel' => 'Więcej opowiadań',
-      'buttonHref' => 0
+      'buttonHref' => NATALLY_PAGE_STORIES
     ],
     'Content_StoryListSuggestions',
     [],

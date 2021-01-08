@@ -1,6 +1,11 @@
 <?php
 # Global const
 const NATALLY_VERSION = '2.4';
+const NATALLY_PAGE_STORIES = 0;
+const NATALLY_PAGE_POEMS = 343;
+const NATALLY_PAGE_JOURNAL = 588;
+const NATALLY_PAGE_PRIVACY_POLICY = 149;
+const NATALLY_PAGE_404 = 657;
 # Global variables
 $NATALLY_STYLES = [
   ['styles-variables', 'styles/variables.css'],

@@ -18,7 +18,7 @@
         'tag' => 'section',
         'title' => 'Poezja 3.14',
         'buttonLabel' => 'Więcej Poezji 3.14',
-        'buttonHref' => 343
+        'buttonHref' => NATALLY_PAGE_POEMS
       ],
       'Content_PoemListSuggestions',
       [],

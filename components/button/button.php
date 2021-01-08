@@ -11,7 +11,7 @@
   $hrefType = gettype($href);
   $hrefStrategies = [
     'string'  => fn ($URL) => $URL,
-    'integer' => fn ($postID) => $postID === 0 ? get_home_url() : get_permalink($postID)
+    'integer' => fn ($postID) => $postID === NATALLY_PAGE_STORIES ? get_home_url() : get_permalink($postID)
   ];
   $href = $hrefStrategies[$hrefType]($href) ?? '#!';
   ?>

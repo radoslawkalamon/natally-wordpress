@@ -6,7 +6,7 @@
         'tag' => 'aside',
         'title' => 'Pierwszy raz?',
         'buttonLabel' => 'Tak, z przyjemnością!',
-        'buttonHref' => 343
+        'buttonHref' => NATALLY_PAGE_POEMS
       ],
       'Component_Text',
       [['align-center'], 'Chcesz dowiedzieć&nbsp;się więcej o&nbsp;Poezji&nbsp;3.14?']
