@@ -1,3 +1,5 @@
+// This file is injected into header.php!
+
 (() => {
   // Color schema
   const colorSchema = window.localStorage.getItem('color-schema') || 'auto';

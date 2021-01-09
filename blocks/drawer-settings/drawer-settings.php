@@ -35,5 +35,4 @@ function Block_DrawerSettings() {
 }
 
 natally_push_style('blocks-drawer-settings', 'blocks/drawer-settings/drawer-settings.css');
-natally_push_script('blocks-drawer-settings-body-attachment', 'blocks/drawer-settings/drawer-settings-body-attachment.js');
 natally_push_script('blocks-drawer-settings', 'blocks/drawer-settings/drawer-settings.js');

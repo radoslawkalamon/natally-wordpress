@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap">
   </head>
   <body <?php body_class(); ?>>
+    <script src="<?= get_template_directory_uri(); ?>/blocks/drawer-settings/drawer-settings-body-attachment.js"></script>
     <div class='body-wrapper'>
       <?php Block_Header(); ?>
       <?php Block_DrawerSidebar(); ?>
