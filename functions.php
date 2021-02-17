@@ -9,6 +9,7 @@ const NATALLY_PAGE_404 = 657;
 # Global variables
 $NATALLY_STYLES = [
   ['styles-variables', 'styles/variables.css'],
+  ['styles-fonts', 'styles/fonts.css'],
   ['styles-schemas', 'styles/schemas.css'],
   ['styles-layout', 'styles/layout.css'],
   ['styles-body', 'styles/body.css'],

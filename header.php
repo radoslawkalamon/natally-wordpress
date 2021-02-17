@@ -25,9 +25,6 @@
     <link type="application/rss+xml" rel="alternate" title="169cm.pl :: Kanał postów" href="<?= bloginfo('rss2_url'); ?>" />
     <!-- Head -->
     <?php wp_head(); ?>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap">
   </head>
   <body <?php body_class(); ?>>
     <script src="<?= get_template_directory_uri(); ?>/blocks/drawer-settings/drawer-settings-body-attachment.js"></script>
