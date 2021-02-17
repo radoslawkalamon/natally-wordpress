@@ -2,7 +2,7 @@
   <?php Component_Logo(['sidebar']); ?>
   <?php Component_Menu(['sidebar'], 'header-menu'); ?>
   <?php Component_SocialMedia(['sidebar']); ?>
-  <?php Component_DrawerButton(['sidebar'], 'settings', 'cog.svg'); ?>
+  <?php Component_DrawerButton(['sidebar'], 'settings', 'cog.svg', 'Ustawienia'); ?>
 <?php } 
 
 function Block_DrawerSidebar() {

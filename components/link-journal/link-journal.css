@@ -44,6 +44,8 @@
   grid-area: excerpt;
   line-height: var(--line-height-content);
   font-size: var(--font-size-base);
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
   display: -webkit-box;
   -webkit-line-clamp: 2;
