@@ -5,6 +5,7 @@
       <?php Block_PoemMeta(); ?>
       <?php Block_PoemContent(); ?>
     </article>
+    <?php Block_PoemAdjacentPosts(); ?>
     <?php Block_PoemFirstTime(); ?>
     <?php Block_PoemListSuggestions(); ?>
     <?php Block_StoryListSuggestions(); ?>

@@ -6,6 +6,7 @@
       <?php Block_Audiobook(); ?>
       <?php Block_JournalContent(); ?>
     </article>
+    <?php Block_JournalAdjacentPosts(); ?>
     <?php Block_DidYouLike(); ?>
     <?php Block_JournalListSuggestions(); ?>
     <?php Block_StoryListSuggestions(); ?>
