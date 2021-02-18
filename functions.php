@@ -167,6 +167,3 @@ add_filter('rest_authentication_errors', function($result) {
 add_filter('xmlrpc_enabled', '__return_false');
 # Remove SearchAction from Yoast SEO JSON
 add_filter('disable_wpseo_json_ld_search', '__return_true');
-# Minify HTML
-get_template_part('WP_HTML_Compression');
-add_action('get_header', fn() => ob_start(fn($html) => new WP_HTML_Compression($html)));
