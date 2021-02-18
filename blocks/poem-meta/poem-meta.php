@@ -4,4 +4,4 @@
   </div>
 <?php }
 
-natally_push_style('blocks-poem-meta', 'blocks/poem-meta/poem-meta.css');
+$args['QUEUE_STYLES']->push('blocks-poem-meta', 'blocks/poem-meta/poem-meta.css');

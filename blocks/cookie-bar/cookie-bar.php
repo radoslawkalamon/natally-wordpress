@@ -9,5 +9,5 @@
   </div>
 <?php }
 
-natally_push_style('blocks-cookie-bar', 'blocks/cookie-bar/cookie-bar.css');
-natally_push_script('blocks-cookie-bar', 'blocks/cookie-bar/cookie-bar.js', true);
+$args['QUEUE_STYLES']->push('blocks-cookie-bar', 'blocks/cookie-bar/cookie-bar.css');
+$args['QUEUE_SCRIPTS']->push('blocks-cookie-bar', 'blocks/cookie-bar/cookie-bar.js');

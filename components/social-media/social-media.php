@@ -52,4 +52,4 @@
   </ul>
 <?php }
 
-natally_push_style('components-social-media', 'components/social-media/social-media.css');
+$args['QUEUE_STYLES']->push('components-social-media', 'components/social-media/social-media.css');

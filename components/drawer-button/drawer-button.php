@@ -20,4 +20,4 @@
 
 <?php }
 
-natally_push_style('components-drawer-button', 'components/drawer-button/drawer-button.css');
+$args['QUEUE_STYLES']->push('components-drawer-button', 'components/drawer-button/drawer-button.css');

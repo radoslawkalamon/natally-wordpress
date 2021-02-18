@@ -6,4 +6,4 @@
   </div>
 <?php }
 
-natally_push_style('blocks-journal-content', 'blocks/journal-content/journal-content.css');
+$args['QUEUE_STYLES']->push('blocks-journal-content', 'blocks/journal-content/journal-content.css');

@@ -23,4 +23,4 @@
   </article>
 <?php }
 
-natally_push_style('components-link-poem', 'components/link-poem/link-poem.css');
+$args['QUEUE_STYLES']->push('components-link-poem', 'components/link-poem/link-poem.css');

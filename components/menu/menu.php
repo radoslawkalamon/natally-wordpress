@@ -25,4 +25,4 @@
   ]);
 }
 
-natally_push_style('components-menu', 'components/menu/menu.css');
+$args['QUEUE_STYLES']->push('components-menu', 'components/menu/menu.css');

@@ -13,4 +13,4 @@ function Block_DrawerSidebar() {
   );
 }
 
-natally_push_style('blocks-drawer-sidebar', 'blocks/drawer-sidebar/drawer-sidebar.css');
+$args['QUEUE_STYLES']->push('blocks-drawer-sidebar', 'blocks/drawer-sidebar/drawer-sidebar.css');

@@ -24,4 +24,4 @@
   </a>
 <?php }
 
-natally_push_style('components-button', 'components/button/button.css');
+$args['QUEUE_STYLES']->push('components-button', 'components/button/button.css');

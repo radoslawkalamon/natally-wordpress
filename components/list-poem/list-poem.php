@@ -21,4 +21,4 @@
   <?php endif; ?>
 <?php }
 
-natally_push_style('components-list-poem', 'components/list-poem/list-poem.css');
+$args['QUEUE_STYLES']->push('components-list-poem', 'components/list-poem/list-poem.css');

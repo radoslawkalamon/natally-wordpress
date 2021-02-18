@@ -8,4 +8,4 @@
   ></div>
 <?php }
 
-natally_push_style('blocks-poem-thumbnail', 'blocks/poem-thumbnail/poem-thumbnail.css');
+$args['QUEUE_STYLES']->push('blocks-poem-thumbnail', 'blocks/poem-thumbnail/poem-thumbnail.css');

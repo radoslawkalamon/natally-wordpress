@@ -28,4 +28,4 @@
   </<?= $data['tag']; ?>>
 <?php }
 
-natally_push_style('components-section', 'components/section/section.css');
+$args['QUEUE_STYLES']->push('components-section', 'components/section/section.css');

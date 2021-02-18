@@ -30,4 +30,4 @@
   </div>
 <?php }
 
-natally_push_style('blocks-puffer-fish-animation', 'blocks/puffer-fish-animation/puffer-fish-animation.css');
+$args['QUEUE_STYLES']->push('blocks-puffer-fish-animation', 'blocks/puffer-fish-animation/puffer-fish-animation.css');

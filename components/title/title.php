@@ -16,4 +16,4 @@
 
 <?php }
 
-natally_push_style('components-title', 'components/title/title.css');
+$args['QUEUE_STYLES']->push('components-title', 'components/title/title.css');

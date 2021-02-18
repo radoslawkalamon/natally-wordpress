@@ -14,4 +14,4 @@
   </header>
 <?php }
 
-natally_push_style('blocks-header', 'blocks/header/header.css');
+$args['QUEUE_STYLES']->push('blocks-header', 'blocks/header/header.css');

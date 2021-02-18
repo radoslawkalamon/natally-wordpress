@@ -7,4 +7,4 @@
   </div>
 <?php }
 
-natally_push_style('blocks-frontpage-content', 'blocks/frontpage-content/frontpage-content.css');
+$args['QUEUE_STYLES']->push('blocks-frontpage-content', 'blocks/frontpage-content/frontpage-content.css');

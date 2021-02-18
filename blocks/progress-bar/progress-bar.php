@@ -6,5 +6,5 @@
   ></div>
 <?php }
 
-natally_push_style('blocks-progress-bar', 'blocks/progress-bar/progress-bar.css');
-natally_push_script('blocks-progress-bar', 'blocks/progress-bar/progress-bar.js');
+$args['QUEUE_STYLES']->push('blocks-progress-bar', 'blocks/progress-bar/progress-bar.css');
+$args['QUEUE_SCRIPTS']->push('blocks-progress-bar', 'blocks/progress-bar/progress-bar.js');

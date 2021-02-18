@@ -17,4 +17,4 @@
   <?php endif; ?>
 <?php }
 
-natally_push_style('blocks-audiobook', 'blocks/audiobook/audiobook.css');
+$args['QUEUE_STYLES']->push('blocks-audiobook', 'blocks/audiobook/audiobook.css');
