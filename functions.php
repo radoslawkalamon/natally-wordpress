@@ -7,11 +7,16 @@ const NATALLY_PAGE_JOURNALS = 588;
 const NATALLY_PAGE_PRIVACY_POLICY = 149;
 const NATALLY_PAGE_404 = 657;
 # Load utils files
-get_template_part('utils/File');
-get_template_part('utils/FilesHashes');
-get_template_part('utils/FileQueue');
-get_template_part('utils/FileQueueStyles');
-get_template_part('utils/FileQueueScripts');
+$NATALLY_UTILS_PARTS = [
+  'utils/File',
+  'utils/FilesHashes',
+  'utils/FileQueue',
+  'utils/FileQueueStyles',
+  'utils/FileQueueScripts',
+];
+foreach ($NATALLY_UTILS_PARTS as $i) {
+  get_template_part($i);
+}
 # Initialize utils
 $NATALLY_UTILS = [
   'QUEUE_STYLES' => new NatallyFileQueueStyles(),
@@ -156,10 +161,10 @@ remove_action('wp_head', 'feed_links_extra', 3);
 #Restrict REST API only for authenticated users
 add_filter('rest_authentication_errors', function($result) {
   if (!empty($result)) {
-      return $result;
+    return $result;
   }
   if (!is_user_logged_in()) {
-      return new WP_Error('rest_not_logged_in', 'You are not currently logged in.', ['status' => 401]);
+    return new WP_Error('rest_not_logged_in', 'You are not currently logged in.', ['status' => 401]);
   }
   return $result;
 });
