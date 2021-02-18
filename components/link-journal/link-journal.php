@@ -33,4 +33,4 @@
 
 <?php }
 
-natally_push_style('components-link-journal', 'components/link-journal/link-journal.css');
+$args['QUEUE_STYLES']->push('components-link-journal', 'components/link-journal/link-journal.css');

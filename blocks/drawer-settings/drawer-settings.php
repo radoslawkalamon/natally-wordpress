@@ -34,5 +34,5 @@ function Block_DrawerSettings() {
   );
 }
 
-natally_push_style('blocks-drawer-settings', 'blocks/drawer-settings/drawer-settings.css');
-natally_push_script('blocks-drawer-settings', 'blocks/drawer-settings/drawer-settings.js');
+$args['QUEUE_STYLES']->push('blocks-drawer-settings', 'blocks/drawer-settings/drawer-settings.css');
+$args['QUEUE_SCRIPTS']->push('blocks-drawer-settings', 'blocks/drawer-settings/drawer-settings.js');

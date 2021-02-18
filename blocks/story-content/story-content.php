@@ -6,4 +6,4 @@
   </div>
 <?php }
 
-natally_push_style('blocks-story-content', 'blocks/story-content/story-content.css');
+$args['QUEUE_STYLES']->push('blocks-story-content', 'blocks/story-content/story-content.css');

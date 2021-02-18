@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
+    <meta charset="<?php bloginfo('charset'); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
+    <!-- Google Tag -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57058519-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -8,10 +12,14 @@
       gtag('js', new Date());
       gtag('config', 'UA-57058519-3');
     </script> -->
-    <meta charset="<?php bloginfo('charset'); ?>" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no">
+    <!-- Microsoft Clarity -->
+    <!-- <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "57waovhwvh");
+    </script> -->
     <!-- Favicon Settings -->
     <link rel="shortcut icon" type="image/png" href="<?= get_template_directory_uri(); ?>/images/icons/icon-192x192.png">
     <link rel="shortcut icon" sizes="192x192" href="<?= get_template_directory_uri(); ?>/images/icons/icon-192x192.png">
@@ -26,12 +34,9 @@
     <link type="application/rss+xml" rel="alternate" title="169cm.pl :: Kanał postów" href="<?= bloginfo('rss2_url'); ?>" />
     <!-- Head -->
     <?php wp_head(); ?>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap">
   </head>
   <body <?php body_class(); ?>>
-    <script src="<?= get_template_directory_uri(); ?>/blocks/drawer-settings/drawer-settings-body-attachment.js"></script>
+    <script src="<?= get_template_directory_uri(); ?>/blocks/drawer-settings/drawer-settings-body-attachment.js?ver=<?= NATALLY_VERSION ?>"></script>
     <div class='body-wrapper'>
       <?php Block_Header(); ?>
       <?php Block_DrawerSidebar(); ?>

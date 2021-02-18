@@ -21,4 +21,4 @@
   <?php endif; ?>
 <?php }
 
-natally_push_style('components-list-story', 'components/list-story/list-story.css');
+$args['QUEUE_STYLES']->push('components-list-story', 'components/list-story/list-story.css');

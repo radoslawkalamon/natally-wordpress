@@ -2,7 +2,7 @@
   <?php Component_Logo(['sidebar']); ?>
   <?php Component_Menu(['sidebar'], 'header-menu'); ?>
   <?php Component_SocialMedia(['sidebar']); ?>
-  <?php Component_DrawerButton(['sidebar'], 'settings', 'cog.svg'); ?>
+  <?php Component_DrawerButton(['sidebar'], 'settings', 'cog.svg', 'Ustawienia'); ?>
 <?php } 
 
 function Block_DrawerSidebar() {
@@ -13,4 +13,4 @@ function Block_DrawerSidebar() {
   );
 }
 
-natally_push_style('blocks-drawer-sidebar', 'blocks/drawer-sidebar/drawer-sidebar.css');
+$args['QUEUE_STYLES']->push('blocks-drawer-sidebar', 'blocks/drawer-sidebar/drawer-sidebar.css');

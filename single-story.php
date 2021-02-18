@@ -7,6 +7,7 @@
       <?php Block_Audiobook(); ?>
       <?php Block_StoryContent(); ?>
     </article>
+    <?php Block_StoryAdjacentPosts(); ?>
     <?php Block_DidYouLike(); ?>
     <?php Block_StoryListSuggestions(); ?>
     <?php Block_JournalListSuggestions(); ?>

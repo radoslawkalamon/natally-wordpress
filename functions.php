@@ -1,35 +1,37 @@
 <?php
 # Global const
-const NATALLY_VERSION = '2.4';
+const NATALLY_VERSION = '2.5';
 const NATALLY_PAGE_STORIES = 0;
 const NATALLY_PAGE_POEMS = 343;
 const NATALLY_PAGE_JOURNALS = 588;
 const NATALLY_PAGE_PRIVACY_POLICY = 149;
 const NATALLY_PAGE_404 = 657;
-# Global variables
-$NATALLY_STYLES = [
-  ['styles-variables', 'styles/variables.css'],
-  ['styles-schemas', 'styles/schemas.css'],
-  ['styles-layout', 'styles/layout.css'],
-  ['styles-body', 'styles/body.css'],
+# Load utils files
+$NATALLY_UTILS_PARTS = [
+  'utils/File',
+  'utils/FilesHashes',
+  'utils/FileQueue',
+  'utils/FileQueueStyles',
+  'utils/FileQueueScripts',
 ];
-$NATALLY_SCRIPTS = [
-  ['background-image-lazy-loading', 'js/background-image-lazy-loading.js', true],
-  ['drawer', 'js/drawer.js', true],
-  ['poem-more-info', 'js/poem-more-info.js', true],
+foreach ($NATALLY_UTILS_PARTS as $i) {
+  get_template_part($i);
+}
+# Initialize utils
+$NATALLY_UTILS = [
+  'QUEUE_STYLES' => new NatallyFileQueueStyles(),
+  'QUEUE_SCRIPTS' => new NatallyFileQueueScripts(),
 ];
-$NATALLY_FILES_HASHES_PATH = get_template_directory().'/file-hashes.json';
-$NATALLY_FILES_HASHES = json_decode(file_get_contents($NATALLY_FILES_HASHES_PATH), true);
-# Styles Push Function
-function natally_push_style(string $name, string $path) {
-  global $NATALLY_STYLES;
-  array_push($NATALLY_STYLES, [$name, $path]);
-}
-# Scripts Push Function
-function natally_push_script(string $name, string $path, bool $defer = true) {
-  global $NATALLY_SCRIPTS;
-  array_push($NATALLY_SCRIPTS, [$name, $path, $defer]);
-}
+# Push global styles
+$NATALLY_UTILS['QUEUE_STYLES']->push('styles-variables', 'styles/variables.css');
+$NATALLY_UTILS['QUEUE_STYLES']->push('styles-fonts', 'styles/fonts.css');
+$NATALLY_UTILS['QUEUE_STYLES']->push('styles-schemas', 'styles/schemas.css');
+$NATALLY_UTILS['QUEUE_STYLES']->push('styles-layout', 'styles/layout.css');
+$NATALLY_UTILS['QUEUE_STYLES']->push('styles-body', 'styles/body.css');
+# Push global scripts
+$NATALLY_UTILS['QUEUE_SCRIPTS']->push('background-image-lazy-loading', 'js/background-image-lazy-loading.js');
+$NATALLY_UTILS['QUEUE_SCRIPTS']->push('drawer', 'js/drawer.js');
+$NATALLY_UTILS['QUEUE_SCRIPTS']->push('poem-more-info', 'js/poem-more-info.js');
 # Content Width set
 $content_width ??= 650;
 # Delete: WP Emoji Scripts / CSS
@@ -65,77 +67,66 @@ remove_action('template_redirect', 'wp_shortlink_header', 11);
 # Register Menus
 register_nav_menu('header-menu', 'Header Menu');
 register_nav_menu('footer-menu', 'Footer Menu');
-# Initialize Components
-get_template_part('components/button/button');
-get_template_part('components/content/content');
-get_template_part('components/drawer/drawer');
-get_template_part('components/drawer-button/drawer-button');
-get_template_part('components/icon/icon');
-get_template_part('components/link-journal/link-journal');
-get_template_part('components/link-poem/link-poem');
-get_template_part('components/link-story/link-story');
-get_template_part('components/list-journal/list-journal');
-get_template_part('components/list-poem/list-poem');
-get_template_part('components/list-story/list-story');
-get_template_part('components/logo/logo');
-get_template_part('components/menu/menu');
-get_template_part('components/meta/meta');
-get_template_part('components/section/section');
-get_template_part('components/social-media/social-media');
-get_template_part('components/text/text');
-get_template_part('components/title/title');
-#Initialize Blocks
-get_template_part('blocks/audiobook/audiobook');
-get_template_part('blocks/cookie-bar/cookie-bar');
-get_template_part('blocks/did-you-like/did-you-like');
-get_template_part('blocks/drawer-settings/drawer-settings');
-get_template_part('blocks/drawer-sidebar/drawer-sidebar');
-get_template_part('blocks/error-404-content/error-404-content');
-get_template_part('blocks/error-404-meta/error-404-meta');
-get_template_part('blocks/footer/footer');
-get_template_part('blocks/frontpage-content/frontpage-content');
-get_template_part('blocks/header/header');
-get_template_part('blocks/journal-content/journal-content');
-get_template_part('blocks/journal-list-full/journal-list-full');
-get_template_part('blocks/journal-list-suggestions/journal-list-suggestions');
-get_template_part('blocks/journal-meta/journal-meta');
-get_template_part('blocks/page-content/page-content');
-get_template_part('blocks/page-meta/page-meta');
-get_template_part('blocks/poem-content/poem-content');
-get_template_part('blocks/poem-first-time/poem-first-time');
-get_template_part('blocks/poem-list-full/poem-list-full');
-get_template_part('blocks/poem-list-suggestions/poem-list-suggestions');
-get_template_part('blocks/poem-meta/poem-meta');
-get_template_part('blocks/poem-thumbnail/poem-thumbnail');
-get_template_part('blocks/progress-bar/progress-bar');
-get_template_part('blocks/puffer-fish-animation/puffer-fish-animation');
-get_template_part('blocks/story-content/story-content');
-get_template_part('blocks/story-list-full/story-list-full');
-get_template_part('blocks/story-list-suggestions/story-list-suggestions');
-get_template_part('blocks/story-meta/story-meta');
-get_template_part('blocks/story-thumbnail/story-thumbnail');
-# Enqueue CSS
-add_action('wp_enqueue_scripts', function () {
-  global $NATALLY_FILES_HASHES;
-  global $NATALLY_STYLES;
-  foreach ($NATALLY_STYLES as $style) {
-    [$name, $path] = $style;
-    $pathTheme = get_template_directory_uri().'/'.$path;
-    $hash = $NATALLY_FILES_HASHES[$path] ?? time();
-    wp_enqueue_style($name, $pathTheme, [], $hash, 'all');
-  }
-});
-# Enqueue JS
-add_action('wp_enqueue_scripts', function () {
-  global $NATALLY_FILES_HASHES;
-  global $NATALLY_SCRIPTS;
-  foreach ($NATALLY_SCRIPTS as $script) {
-    [$name, $path, $defer] = $script;
-    $pathTheme = get_template_directory_uri().'/'.$path;
-    $hash = $NATALLY_FILES_HASHES[$path] ?? time();
-    wp_enqueue_script($name, $pathTheme, [], $hash, $defer);
-  }
-});
+# Initialize components & blocks
+$NATALLY_TEMPLATE_PARTS = [
+  'components/button/button',
+  'components/content/content',
+  'components/drawer/drawer',
+  'components/drawer-button/drawer-button',
+  'components/icon/icon',
+  'components/link-adjacent-post/link-adjacent-post',
+  'components/link-journal/link-journal',
+  'components/link-poem/link-poem',
+  'components/link-story/link-story',
+  'components/list-journal/list-journal',
+  'components/list-poem/list-poem',
+  'components/list-story/list-story',
+  'components/logo/logo',
+  'components/menu/menu',
+  'components/meta/meta',
+  'components/section/section',
+  'components/social-media/social-media',
+  'components/text/text',
+  'components/title/title',
+  'blocks/audiobook/audiobook',
+  'blocks/cookie-bar/cookie-bar',
+  'blocks/did-you-like/did-you-like',
+  'blocks/drawer-settings/drawer-settings',
+  'blocks/drawer-sidebar/drawer-sidebar',
+  'blocks/error-404-content/error-404-content',
+  'blocks/error-404-meta/error-404-meta',
+  'blocks/footer/footer',
+  'blocks/frontpage-content/frontpage-content',
+  'blocks/header/header',
+  'blocks/journal-adjacent-posts/journal-adjacent-posts',
+  'blocks/journal-content/journal-content',
+  'blocks/journal-list-full/journal-list-full',
+  'blocks/journal-list-suggestions/journal-list-suggestions',
+  'blocks/journal-meta/journal-meta',
+  'blocks/page-content/page-content',
+  'blocks/page-meta/page-meta',
+  'blocks/poem-adjacent-posts/poem-adjacent-posts',
+  'blocks/poem-content/poem-content',
+  'blocks/poem-first-time/poem-first-time',
+  'blocks/poem-list-full/poem-list-full',
+  'blocks/poem-list-suggestions/poem-list-suggestions',
+  'blocks/poem-meta/poem-meta',
+  'blocks/poem-thumbnail/poem-thumbnail',
+  'blocks/progress-bar/progress-bar',
+  'blocks/puffer-fish-animation/puffer-fish-animation',
+  'blocks/story-adjacent-posts/story-adjacent-posts',
+  'blocks/story-content/story-content',
+  'blocks/story-list-full/story-list-full',
+  'blocks/story-list-suggestions/story-list-suggestions',
+  'blocks/story-meta/story-meta',
+  'blocks/story-thumbnail/story-thumbnail',
+];
+foreach ($NATALLY_TEMPLATE_PARTS as $i) {
+  get_template_part($i, null, $NATALLY_UTILS);
+}
+# Enqueue styles & scripts
+add_action('wp_enqueue_scripts', fn() => $NATALLY_UTILS['QUEUE_STYLES']->enqueue());
+add_action('wp_enqueue_scripts', fn() => $NATALLY_UTILS['QUEUE_SCRIPTS']->enqueue());
 # Add theme support for post-thumbnails
 add_theme_support('post-thumbnails');
 # Image size settings
@@ -171,13 +162,13 @@ add_action('do_feed_atom_comments', 'disable_comments_feeds', -1);
 add_action('feed_links_show_comments_feed', '__return_false', -1);
 remove_action('wp_head', 'feed_links', 2);
 remove_action('wp_head', 'feed_links_extra', 3);
-#Restrict REST API only for authenticated users
+# Restrict REST API only for authenticated users
 add_filter('rest_authentication_errors', function($result) {
   if (!empty($result)) {
-      return $result;
+    return $result;
   }
   if (!is_user_logged_in()) {
-      return new WP_Error('rest_not_logged_in', 'You are not currently logged in.', ['status' => 401]);
+    return new WP_Error('rest_not_logged_in', 'You are not currently logged in.', ['status' => 401]);
   }
   return $result;
 });
@@ -185,6 +176,3 @@ add_filter('rest_authentication_errors', function($result) {
 add_filter('xmlrpc_enabled', '__return_false');
 # Remove SearchAction from Yoast SEO JSON
 add_filter('disable_wpseo_json_ld_search', '__return_true');
-# Minify HTML
-get_template_part('WP_HTML_Compression');
-add_action('get_header', fn() => ob_start(fn($html) => new WP_HTML_Compression($html)));

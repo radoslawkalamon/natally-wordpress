@@ -14,4 +14,4 @@
   </div>
 <?php }
 
-natally_push_style('components-logo', 'components/logo/logo.css');
+$args['QUEUE_STYLES']->push('components-logo', 'components/logo/logo.css');

@@ -4,6 +4,8 @@
   max-width: var(--max-width-content);
   line-height: var(--line-height-content);
   font-size: var(--font-size-base);
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto;
 }
 

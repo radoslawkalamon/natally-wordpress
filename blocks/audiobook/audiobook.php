@@ -11,9 +11,10 @@
       height='130'
       frameborder='no'
       scrolling='no'
+      aria-label='Audiobook dla "<?= get_the_title(); ?>" w serwisie SoundCloud'
     ></iframe>
   </section>
   <?php endif; ?>
 <?php }
 
-natally_push_style('blocks-audiobook', 'blocks/audiobook/audiobook.css');
+$args['QUEUE_STYLES']->push('blocks-audiobook', 'blocks/audiobook/audiobook.css');

@@ -19,4 +19,4 @@
 
 <?php }
 
-natally_push_style('components-drawer', 'components/drawer/drawer.css');
+$args['QUEUE_STYLES']->push('components-drawer', 'components/drawer/drawer.css');

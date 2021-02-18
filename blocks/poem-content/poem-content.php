@@ -6,4 +6,4 @@
   </div>
 <?php }
 
-natally_push_style('blocks-poem-content', 'blocks/poem-content/poem-content.css');
+$args['QUEUE_STYLES']->push('blocks-poem-content', 'blocks/poem-content/poem-content.css');

@@ -21,4 +21,4 @@
   </div>
 <?php }
 
-natally_push_style('components-meta', 'components/meta/meta.css');
+$args['QUEUE_STYLES']->push('components-meta', 'components/meta/meta.css');

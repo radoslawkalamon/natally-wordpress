@@ -21,4 +21,4 @@
   <?php endif; ?>
 <?php }
 
-natally_push_style('components-list-journal', 'components/list-journal/list-journal.css');
+$args['QUEUE_STYLES']->push('components-list-journal', 'components/list-journal/list-journal.css');

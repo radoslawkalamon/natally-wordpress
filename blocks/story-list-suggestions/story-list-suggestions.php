@@ -9,15 +9,17 @@
 <?php } ?>
 
 <?php function Block_StoryListSuggestions() { ?>
-  <?php Component_Section(
-    [],
-    [
-      'tag' => 'section',
-      'title' => 'Opowiadania',
-      'buttonLabel' => 'Więcej opowiadań',
-      'buttonHref' => NATALLY_PAGE_STORIES
-    ],
-    'Content_StoryListSuggestions',
-    [],
-  ); ?>
+  <div class='story-list-suggestions'>
+    <?php Component_Section(
+      [],
+      [
+        'tag' => 'section',
+        'title' => 'Opowiadania',
+        'buttonLabel' => 'Więcej opowiadań',
+        'buttonHref' => NATALLY_PAGE_STORIES
+      ],
+      'Content_StoryListSuggestions',
+      [],
+    ); ?>
+  </div>
 <?php }

@@ -17,4 +17,4 @@
   </div>
 <?php }
 
-natally_push_style('components-content', 'components/content/content.css');
+$args['QUEUE_STYLES']->push('components-content', 'components/content/content.css');

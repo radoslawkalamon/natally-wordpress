@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const cookiesAcceptedName = 'cookie-bar-accept';
-  const cookiesAcceptedValue = '3';
+  const cookiesAcceptedValue = '4';
   const cookiesAccepted = window.localStorage.getItem(cookiesAcceptedName);
 
   if (cookiesAccepted !== cookiesAcceptedValue) {

@@ -12,7 +12,7 @@
   ?>
 
   <<?= $data['tag']; ?> class='<?= implode(' ', $classNames); ?>'>
-    <?php if ($data['title'] !== null) : ?>
+    <?php if (isset($data['title'])) : ?>
     <h2 class='section__title'>
       <?= $data['title']; ?>
     </h2>
@@ -20,7 +20,7 @@
     <div class='section__content'>
       <?php call_user_func($content, ...$contentArgs); ?>
     </div>
-    <?php if ($data['buttonLabel'] !== null && $data['buttonHref'] !== null) : ?>
+    <?php if (isset($data['buttonLabel']) && isset($data['buttonHref'])) : ?>
     <div class='section__button'>
       <?php Component_Button([], $data['buttonLabel'], $data['buttonHref']); ?>
     </div>
@@ -28,4 +28,4 @@
   </<?= $data['tag']; ?>>
 <?php }
 
-natally_push_style('components-section', 'components/section/section.css');
+$args['QUEUE_STYLES']->push('components-section', 'components/section/section.css');

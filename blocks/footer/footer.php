@@ -9,4 +9,4 @@
   </footer>
 <?php }
 
-natally_push_style('blocks-footer', 'blocks/footer/footer.css');
+$args['QUEUE_STYLES']->push('blocks-footer', 'blocks/footer/footer.css');

@@ -38,4 +38,4 @@
   </article>
 <?php }
 
-natally_push_style('components-link-story', 'components/link-story/link-story.css');
+$args['QUEUE_STYLES']->push('components-link-story', 'components/link-story/link-story.css');
