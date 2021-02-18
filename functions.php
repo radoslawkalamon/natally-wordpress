@@ -162,7 +162,7 @@ add_action('do_feed_atom_comments', 'disable_comments_feeds', -1);
 add_action('feed_links_show_comments_feed', '__return_false', -1);
 remove_action('wp_head', 'feed_links', 2);
 remove_action('wp_head', 'feed_links_extra', 3);
-#Restrict REST API only for authenticated users
+# Restrict REST API only for authenticated users
 add_filter('rest_authentication_errors', function($result) {
   if (!empty($result)) {
     return $result;
