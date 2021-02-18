@@ -13,13 +13,13 @@
       gtag('config', 'UA-57058519-3');
     </script> -->
     <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "57waovhwvh");
-    </script>
+    <!-- <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "57waovhwvh");
+    </script> -->
     <!-- Favicon Settings -->
     <link rel="shortcut icon" type="image/png" href="<?= get_template_directory_uri(); ?>/images/icons/icon-192x192.png">
     <link rel="shortcut icon" sizes="192x192" href="<?= get_template_directory_uri(); ?>/images/icons/icon-192x192.png">
