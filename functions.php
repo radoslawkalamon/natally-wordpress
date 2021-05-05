@@ -1,6 +1,6 @@
 <?php
 # Global const
-const NATALLY_VERSION = '2.5';
+const NATALLY_VERSION = '2.5.1';
 const NATALLY_PAGE_STORIES = 0;
 const NATALLY_PAGE_POEMS = 343;
 const NATALLY_PAGE_JOURNALS = 588;
