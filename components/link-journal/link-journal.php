@@ -4,7 +4,9 @@
   $classNames = [
     'link-journal',
     ...array_map(fn($element) => 'link-journal--'.$element, $styleClasses),
-  ]; ?>
+  ];
+  $isAudiobook = get_post_meta(get_the_ID(), 'soundcloud_track_id', true) !== '';
+  ?>
 
   <article class='<?= implode(' ', $classNames); ?>'>
     <a
@@ -22,6 +24,11 @@
       <div class='link-journal__excerpt'>
         <?= get_the_excerpt(); ?>
       </div>
+      <?php if ($isAudiobook) : ?>
+      <span class='link-journal__audiobook'>
+        <?= Component_Icon('audiobook.svg'); ?>
+      </span>
+      <?php endif; ?>
       <div
         class='link-journal__read-more'
         aria-hidden='true'

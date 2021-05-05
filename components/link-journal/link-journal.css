@@ -10,11 +10,11 @@
   display: grid;
   align-items: center;
   grid-template-rows: max-content max-content max-content;
-  grid-template-columns: 1fr 80px;
+  grid-template-columns: 32px 1fr 80px;
   grid-template-areas:
-    'header meta'
-    'excerpt excerpt'
-    'read-more read-more';
+    'header header meta'
+    'excerpt excerpt excerpt'
+    'audiobook read-more read-more';
   grid-gap: var(--padding-size-2);
   padding: var(--padding-size-2) 0;
   text-decoration: none;
@@ -56,6 +56,15 @@
 
 .link-journal__content:hover .link-journal__excerpt {
   color: var(--color-base-1);
+}
+
+.link-journal__audiobook {
+  width: 20px;
+  height: 20px;
+}
+
+.link-journal__audiobook path {
+  fill: var(--color-accent-1);
 }
 
 .link-journal__read-more {
