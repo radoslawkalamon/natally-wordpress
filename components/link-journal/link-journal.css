@@ -10,7 +10,7 @@
   display: grid;
   align-items: center;
   grid-template-rows: max-content max-content max-content;
-  grid-template-columns: 32px 1fr 80px;
+  grid-template-columns: 20px 1fr 80px;
   grid-template-areas:
     'header header meta'
     'excerpt excerpt excerpt'
