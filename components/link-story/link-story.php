@@ -28,7 +28,7 @@
           </h1>
         </header>
         <footer class='link-story__meta'>
-          <?= implode(' • ', [
+          <?= implode(' ⋅ ', [
             get_the_date(),
             get_post_meta(get_the_ID(), 'reading_time', true),
           ]); ?>

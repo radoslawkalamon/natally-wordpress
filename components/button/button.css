@@ -3,7 +3,7 @@
   border: var(--border-button);
   font-family: var(--font-family-sans);
   font-weight: 700;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-footnotes);
   background-color: var(--color-contra-1);
   color: var(--color-base-1);
   cursor: pointer;

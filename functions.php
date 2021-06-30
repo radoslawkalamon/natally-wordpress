@@ -24,7 +24,6 @@ $NATALLY_UTILS = [
 ];
 # Push global styles
 $NATALLY_UTILS['QUEUE_STYLES']->push('styles-variables', 'styles/variables.css');
-$NATALLY_UTILS['QUEUE_STYLES']->push('styles-fonts', 'styles/fonts.css');
 $NATALLY_UTILS['QUEUE_STYLES']->push('styles-schemas', 'styles/schemas.css');
 $NATALLY_UTILS['QUEUE_STYLES']->push('styles-layout', 'styles/layout.css');
 $NATALLY_UTILS['QUEUE_STYLES']->push('styles-body', 'styles/body.css');

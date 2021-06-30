@@ -9,7 +9,7 @@ body {
   --color-gray-transparent-2: rgba(34, 34, 34, 0.2);
   --color-red-transparent: rgba(226, 0, 14, 0.4);
 
-  --font-family-sans: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family-sans: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
   --font-family-serif: Georgia, Times, 'Times New Roman', serif; 
   --font-size-footnotes: 13px;
   --font-size-base: 16px;
@@ -45,6 +45,10 @@ body {
   --border-button: 2px solid var(--color-accent-1);
 
   --time-animation: 0.33s;
+
+  --content-arrows-left: '«';
+  --content-arrows-right: '»';
+  --content-dot: '⋅';
 }
 
 @media (min-width: 768px) {

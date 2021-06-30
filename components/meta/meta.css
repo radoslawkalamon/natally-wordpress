@@ -28,6 +28,11 @@
   height: var(--height-line);
 }
 
+.meta__subtitle {
+  font-weight: bold;
+  font-size: var(--font-size-footnotes);
+}
+
 .meta__footer {
   font-weight: bold;
 }

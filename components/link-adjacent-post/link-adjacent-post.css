@@ -13,7 +13,7 @@
 }
 
 .link-adjacent-post--prev .link-adjacent-post__label::before {
-  content: '<< ';
+  content: var(--content-arrows-left) ' ';
   color: var(--color-accent-1);
 }
 
@@ -23,7 +23,7 @@
 }
 
 .link-adjacent-post--next .link-adjacent-post__label::after {
-  content: ' >>';
+  content: ' ' var(--content-arrows-right);
   color: var(--color-accent-1);
 }
 
