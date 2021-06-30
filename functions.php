@@ -89,7 +89,6 @@ $NATALLY_TEMPLATE_PARTS = [
   'components/title/title',
   'blocks/audiobook/audiobook',
   'blocks/cookie-bar/cookie-bar',
-  'blocks/did-you-like/did-you-like',
   'blocks/drawer-settings/drawer-settings',
   'blocks/drawer-sidebar/drawer-sidebar',
   'blocks/error-404-content/error-404-content',
