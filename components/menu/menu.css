@@ -18,7 +18,7 @@
 }
 
 .menu--footer .menu-item::after {
-  content: ' • ';
+  content: ' ' var(--content-dot) ' ';
 }
 
 .menu--footer .menu-item:last-of-type:after {

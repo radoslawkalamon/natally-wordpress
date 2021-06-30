@@ -38,6 +38,7 @@
   text-align: right;
   font-family: var(--font-family-sans);
   font-size: var(--font-size-footnotes);
+  font-weight: bold;
 }
 
 .link-journal__excerpt {
@@ -71,11 +72,12 @@
   font-family: var(--font-family-sans);
   grid-area: read-more;
   text-align: right;
+  font-weight: bold;
   font-size: var(--font-size-footnotes);
   text-transform: uppercase;
 }
 
 .link-journal__read-more::after {
-  content: ' >>';
+  content: ' ' var(--content-arrows-right);
   color: var(--color-accent-1);
 }

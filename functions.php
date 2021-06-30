@@ -1,6 +1,6 @@
 <?php
 # Global const
-const NATALLY_VERSION = '2.5.1';
+const NATALLY_VERSION = '2.6.0';
 const NATALLY_PAGE_STORIES = 0;
 const NATALLY_PAGE_POEMS = 343;
 const NATALLY_PAGE_JOURNALS = 588;
@@ -24,7 +24,6 @@ $NATALLY_UTILS = [
 ];
 # Push global styles
 $NATALLY_UTILS['QUEUE_STYLES']->push('styles-variables', 'styles/variables.css');
-$NATALLY_UTILS['QUEUE_STYLES']->push('styles-fonts', 'styles/fonts.css');
 $NATALLY_UTILS['QUEUE_STYLES']->push('styles-schemas', 'styles/schemas.css');
 $NATALLY_UTILS['QUEUE_STYLES']->push('styles-layout', 'styles/layout.css');
 $NATALLY_UTILS['QUEUE_STYLES']->push('styles-body', 'styles/body.css');
@@ -90,7 +89,6 @@ $NATALLY_TEMPLATE_PARTS = [
   'components/title/title',
   'blocks/audiobook/audiobook',
   'blocks/cookie-bar/cookie-bar',
-  'blocks/did-you-like/did-you-like',
   'blocks/drawer-settings/drawer-settings',
   'blocks/drawer-sidebar/drawer-sidebar',
   'blocks/error-404-content/error-404-content',
