@@ -56,8 +56,7 @@
 }
 
 @media (min-width: 768px) {
-  .cookie-bar__text,
-  .cookie-bar__button {
+  .cookie-bar__text {
     font-size: var(--font-size-base);
   }
 }
