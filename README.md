@@ -2,7 +2,7 @@
 
 ## English description
 
-This is an archive repository of a 169cm.pl's WordPress theme. Most of the tickets and releases are in Polish. I am making this repository available because it tells one of the most important stories for me - the growth and decline of my 169cm.pl blog.
+This is an archive repository of a 169cm.pl's WordPress theme. Most of the tickets and releases are in Polish. I am making this repository available because it tells one of the most important stories for me - the growth and decline of my blog 169cm.pl.
 
 Enjoy and freely use whatever you find here in your projects. Bon appetit!
 
