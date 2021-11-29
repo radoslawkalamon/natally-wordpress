@@ -1,7 +1,7 @@
 {
   "name": "natally",
   "version": "2.6.0",
-  "description": "",
+  "description": "169cm.pl WordPress theme",
   "main": "",
   "scripts": {
     "build": "node ./dev/create-dist.js && node ./dev/minify-files.js && node ./dev/calculate-hashes.js",
@@ -9,20 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/radoslawkuswik/natally-wordpress.git"
+    "url": "git+https://github.com/radoslawkalamon/natally-wordpress.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["wordpress", "theme"],
+  "author": "Radosław Kalamon",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/radoslawkuswik/natally-wordpress/issues"
+    "url": "https://github.com/radoslawkalamon/natally-wordpress/issues"
   },
-  "homepage": "https://github.com/radoslawkuswik/natally-wordpress#readme",
+  "homepage": "https://github.com/radoslawkalamon/natally-wordpress#readme",
   "devDependencies": {
     "chokidar": "^3.5.2",
     "fs-extra": "^10.0.0",
-    "glob": "^7.1.7",
+    "glob": "^7.2.0",
     "md5-file": "^5.0.0",
-    "minify": "^7.0.2"
+    "minify": "^7.2.2"
   }
 }
